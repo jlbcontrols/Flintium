@@ -1,0 +1,58 @@
+Starting conversion: 20191218:09.13.20
+Conversion finished. Elapsed time: 8 ms
+Starting conversion: 20191218:09.14.53
+Conversion finished. Elapsed time: 20 ms
+Starting conversion: 20191218:09.18.47
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20191218:10.04.23
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20191221:11.00.27
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20191221:11.09.51
+Conversion finished. Elapsed time: 16 ms
+Starting conversion: 20191221:11.14.10
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20191221:11.17.29
+Conversion finished. Elapsed time: 18 ms
+Starting conversion: 20191221:11.47.30
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20191222:05.56.58
+Conversion finished. Elapsed time: 13 ms
+Starting conversion: 20191223:06.14.47
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20191224:08.14.01
+Conversion finished. Elapsed time: 15 ms
+Starting conversion: 20200103:11.56.01
+Conversion finished. Elapsed time: 21 ms
+Starting conversion: 20200103:12.10.37
+Conversion finished. Elapsed time: 16 ms
+Starting conversion: 20200103:17.33.32
+Conversion finished. Elapsed time: 14 ms
+Starting conversion: 20200104:17.03.39
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20200104:17.07.46
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20200104:17.24.27
+Conversion finished. Elapsed time: 14 ms
+Starting conversion: 20200104:17.37.54
+Conversion finished. Elapsed time: 16 ms
+Starting conversion: 20200105:06.19.46
+Conversion finished. Elapsed time: 20 ms
+Starting conversion: 20200106:05.41.36
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20200107:05.13.03
+Conversion finished. Elapsed time: 18 ms
+Starting conversion: 20200108:06.20.40
+Conversion finished. Elapsed time: 17 ms
+Starting conversion: 20200109:06.16.21
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20200110:06.27.32
+Conversion finished. Elapsed time: 15 ms
+Starting conversion: 20200110:10.47.21
+Conversion finished. Elapsed time: 12 ms
+Starting conversion: 20200110:10.56.28
+Conversion finished. Elapsed time: 16 ms
+Starting conversion: 20200110:10.59.56
+Conversion finished. Elapsed time: 19 ms
+Starting conversion: 20200110:11.09.38
+Conversion finished. Elapsed time: 17 ms

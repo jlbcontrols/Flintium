@@ -1,0 +1,38 @@
+{
+  "custom": {},
+  "propConfig": {
+    "props.auth": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.gateway": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.data": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.permissionGranted": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.host": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.id": {
+      "access": "SYSTEM",
+      "persistent": false
+    }
+  },
+  "props": {
+    "geolocation": {},
+    "locale": "en-US",
+    "timeZoneId": "America/Los_Angeles"
+  }
+}

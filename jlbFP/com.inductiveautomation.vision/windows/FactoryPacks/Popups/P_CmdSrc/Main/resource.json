@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-01-09T17:15:47Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "instancePath,label",
+    "lastModificationSignature": "14572e15a7126c6f4cda7fb545abb15b16368fe072dadd8e59365c43ac23463d"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "template.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-01-09T22:47:32Z"
+    },
+    "lastModificationSignature": "ee1a0a2d8b2f4dd5244e28e58c171d8588b1d76f3e5844bfc356bd900c7bfa5c"
+  }
+}
