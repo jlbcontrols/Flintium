@@ -10,10 +10,10 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2020-01-08T22:29:59Z"
+      "timestamp": "2020-01-13T22:33:54Z"
     },
     "xml-format-version": 1,
     "parameter-names": "instancePath,label",
-    "lastModificationSignature": "8779141fe8ba6e8b50fe30d00a5ae9bf44d1183b05ee3032a54de30f52702f87"
+    "lastModificationSignature": "1bf9f4e3ca244a5dd0610749a2cea6088392e63c507c9912f63e555b7ae24acc"
   }
 }

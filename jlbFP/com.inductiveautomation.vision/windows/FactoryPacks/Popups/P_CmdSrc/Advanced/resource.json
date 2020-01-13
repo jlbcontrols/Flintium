@@ -1,16 +1,19 @@
 {
   "scope": "C",
-  "version": 1,
+  "version": 2,
   "restricted": false,
   "overridable": true,
   "files": [
-    "data.bin"
+    "window.bin",
+    "thumbnail.png"
   ],
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2019-12-22T14:01:36Z"
+      "timestamp": "2020-01-13T18:53:03Z"
     },
-    "lastModificationSignature": "b0fd4652b9e8fad3aae6003e3938d6df475da389935433ce8ff578aa72298584"
+    "xml-format-version": 1,
+    "parameter-names": "instancePath",
+    "lastModificationSignature": "31d19493b2d61c6d280684141168fba12728d250fca47e9ff81880cffac1579f"
   }
 }

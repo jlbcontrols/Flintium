@@ -20,8 +20,11 @@
     "opcDataMode": "Subscribed"
   },
   {
-    "rate": 50,
-    "name": "FactoryPacks Fast"
+    "name": "FactoryPacks Direct"
+  },
+  {
+    "rate": 200,
+    "name": "FactoryPacks Direct-Fast"
   },
   {
     "mode": "Leased",
