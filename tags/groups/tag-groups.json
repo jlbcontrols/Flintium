@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "Direct",
+    "readAfterWrite": false,
+    "rate": 1000,
+    "name": "Default",
+    "optWriteTimeout": 60000,
+    "optWrites": false,
+    "oneShot": false,
+    "opcDataMode": "Subscribed"
+  },
+  {
+    "mode": "Direct",
+    "readAfterWrite": false,
+    "rate": 10000,
+    "name": "Default Historical",
+    "optWriteTimeout": 60000,
+    "optWrites": false,
+    "oneShot": false,
+    "opcDataMode": "Subscribed"
+  },
+  {
+    "rate": 50,
+    "name": "FactoryPacks Fast"
+  },
+  {
+    "mode": "Leased",
+    "leasedRate": 50,
+    "rate": 5000,
+    "name": "FactoryPacks Leased"
+  }
+]
