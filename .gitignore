@@ -1,0 +1,7 @@
+# Ignition #
+conversion-report.txt
+
+# Studio 5000 #
+*.Sem
+*.Wrk
+*.BAK*
