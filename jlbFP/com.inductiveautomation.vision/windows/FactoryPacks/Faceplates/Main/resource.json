@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-01-14T23:03:35Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "hideAlarms,hideDiagnostics,hideMaintenance,hideOperator,hideTrends,instancePath,label,templateFolder",
+    "lastModificationSignature": "8c10e61970c771e23619a209a4989266f474ca94327f9042a884f78f01d27cef"
+  }
+}
