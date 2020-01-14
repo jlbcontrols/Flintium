@@ -14,6 +14,7 @@ SETUP
 Clone this repo to /Ignition/data/projects  
 Import the tag files (/tags folder) into Ignition using the Designer  
 Import the tag-groups file (/tags/groups folder) into Ignition using the Designer  
+Add fpImage folder to root of Image Management in Designer
 
 MODULES  
 Two third party modules are used in this project, but neither are required. The .modl files are included in the modules folder.  
