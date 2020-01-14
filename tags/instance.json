@@ -18173,15 +18173,15 @@
               "tagType": "Folder",
               "tags": [
                 {
+                  "name": "StsColor",
+                  "tagType": "AtomicTag"
+                },
+                {
                   "name": "LastFaultCode",
                   "tagType": "AtomicTag"
                 },
                 {
                   "name": "OutDatalink",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "StsColor",
                   "tagType": "AtomicTag"
                 },
                 {
