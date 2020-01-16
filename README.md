@@ -12,7 +12,8 @@ pw: password
 
 SETUP  
 Clone this repo to /Ignition/data/projects  
-Import the tag files (/tags folder) into Ignition using the Designer  
+Import /tags/dataTypes.json into the Data Types folder in the Ignition Designer  
+Import /tags/instance.json into the root Tags folder in the Ignition Designer  
 Import the tag-groups file (/tags/groups folder) into Ignition using the Designer  
 Add fpImage folder to root of Image Management in Designer
 

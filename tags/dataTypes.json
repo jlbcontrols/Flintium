@@ -194,28 +194,6 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Config",
                       "tagType": "Folder",
                       "tags": [
@@ -266,19 +244,7 @@
                       ]
                     },
                     {
-                      "name": "Disabled",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelved",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -302,52 +268,6 @@
                     {
                       "name": "Suppressed",
                       "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ready",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "M",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Disable",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Test",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Enable",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "O",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Ack",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Shelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Reset",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Unshelve",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        }
-                      ]
                     },
                     {
                       "name": "Status",
@@ -411,6 +331,86 @@
                             },
                             {
                               "name": "Disable",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Disabled",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ready",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "M",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Disable",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Test",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Enable",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "O",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Ack",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Shelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Reset",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Unshelve",
                               "tagType": "AtomicTag"
                             }
                           ]
@@ -433,6 +433,84 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disabled",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Status",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Ready Reset",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Ready Ack",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Inhibit",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "Ready",
                       "tagType": "Folder",
                       "tags": [
@@ -475,46 +553,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
@@ -615,45 +653,7 @@
                       ]
                     },
                     {
-                      "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disabled",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Status",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Ready Reset",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Ready Ack",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Inhibit",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -672,10 +672,6 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
@@ -700,10 +696,6 @@
                           "tagType": "AtomicTag"
                         }
                       ]
-                    },
-                    {
-                      "name": "Disabled",
-                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Ready",
@@ -753,6 +745,40 @@
                     },
                     {
                       "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disabled",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -816,28 +842,6 @@
                       ]
                     },
                     {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Config",
                       "tagType": "Folder",
                       "tags": [
@@ -889,10 +893,6 @@
                     },
                     {
                       "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Inp",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -988,6 +988,58 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disabled",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "Status",
                       "tagType": "Folder",
                       "tags": [
@@ -1008,10 +1060,6 @@
                           "tagType": "AtomicTag"
                         }
                       ]
-                    },
-                    {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Ack",
@@ -1160,55 +1208,7 @@
                       ]
                     },
                     {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disabled",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -1553,6 +1553,56 @@
                       "tagType": "AtomicTag"
                     },
                     {
+                      "name": "Config",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Tag",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowExist",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxShelfT",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AlmMinOnT",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Exists",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Severity",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AckReqd",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Condition",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "ResetReqd",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowShelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowDisable",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
                       "name": "Alarm",
                       "tagType": "AtomicTag"
                     },
@@ -1621,56 +1671,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Config",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Tag",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowExist",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxShelfT",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AlmMinOnT",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Exists",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Severity",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AckReqd",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Condition",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "ResetReqd",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowShelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowDisable",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
@@ -6049,10 +6049,6 @@
                       ]
                     },
                     {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
@@ -6099,32 +6095,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
@@ -6225,6 +6195,44 @@
                       ]
                     },
                     {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
                       "name": "Error",
                       "tagType": "Folder",
                       "tags": [
@@ -6237,14 +6245,6 @@
                           "tagType": "AtomicTag"
                         }
                       ]
-                    },
-                    {
-                      "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Disabled",
@@ -6432,14 +6432,6 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disabled",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Status",
                       "tagType": "Folder",
                       "tags": [
@@ -6514,6 +6506,36 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disabled",
+                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Cmd",
@@ -6628,28 +6650,6 @@
                     {
                       "name": "Suppressed",
                       "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
                     }
                   ]
                 },
@@ -6725,28 +6725,6 @@
                       ]
                     },
                     {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Inp",
                       "tagType": "AtomicTag"
                     },
@@ -6795,24 +6773,6 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Ready",
@@ -6887,15 +6847,55 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Disabled",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -6994,50 +6994,6 @@
                       ]
                     },
                     {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Ready",
                       "tagType": "Folder",
                       "tags": [
@@ -7142,6 +7098,50 @@
                       "tagType": "AtomicTag"
                     },
                     {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
                       "name": "Disabled",
                       "tagType": "AtomicTag"
                     }
@@ -7168,6 +7168,54 @@
                   },
                   "tagType": "UdtInstance",
                   "tags": [
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
                     {
                       "name": "Ack",
                       "tagType": "AtomicTag"
@@ -7219,14 +7267,6 @@
                       ]
                     },
                     {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Config",
                       "tagType": "Folder",
                       "tags": [
@@ -7323,48 +7363,8 @@
                       ]
                     },
                     {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Inp",
                       "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
                     },
                     {
                       "name": "Status",
@@ -7493,10 +7493,6 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
@@ -7615,14 +7611,6 @@
                       ]
                     },
                     {
-                      "name": "Disabled",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Val",
                       "tagType": "Folder",
                       "tags": [
@@ -7643,6 +7631,22 @@
                           "tagType": "AtomicTag"
                         }
                       ]
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disabled",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Config",
@@ -7710,10 +7714,6 @@
                     },
                     {
                       "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Inp",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -9250,236 +9250,6 @@
                       ]
                     },
                     {
-                      "name": "Hi",
-                      "tagType": "UdtInstance",
-                      "tags": [
-                        {
-                          "name": "Status",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Ready Reset",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Ready Ack",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Inhibit",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Shelved",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Cmd",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "O",
-                              "tagType": "Folder",
-                              "tags": [
-                                {
-                                  "name": "Shelve",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Unshelve",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Ack",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Reset",
-                                  "tagType": "AtomicTag"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "M",
-                              "tagType": "Folder",
-                              "tags": [
-                                {
-                                  "name": "Disable",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Test",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Enable",
-                                  "tagType": "AtomicTag"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Ack",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Inp",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Alarm",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Disabled",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Config",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Severity",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Tag",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Exists",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AckReqd",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Condition",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "MaxShelfT",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowExist",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AlmMinOnT",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowDisable",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "ResetReqd",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowShelve",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Error Severity",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error Timer",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Suppressed",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Val",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "SecToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "MinToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Notify",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Ready",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "M",
-                              "tagType": "Folder",
-                              "tags": [
-                                {
-                                  "name": "Enable",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Test",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Disable",
-                                  "tagType": "AtomicTag"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "O",
-                              "tagType": "Folder",
-                              "tags": [
-                                {
-                                  "name": "Shelve",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Ack",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Reset",
-                                  "tagType": "AtomicTag"
-                                },
-                                {
-                                  "name": "Unshelve",
-                                  "tagType": "AtomicTag"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
                       "name": "HiHi",
                       "tagType": "UdtInstance",
                       "tags": [
@@ -9506,6 +9276,32 @@
                           "tagType": "AtomicTag"
                         },
                         {
+                          "name": "Shelved",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Val",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Notify",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "SecToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "MinToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
                           "name": "Status",
                           "tagType": "Folder",
                           "tags": [
@@ -9526,10 +9322,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        },
-                        {
-                          "name": "Shelved",
-                          "tagType": "AtomicTag"
                         },
                         {
                           "name": "Ack",
@@ -9640,28 +9432,6 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Val",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Notify",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "SecToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "MinToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
                           "name": "Cmd",
                           "tagType": "Folder",
                           "tags": [
@@ -9701,6 +9471,236 @@
                                 },
                                 {
                                   "name": "Enable",
+                                  "tagType": "AtomicTag"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Hi",
+                      "tagType": "UdtInstance",
+                      "tags": [
+                        {
+                          "name": "Shelved",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Alarm",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Config",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Severity",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Tag",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Exists",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AckReqd",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Condition",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "MaxShelfT",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowExist",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AlmMinOnT",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowDisable",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "ResetReqd",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowShelve",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Error Severity",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error Timer",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Suppressed",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Status",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Ready Reset",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Ready Ack",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Inhibit",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Cmd",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "O",
+                              "tagType": "Folder",
+                              "tags": [
+                                {
+                                  "name": "Shelve",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Unshelve",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Ack",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Reset",
+                                  "tagType": "AtomicTag"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "M",
+                              "tagType": "Folder",
+                              "tags": [
+                                {
+                                  "name": "Disable",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Test",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Enable",
+                                  "tagType": "AtomicTag"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Ack",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Inp",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Disabled",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Val",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "SecToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "MinToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Notify",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Ready",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "M",
+                              "tagType": "Folder",
+                              "tags": [
+                                {
+                                  "name": "Enable",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Test",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Disable",
+                                  "tagType": "AtomicTag"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "O",
+                              "tagType": "Folder",
+                              "tags": [
+                                {
+                                  "name": "Shelve",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Ack",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Reset",
+                                  "tagType": "AtomicTag"
+                                },
+                                {
+                                  "name": "Unshelve",
                                   "tagType": "AtomicTag"
                                 }
                               ]
@@ -9782,36 +9782,6 @@
                       "tagType": "UdtInstance",
                       "tags": [
                         {
-                          "name": "Disabled",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Alarm",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Val",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Notify",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "SecToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "MinToUnshelve",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
                           "name": "Error",
                           "tagType": "Folder",
                           "tags": [
@@ -10004,6 +9974,36 @@
                         {
                           "name": "Shelved",
                           "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Disabled",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Alarm",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Val",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Notify",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "SecToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "MinToUnshelve",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -10012,6 +10012,82 @@
                       "tagType": "UdtInstance",
                       "tags": [
                         {
+                          "name": "Shelved",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Alarm",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Error Severity",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error Timer",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Suppressed",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Config",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "Tag",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Exists",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "MaxShelfT",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowExist",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AlmMinOnT",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Severity",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "ResetReqd",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowShelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AckReqd",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "AllowDisable",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Condition",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
                           "name": "Ready",
                           "tagType": "Folder",
                           "tags": [
@@ -10056,10 +10132,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "name": "Shelved",
-                          "tagType": "AtomicTag"
                         },
                         {
                           "name": "Ack",
@@ -10138,10 +10210,6 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Alarm",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "Val",
                           "tagType": "Folder",
                           "tags": [
@@ -10164,76 +10232,8 @@
                           ]
                         },
                         {
-                          "name": "Error",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Error Severity",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error Timer",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
                           "name": "Inp",
                           "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Suppressed",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Config",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "Tag",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Exists",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "MaxShelfT",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowExist",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AlmMinOnT",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Severity",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "ResetReqd",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowShelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AckReqd",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "AllowDisable",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Condition",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
                         }
                       ]
                     },
@@ -10378,32 +10378,6 @@
                       "tagType": "UdtInstance",
                       "tags": [
                         {
-                          "name": "Disabled",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Val",
-                          "tagType": "Folder",
-                          "tags": [
-                            {
-                              "name": "MinToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Error",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "SecToUnshelve",
-                              "tagType": "AtomicTag"
-                            },
-                            {
-                              "name": "Notify",
-                              "tagType": "AtomicTag"
-                            }
-                          ]
-                        },
-                        {
                           "name": "Config",
                           "tagType": "Folder",
                           "tags": [
@@ -10522,6 +10496,36 @@
                           ]
                         },
                         {
+                          "name": "Alarm",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Disabled",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Val",
+                          "tagType": "Folder",
+                          "tags": [
+                            {
+                              "name": "MinToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Error",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "SecToUnshelve",
+                              "tagType": "AtomicTag"
+                            },
+                            {
+                              "name": "Notify",
+                              "tagType": "AtomicTag"
+                            }
+                          ]
+                        },
+                        {
                           "name": "Ready",
                           "tagType": "Folder",
                           "tags": [
@@ -10566,10 +10570,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "name": "Alarm",
-                          "tagType": "AtomicTag"
                         },
                         {
                           "name": "Status",
@@ -18174,6 +18174,46 @@
                   "tagType": "UdtInstance",
                   "tags": [
                     {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "Inp",
                       "tagType": "AtomicTag"
                     },
@@ -18230,28 +18270,6 @@
                     {
                       "name": "Suppressed",
                       "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
                     },
                     {
                       "name": "Status",
@@ -18372,24 +18390,6 @@
                       ]
                     },
                     {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Disabled",
                       "tagType": "AtomicTag"
                     },
@@ -18410,18 +18410,6 @@
                   },
                   "tagType": "UdtInstance",
                   "tags": [
-                    {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
                     {
                       "name": "Ack",
                       "tagType": "AtomicTag"
@@ -18475,6 +18463,40 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "Error",
@@ -18536,28 +18558,6 @@
                         },
                         {
                           "name": "Exists",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error",
                           "tagType": "AtomicTag"
                         }
                       ]
@@ -18652,6 +18652,74 @@
                       "tagType": "AtomicTag"
                     },
                     {
+                      "name": "Config",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Tag",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxShelfT",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowExist",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Exists",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AlmMinOnT",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Severity",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AckReqd",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Condition",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "ResetReqd",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowDisable",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AllowShelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
                       "name": "Status",
                       "tagType": "Folder",
                       "tags": [
@@ -18742,56 +18810,6 @@
                       ]
                     },
                     {
-                      "name": "Config",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Tag",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxShelfT",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowExist",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Exists",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AlmMinOnT",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Severity",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AckReqd",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Condition",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "ResetReqd",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowDisable",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AllowShelve",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
                       "name": "Disabled",
                       "tagType": "AtomicTag"
                     },
@@ -18805,10 +18823,6 @@
                     },
                     {
                       "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -18854,20 +18868,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     }
@@ -18889,6 +18889,50 @@
                       "tagType": "AtomicTag"
                     },
                     {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Suppressed",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Alarm",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Error",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error Timer",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Error Severity",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
                       "name": "Inp",
                       "tagType": "AtomicTag"
                     },
@@ -18938,28 +18982,6 @@
                         },
                         {
                           "name": "AlmMinOnT",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
                           "tagType": "AtomicTag"
                         }
                       ]
@@ -19079,34 +19101,12 @@
                       ]
                     },
                     {
-                      "name": "Suppressed",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Shelved",
                       "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Error",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error Timer",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Error Severity",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
                     }
                   ]
                 },
@@ -19126,37 +19126,7 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Inp",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Alarm",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Status",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Inhibit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Ready Reset",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Ready Ack",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Ack",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -19202,32 +19172,6 @@
                               "tagType": "AtomicTag"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Shelved",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Val",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Error",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "SecToUnshelve",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Notify",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
@@ -19295,6 +19239,62 @@
                         },
                         {
                           "name": "AllowDisable",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Inp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Status",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Inhibit",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Ready Reset",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Ready Ack",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelved",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Val",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "Error",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "SecToUnshelve",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Notify",
                           "tagType": "AtomicTag"
                         }
                       ]
@@ -20438,6 +20438,240 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
+                "binding": "[{LeasedPLC}]{PAX Tag}.Suppressed"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Suppressed",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AckReqd"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "AckReqd",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AllowDisable"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "AllowDisable",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_ResetReqd"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "ResetReqd",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Cond"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "String",
+                  "name": "Condition",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": "",
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Tag"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "String",
+                  "name": "Tag",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": "",
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.PCfg_AllowExist"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "AllowExist",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Exists"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "Exists",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_MaxShelfT"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Int4",
+                  "name": "MaxShelfT",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": 0,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Severity"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Int4",
+                  "name": "Severity",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": 0,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AlmMinOnT"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Int4",
+                  "name": "AlmMinOnT",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": 0,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AllowShelve"
+                  },
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "AllowShelve",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                }
+              ]
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Err_Timer"
+                  },
+                  "accessRights": "Read_Only",
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "Error Timer",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                },
+                {
+                  "opcItemPath": {
+                    "bindType": "parameter",
+                    "binding": "[{LeasedPLC}]{PAX Tag}.Err_Severity"
+                  },
+                  "accessRights": "Read_Only",
+                  "valueSource": "opc",
+                  "dataType": "Boolean",
+                  "name": "Error Severity",
+                  "tagGroup": "FactoryPacks Leased",
+                  "value": false,
+                  "tagType": "AtomicTag",
+                  "opcServer": "Ignition OPC UA Server"
+                }
+              ]
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{LeasedPLC}]{PAX Tag}.Alm"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "alarms": [
+                {
+                  "setpointA": 1.0,
+                  "mode": "Equality",
+                  "name": "Alarm",
+                  "shelvingAllowed": {
+                    "bindType": "Tag",
+                    "value": "[.]../Config/AllowShelve"
+                  },
+                  "displayPath": {
+                    "bindType": "Expression",
+                    "value": "{[.]../Config/Condition}"
+                  },
+                  "priority": {
+                    "bindType": "Expression",
+                    "value": "if (\n\t{[.]../Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]../Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]../Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
+                  },
+                  "enabled": {
+                    "bindType": "Tag",
+                    "value": "[.]Config/Exists"
+                  }
+                }
+              ],
+              "name": "Alarm",
+              "tagGroup": "FactoryPacks Direct",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
                 "binding": "[{LeasedPLC}]{PAX Tag}.Inp"
               },
               "accessRights": "Read_Only",
@@ -20765,20 +20999,6 @@
               ]
             },
             {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{LeasedPLC}]{PAX Tag}.Suppressed"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Suppressed",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
               "name": "Val",
               "tagType": "Folder",
               "tags": [
@@ -20839,225 +21059,6 @@
                   "opcServer": "Ignition OPC UA Server"
                 }
               ]
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AckReqd"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "AckReqd",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AllowDisable"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "AllowDisable",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_ResetReqd"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "ResetReqd",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Cond"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "String",
-                  "name": "Condition",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": "",
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Tag"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "String",
-                  "name": "Tag",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": "",
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.PCfg_AllowExist"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "AllowExist",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Exists"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "Exists",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_MaxShelfT"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Int4",
-                  "name": "MaxShelfT",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": 0,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_Severity"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Int4",
-                  "name": "Severity",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": 0,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AlmMinOnT"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Int4",
-                  "name": "AlmMinOnT",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": 0,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Cfg_AllowShelve"
-                  },
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "AllowShelve",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                }
-              ]
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Err_Timer"
-                  },
-                  "accessRights": "Read_Only",
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "Error Timer",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                },
-                {
-                  "opcItemPath": {
-                    "bindType": "parameter",
-                    "binding": "[{LeasedPLC}]{PAX Tag}.Err_Severity"
-                  },
-                  "accessRights": "Read_Only",
-                  "valueSource": "opc",
-                  "dataType": "Boolean",
-                  "name": "Error Severity",
-                  "tagGroup": "FactoryPacks Leased",
-                  "value": false,
-                  "tagType": "AtomicTag",
-                  "opcServer": "Ignition OPC UA Server"
-                }
-              ]
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{LeasedPLC}]{PAX Tag}.Alm"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "alarms": [
-                {
-                  "setpointA": 1.0,
-                  "name": "Alarm",
-                  "shelvingAllowed": {
-                    "bindType": "Tag",
-                    "value": "[.]../Config/AllowShelve"
-                  },
-                  "displayPath": {
-                    "bindType": "Expression",
-                    "value": "{[.]../Config/Condition}"
-                  },
-                  "priority": {
-                    "bindType": "Expression",
-                    "value": "if (\n\t{[.]../Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]../Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]../Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
-                  },
-                  "enabled": {
-                    "bindType": "Tag",
-                    "value": "[.]../Config/Exists"
-                  }
-                }
-              ],
-              "name": "Alarm",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
             }
           ]
         }
