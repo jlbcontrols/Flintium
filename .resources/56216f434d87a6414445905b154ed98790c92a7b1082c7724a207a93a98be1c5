@@ -27,6 +27,8 @@ def updateTagGroup(udtName):
 #UdtConversion.removePrefixes("P_VSD")
 #UdtConversion.updateTagGroup("P_VSD")
 
+
+# Run this to perform intitial conversion, after type is created from OPC drop.  May need to restart module on gateway webpage before use.
 def convertFromOpcDrop(udtName):
 	import system
 	udtPath = "_types_/FactoryPacks/" + udtName
