@@ -50,6 +50,18 @@ P_VSD = Nav(
 	)
 )
 
+P_ValveC = Nav(
+	name='P_ValveC',
+	main=Main(
+		trends=False
+	),
+	advanced=Advanced(
+		engineering=3,
+		faults=0,
+		maintenance=2
+	)
+)
+
 P_PIDE = Nav(
 	name='P_PIDE',
 	advanced=Advanced(
