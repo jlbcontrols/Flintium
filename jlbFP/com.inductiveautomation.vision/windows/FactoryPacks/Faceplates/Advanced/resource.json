@@ -10,10 +10,10 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2020-01-20T23:50:18Z"
+      "timestamp": "2020-02-20T20:48:35Z"
     },
     "xml-format-version": 1,
     "parameter-names": "engineeringPages,faultsPages,hideEngineering,hideFaults,hideHmi,hideMaintenance,hmiPages,instancePath,label,maintenancePages,templateFolder",
-    "lastModificationSignature": "5f4e1d1492319ecc28aa789519699489b7f412ecf00a496aa111a9d0cd02c0de"
+    "lastModificationSignature": "63158464425d835a224a9c5003175445b2d11c0d6d130b99b2081f4f062525c5"
   }
 }
