@@ -18,9 +18,9 @@ Import the tag-groups file (/tags/groups folder) into Ignition using the Designe
 Add fpImage folder to root of Image Management in Designer
 
 MODULES  
-Two third party modules are used in this project, but neither are required. The .modl files are included in the modules folder.  
--pidbot: used for PIDE tuning faceplate.  
--tagScriptModule: used to automate configuration of UDTs.  Converts PlantPax UDTs from OPC drag/drop closer to the format required for this project.
+Two third party modules are used in this project, but neither are required.  
+-pidbot: used for PIDE tuning faceplate.  Download the latest version at jlbcontrols.com/pidbot.
+-tagScriptModule: used to automate configuration of UDTs.  Converts PlantPax UDTs from OPC drag/drop closer to the format required for this project.  Included in the modules folder.
 
 ALLOW UNSIGNED MODULES  
 Modify /Ignition/data/ignition.conf to add this line to #Java Additional Parameters:  
