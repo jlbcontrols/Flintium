@@ -27,6 +27,10 @@
     "name": "FactoryPacks Direct-Fast"
   },
   {
+    "rate": 50,
+    "name": "FactoryPacks Fast"
+  },
+  {
     "mode": "Leased",
     "leasedRate": 50,
     "rate": 5000,
