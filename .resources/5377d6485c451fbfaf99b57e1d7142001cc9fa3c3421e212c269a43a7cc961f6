@@ -7,15 +7,14 @@ class Main():
 		self.trends=trends
 		self.diagnostics=diagnostics
 		self.alarms=alarms
-	def getHiddenTabs(self):
+	def getTabDict(self):
 		return {
-			'hideOperator':self.operator==False,
-			'hideMaintenance':self.maintenance==False,
-			'hideTrends':self.trends==False,
-			'hideDiagnostics':self.diagnostics==False,
-			'hideAlarms':self.alarms==False
+			'hasOperator':self.operator,
+			'hasMaintenance':self.maintenance,
+			'hasTrends':self.trends,
+			'hasDiagnostics':self.diagnostics,
+			'hasAlarms':self.alarms
 		}
-
 
 class Advanced():
 	def __init__(self, maintenance=1, engineering=1, hmi=1, faults=1):
@@ -23,15 +22,13 @@ class Advanced():
 		self.engineering=engineering
 		self.hmi=hmi
 		self.faults=faults
-	def getPageCounts(self):
+	def getPageCountDict(self):
 		return {
 			'maintenancePages':self.maintenance,
 			'engineeringPages':self.engineering,
 			'hmiPages':self.hmi,
 			'faultsPages':self.faults
 		}
-
-
 
 class Nav():
 	def __init__(self, name='',main=Main(), advanced=Advanced()):
@@ -41,6 +38,7 @@ class Nav():
 
 
 
+### Nav object instances for each UDT
 
 P_VSD = Nav(
 	name='P_VSD',
@@ -138,5 +136,12 @@ P_Alarm = Nav(
 )
 
 
-navList = [P_VSD, P_PIDE, P_AIn, P_Intlk, P_CmdSrc, P_Gate, P_Alarm, P_ValveC]
+
+
+def getNavObject(udtTypeName):
+	navList = [P_VSD, P_PIDE, P_AIn, P_Intlk, P_CmdSrc, P_Gate, P_Alarm, P_ValveC]
+	for obj in navList:
+		if(obj.name==udtTypeName):
+			return obj	
+	
 		

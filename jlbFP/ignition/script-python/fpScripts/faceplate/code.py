@@ -2,42 +2,31 @@
 
 # Called from vision component scripts
 def open(instancePath, faceplateType):
+
 	udtTypeName = fpScripts.util.getTypeName(instancePath)
-	params = getPathParams(instancePath, udtTypeName)
 	print udtTypeName
+	
+	params = {
+		'instancePath':instancePath,
+		'templateFolder':'FactoryPacks/Panels/'+ udtTypeName,
+	}
 	tabProperties = getTabProperties(udtTypeName,faceplateType)
 	params.update(tabProperties)
+	
 	popupPath = 'FactoryPacks/Faceplates/' + faceplateType
 	window = system.nav.openWindowInstance(popupPath, params)
 	system.nav.centerWindow(window)
 	
 
 def getTabProperties(udtTypeName,faceplateType):
+	udtNav = fpScripts.nav.getNavObject(udtTypeName)
 	if(faceplateType=='Main'):
-		return getMainHiddenTabs(udtTypeName)
+		return udtNav.main.getTabDict()
 	if(faceplateType=='Advanced'):
-		return getAdvancedPageCounts(udtTypeName)
+		return obj.advanced.getPageCountDict()
 	return {}
 
 
-def getPathParams(instancePath, udtTypeName):
-	params = {
-		'instancePath':instancePath,
-		'templateFolder':'FactoryPacks/Panels/'+ udtTypeName,
-	}
-	return params
-
-	
-def getMainHiddenTabs(udtTypeName):
-	for obj in fpScripts.nav.navList:
-		if(obj.name==udtTypeName):
-			return obj.main.getHiddenTabs()	
-	
-	
-def getAdvancedPageCounts(udtTypeName):
-	for obj in fpScripts.nav.navList:
-		if(obj.name==udtTypeName):
-			return obj.advanced.getPageCounts()
 
 
 	
