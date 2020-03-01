@@ -1,6 +1,7 @@
 [
   {
     "mode": "Direct",
+    "leasedRate": 100,
     "readAfterWrite": false,
     "rate": 1000,
     "name": "Default",
@@ -20,6 +21,7 @@
     "opcDataMode": "Subscribed"
   },
   {
+    "rate": 1000,
     "name": "FactoryPacks Direct"
   },
   {
@@ -27,12 +29,8 @@
     "name": "FactoryPacks Direct-Fast"
   },
   {
-    "rate": 50,
-    "name": "FactoryPacks Fast"
-  },
-  {
     "mode": "Leased",
-    "leasedRate": 50,
+    "leasedRate": 1000,
     "rate": 5000,
     "name": "FactoryPacks Leased"
   }

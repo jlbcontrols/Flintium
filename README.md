@@ -16,6 +16,8 @@ Import /tags/dataTypes.json into the Data Types folder in the Ignition Designer
 Import /tags/instance.json into the root Tags folder in the Ignition Designer  
 Import the tag-groups file (/tags/groups folder) into Ignition using the Designer  
 Add fpImage folder to root of Image Management in Designer
+Create a Logix Driver device called "plc1" on the gateway webpage
+Create a database connection called "MySQL" on the gateway webpage
 
 MODULES  
 Two third party modules are used in this project, but neither are required.  
