@@ -1,5 +1,7 @@
 ##### Navigation objects for each UDT that hold information on which faceplate tabs are available #####
 
+# Note: Originally a "Nav" UDT was created to store this information.  Nav instances were nested in the process object UDT definitions.  That strategy was abandoned because subsequent changes to the Nav type definition deleted the configurations in the Nav instances.
+
 class Main():
 	def __init__(self, operator=True, maintenance=True, trends=True, diagnostics=True, alarms=True):
 		self.operator=operator
