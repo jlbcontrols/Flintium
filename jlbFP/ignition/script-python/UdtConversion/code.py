@@ -1,4 +1,4 @@
-##### Funcions used with the tagScriptModule.  Only used during development to help build UDTs.  Not called anywhere in the project. #####
+##### Funcions used with the tagScriptModule.  Only used during development to help build UDTs from AOI tags (from OPC browser).  Not called anywhere in the project. #####
 
 def updateOpcPaths(udtName):
 	import system
@@ -35,7 +35,7 @@ def convertFromOpcDrop(udtName):
 	
 	retFolderize = system.udtHelper.folderize(udtPath)
 	
-	opcStartString = "ns=1;s=[{LeasedPLC}]{PAX Tag}."
+	opcStartString = "ns=1;s=[{PLC}]{PAX Tag}."
 	retOpcUpdate = system.udtHelper.updateOpcPath(udtPath, opcStartString)
 	
 	retPrefixUpdate = system.udtHelper.removePrefixes(udtPath)
