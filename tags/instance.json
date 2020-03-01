@@ -3835,10 +3835,6 @@
               ]
             },
             {
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
-            },
-            {
               "name": "Nrdy",
               "tagType": "Folder",
               "tags": [
@@ -6626,11 +6622,6 @@
           },
           "tagType": "UdtInstance",
           "tags": [
-            {
-              "value": "[default]Instance/Tank1/P1_Intlk",
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
-            },
             {
               "name": "SrcQ_IO",
               "tagType": "AtomicTag"
@@ -13122,10 +13113,6 @@
             },
             {
               "name": "Out_CV",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "IntlkTagPath",
               "tagType": "AtomicTag"
             },
             {
@@ -19639,10 +19626,6 @@
               "tagType": "AtomicTag"
             },
             {
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
-            },
-            {
               "name": "Config",
               "tagType": "Folder",
               "tags": [
@@ -25165,6 +25148,611 @@
                 },
                 {
                   "name": "Intlk06",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FCV102_Intlk",
+          "typeId": "FactoryPacks/P_Intlk",
+          "parameters": {
+            "PLC": "plc1",
+            "PAX Tag": "FCV102_Intlk"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Intlk13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "BypActive",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "LatchDefeat",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk15",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Intlk14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "BypActive",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "FirstOut",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "IntlkOK",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "NBIntlkOK",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk10",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Set",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Bypass14",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass11",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass05",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass07",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass03",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass12",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass04",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass13",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass15",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass08",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass06",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass01",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass09",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass00",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass10",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass02",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "CondText01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OKState",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "HasNav",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState00",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "FirstOutTxt",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Meta",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Description",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "PLCTag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Area",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Label",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -32193,11 +32781,6 @@
               "tagType": "AtomicTag"
             },
             {
-              "value": "[default]Instance/Tank1/P1_Intlk",
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
-            },
-            {
               "name": "HMI_Lib",
               "tagType": "AtomicTag"
             },
@@ -36756,10 +37339,6 @@
                   "tagType": "AtomicTag"
                 }
               ]
-            },
-            {
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
             },
             {
               "name": "CmdSrc",
@@ -43884,6 +44463,611 @@
           ]
         },
         {
+          "name": "TCV10_Intlk",
+          "typeId": "FactoryPacks/P_Intlk",
+          "parameters": {
+            "PLC": "plc1",
+            "PAX Tag": "TCV10_Intlk"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Intlk12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "BypActive",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "LatchDefeat",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk01",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Latched09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "HasNav",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OKState",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Bypassable04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OkState03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "CondText15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Latched11",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Meta",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "PLCTag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Label",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Description",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Area",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "FirstOutTxt",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Set",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Bypass00",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass05",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass07",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass04",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass10",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass15",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass09",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass01",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass02",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass11",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass14",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass12",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass06",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass03",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass13",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Bypass08",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Intlk",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk06",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "NBIntlkOK",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk11",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk10",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk08",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk14",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk02",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk01",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "BypActive",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk03",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk12",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk05",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "IntlkOK",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk00",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk09",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk07",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk15",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk13",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Intlk04",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "FirstOut",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "TC10_Intlk",
           "typeId": "FactoryPacks/P_Intlk",
           "parameters": {
@@ -47138,10 +48322,6 @@
                   "tagType": "AtomicTag"
                 }
               ]
-            },
-            {
-              "name": "IntlkTagPath",
-              "tagType": "AtomicTag"
             },
             {
               "name": "Val",
