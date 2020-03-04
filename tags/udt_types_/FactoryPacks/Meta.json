@@ -1,0 +1,70 @@
+{
+  "dataType": "Int4",
+  "name": "Meta",
+  "value": 0,
+  "parameters": {
+    "PLC": {
+      "bindType": "parameter",
+      "binding": "{PLC}"
+    },
+    "PAX Tag": {
+      "bindType": "parameter",
+      "binding": "{PAX Tag}"
+    }
+  },
+  "tagType": "UdtType",
+  "tags": [
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "PLCTag",
+      "tagGroup": "FactoryPacks Leased",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Label",
+      "tagGroup": "FactoryPacks Leased",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Description",
+      "tagGroup": "FactoryPacks Leased",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Area"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Area",
+      "tagGroup": "FactoryPacks Leased",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    }
+  ]
+}
