@@ -4,15 +4,15 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "thumbnail.png",
-    "window.bin"
+    "window.bin",
+    "thumbnail.png"
   ],
   "attributes": {
-    "xml-format-version": 1,
-    "lastModificationSignature": "646af129f1944f41f04497ddc79b003c9466aa3204795e6b0619a152761c3d56",
     "lastModification": {
-      "actor": "maxc",
-      "timestamp": "2020-03-04T12:52:49Z"
-    }
+      "actor": "admin",
+      "timestamp": "2020-03-04T17:58:30Z"
+    },
+    "xml-format-version": 1,
+    "lastModificationSignature": "54bea5ede34ad6c17b2c29c9584508cf025d66c5a54297c292bafbe0ef2f9242"
   }
 }
