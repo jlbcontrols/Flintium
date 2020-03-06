@@ -20,7 +20,8 @@ def updateTagGroup(udtName):
 	import system
 	udtPath = "_types_/FactoryPacks/" + udtName
 	tagGroupString = "FactoryPacks Leased"
-	return system.udtHelper.updateTagGroup(udtPath, tagGroupString)
+	opcPathFilterString = ""
+	return system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
 		
 #UdtConversion.updateOpcPaths("P_VSD")
 #UdtConversion.folderize("P_VSD")
@@ -33,14 +34,25 @@ def convertFromOpcDrop(udtName):
 	import system
 	udtPath = "_types_/FactoryPacks/" + udtName
 	
-	retFolderize = system.udtHelper.folderize(udtPath)
+	folderizedQty = system.udtHelper.folderize(udtPath)
 	
 	opcStartString = "ns=1;s=[{PLC}]{PAX Tag}."
-	retOpcUpdate = system.udtHelper.updateOpcPath(udtPath, opcStartString)
+	opcUpdateQty = system.udtHelper.updateOpcPath(udtPath, opcStartString)
 	
-	retPrefixUpdate = system.udtHelper.removePrefixes(udtPath)
+	prefixUpdatedQty = system.udtHelper.removePrefixes(udtPath)
 	
 	tagGroupString = "FactoryPacks Leased"
-	retTagGroupUpdate = system.udtHelper.updateTagGroup(udtPath, tagGroupString)
+	opcPathFilterString = ""
+	tagGroupUpdateAllQty = system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
 	
-	return 'folderize=' + str(retFolderize) + '\n' +'opcUpdate=' + str(retOpcUpdate) + '\n' +'prefixUpdate=' + str(retPrefixUpdate) + '\n' +'tagGroupUpdate=' + str(retTagGroupUpdate)
+	tagGroupString = "FactoryPacks Leased-Slow"
+	opcPathFilterString = "Cfg_"
+	tagGroupUpdateCfgQty = system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
+	
+	return {
+		'folderizedQty':folderizedQty,
+		'opcUpdateQty':opcUpdateQty,
+		'prefixUpdatedQty':prefixUpdatedQty,
+		'tagGroupUpdateAllQty':tagGroupUpdateAllQty,
+		'tagGroupUpdateCfgQty':tagGroupUpdateCfgQty
+		}
