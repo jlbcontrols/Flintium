@@ -5,6 +5,12 @@ def updateOpcPaths(udtName):
 	udtPath = "_types_/FactoryPacks/" + udtName
 	opcStartString = "ns=1;s=[{LeasedPLC}]{PAX Tag}."
 	return system.udtHelper.updateOpcPath(udtPath, opcStartString)
+	
+def updateOpcServer(udtName):
+	import system
+	udtPath = "_types_/FactoryPacks/" + udtName
+	opcServerString = "{OPC Server}"
+	return system.udtHelper.updateOpcServer(udtPath, opcServerString)
 
 def folderize(udtName):
 	import system
@@ -37,7 +43,10 @@ def convertFromOpcDrop(udtName):
 	folderizedQty = system.udtHelper.folderize(udtPath)
 	
 	opcStartString = "ns=1;s=[{PLC}]{PAX Tag}."
-	opcUpdateQty = system.udtHelper.updateOpcPath(udtPath, opcStartString)
+	opcPathQty = system.udtHelper.updateOpcPath(udtPath, opcStartString)
+	
+	opcServerString = "{OPC Server}"
+	opcServerQty = system.udtHelper.updateOpcServer(udtPath, opcServerString)
 	
 	prefixUpdatedQty = system.udtHelper.removePrefixes(udtPath)
 	
@@ -51,7 +60,8 @@ def convertFromOpcDrop(udtName):
 	
 	return {
 		'folderizedQty':folderizedQty,
-		'opcUpdateQty':opcUpdateQty,
+		'opcPathQty':opcPathQty,
+		'opcServerQty':opcServerQty,
 		'prefixUpdatedQty':prefixUpdatedQty,
 		'tagGroupUpdateAllQty':tagGroupUpdateAllQty,
 		'tagGroupUpdateCfgQty':tagGroupUpdateCfgQty
