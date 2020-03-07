@@ -1,4 +1,5 @@
 ##### Funcions used with the tagScriptModule.  Only used during development to help build UDTs from AOI tags (from OPC browser).  Not called anywhere in the project. #####
+# May need to restart module on gateway webpage before use.
 
 def updateOpcPaths(udtName):
 	import system
@@ -25,14 +26,22 @@ def removePrefixes(udtName):
 def updateTagGroup(udtName):
 	import system
 	udtPath = "_types_/FactoryPacks/" + udtName
-	tagGroupString = "FactoryPacks Leased"
-	opcPathFilterString = ""
+	tagGroupString = "FactoryPacks Leased-Slow"
+	opcPathFilterString = "Cfg_"
 	return system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
-		
-#UdtConversion.updateOpcPaths("P_VSD")
-#UdtConversion.folderize("P_VSD")
-#UdtConversion.removePrefixes("P_VSD")
-#UdtConversion.updateTagGroup("P_VSD")
+
+# Examples:		
+# UdtConversion.updateOpcPaths("P_VSD")
+# UdtConversion.folderize("P_VSD")
+# UdtConversion.removePrefixes("P_VSD")
+# UdtConversion.updateTagGroup("P_VSD")
+
+# Use this to apply a function to all the UDT tags.  The function must take udtName as the sole input (i.e. one of the functions listed above)
+# Example: UdtConversion.updateAllUdts(UdtConversion.updateTagGroup)
+def updateAllUdts(updateFunction):
+	udtList = ["Meta","P_AIn","P_Alarm","P_CmdSrc","P_Gate","P_Intlk","P_MotorRev","P_PIDE","P_ValveC","P_ValveSO","P_VSD","ProgOperKeep"]
+	for udtName in udtList:
+		updateFunction(udtName)
 
 
 # Run this to perform intitial conversion, after type is created from OPC drop.  May need to restart module on gateway webpage before use.
@@ -66,3 +75,6 @@ def convertFromOpcDrop(udtName):
 		'tagGroupUpdateAllQty':tagGroupUpdateAllQty,
 		'tagGroupUpdateCfgQty':tagGroupUpdateCfgQty
 		}
+		
+		
+
