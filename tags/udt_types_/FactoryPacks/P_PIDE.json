@@ -2161,64 +2161,6 @@
       ]
     },
     {
-      "name": "Local",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "HMI_Type",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "HMI_Lib",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HMI_HasAutotune",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int1",
-          "name": "HMI_Tab",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        }
-      ]
-    },
-    {
       "name": "Val",
       "tagType": "Folder",
       "tags": [
