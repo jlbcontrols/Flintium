@@ -7,6 +7,10 @@
       "bindType": "parameter",
       "binding": "{PLC}"
     },
+    "OPC Server": {
+      "bindType": "parameter",
+      "binding": "{OPC Server}"
+    },
     "PAX Tag": {
       "bindType": "parameter",
       "binding": "{PAX Tag}"
@@ -49,22 +53,6 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "String",
-      "name": "Description",
-      "value": "",
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
         "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
       },
       "tagGroup": {
@@ -74,6 +62,22 @@
       "valueSource": "opc",
       "dataType": "String",
       "name": "PLCTag",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Description",
       "value": "",
       "tagType": "AtomicTag",
       "opcServer": "Ignition OPC UA Server"

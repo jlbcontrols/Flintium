@@ -7,6 +7,10 @@
       "bindType": "parameter",
       "binding": "{PLC}"
     },
+    "OPC Server": {
+      "bindType": "parameter",
+      "binding": "{OPC Server}"
+    },
     "PAX Tag": {
       "bindType": "parameter",
       "binding": "{PAX Tag}"
@@ -14,6 +18,365 @@
   },
   "tagType": "UdtType",
   "tags": [
+    {
+      "name": "Set",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "M",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MSet_SubstPV"
+              },
+              "valueSource": "opc",
+              "dataType": "Float4",
+              "name": "SubstPV",
+              "tagGroup": "FactoryPacks Leased",
+              "value": 0.0,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Config",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_FailHiLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FailHiLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_FiltTC"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FilterTC",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_PVEUMax"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "EUMax",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_NoSubstPV"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "NoSubstPV",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_InpRawMax"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "RawMax",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_FailLoLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FailLoLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_LoDB"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "LoDB",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasChanObj"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasChanObj",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_FailDB"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FailDB",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_PVEUMin"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "EUMin",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HiHiLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "historyProvider": "MySQL",
+          "historyEnabled": true,
+          "name": "HiHiLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_UseChanSrcQ"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "UseChanSrcQ",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLoDB"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "LoLoDB",
+          "value": 0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLoLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "historyProvider": "MySQL",
+          "historyEnabled": true,
+          "name": "LoLoLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HiLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "historyProvider": "MySQL",
+          "historyEnabled": true,
+          "name": "HiLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_EU"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "EU",
+          "value": "",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLim"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "historyProvider": "MySQL",
+          "historyEnabled": true,
+          "name": "LoLim",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HiHiDB"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "HiHiDB",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HiDB"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "HiDB",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_InpRawMin"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "RawMin",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
     {
       "dataType": "Int4",
       "name": "Meta",
@@ -28,11 +391,11 @@
       "tagType": "UdtInstance",
       "tags": [
         {
-          "name": "Label",
+          "name": "Area",
           "tagType": "AtomicTag"
         },
         {
-          "name": "Area",
+          "name": "Label",
           "tagType": "AtomicTag"
         },
         {
@@ -46,221 +409,9 @@
       ]
     },
     {
-      "name": "Input",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_PVBad"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PVBad",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_Sim"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Sim",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_Reset"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Reset",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_PVUncertain"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PVUncertain",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_PV"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "PV",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_PVNotify"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PVNotify",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_PVSrcQ"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "PVSrcQ",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        }
-      ]
-    },
-    {
-      "name": "Error",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Timer",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Alarm"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Alarm",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Raw"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Raw",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_EU"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "EU",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Filt"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Filter",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        }
-      ]
-    },
-    {
       "name": "Ready",
       "tagType": "Folder",
       "tags": [
-        {
-          "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_ResetAckAll"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ResetAckAll",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            }
-          ]
-        },
         {
           "name": "M",
           "tagType": "Folder",
@@ -292,1630 +443,6 @@
               "opcServer": "Ignition OPC UA Server"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Alarm",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "dataType": "Int4",
-          "name": "HiHiGate",
-          "typeId": "FactoryPacks/P_Gate",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.HiHiGate"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "OnDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OffDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "InpCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateCond",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Input",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Out",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "FailGate",
-          "typeId": "FactoryPacks/P_Gate",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.FailGate"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Out",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "GateCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OffDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "InpCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OnDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateDly",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Input",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "Lo",
-          "typeId": "FactoryPacks/P_Alarm",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.Lo"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Ready Ack",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Ready Reset",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Condition",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "LoLoGate",
-          "typeId": "FactoryPacks/P_Gate",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.LoLoGate"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Out",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "GateDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OnDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OffDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "InpCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateCond",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Input",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "Fail",
-          "typeId": "FactoryPacks/P_Alarm",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.Fail"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Condition",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Ready Reset",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Ready Ack",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "HiGate",
-          "typeId": "FactoryPacks/P_Gate",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.HiGate"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "InpCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OnDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OffDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateDly",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Out",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Input",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "LoGate",
-          "typeId": "FactoryPacks/P_Gate",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.LoGate"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Out",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "OffDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OnDly",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "InpCond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "GateDly",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Input",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Gate",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "Hi",
-          "typeId": "FactoryPacks/P_Alarm",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.Hi"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Condition",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error Severity",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Ready Ack",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Ready Reset",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "LoLo",
-          "typeId": "FactoryPacks/P_Alarm",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.LoLo"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Ready Reset",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Ready Ack",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Condition",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "dataType": "Int4",
-          "name": "HiHi",
-          "typeId": "FactoryPacks/P_Alarm",
-          "value": 0,
-          "parameters": {
-            "PAX Tag": {
-              "bindType": "parameter",
-              "binding": "{PAX Tag}.HiHi"
-            }
-          },
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Error Timer",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error Severity",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Ready Ack",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Error",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Ready Reset",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Condition",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Cmd",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "name": "M",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MCmd_InpPV"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "InpPV",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MCmd_SubstPV"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "SubstPV",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            }
-          ]
         },
         {
           "name": "O",
@@ -1924,7 +451,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
               },
               "valueSource": "opc",
               "dataType": "Boolean",
@@ -1937,20 +464,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_ClearCapt"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ClearCapture",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_ResetAckAll"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_ResetAckAll"
               },
               "valueSource": "opc",
               "dataType": "Boolean",
@@ -1967,29 +481,20 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.SrcQ"
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val"
       },
       "accessRights": "Read_Only",
       "valueSource": "opc",
-      "dataType": "Int4",
-      "name": "SrcQ",
-      "tagGroup": "FactoryPacks Leased",
-      "value": 0,
+      "historyMaxAge": 2.0,
+      "HistoricalDeadband": 0.1,
+      "tagGroup": "FactoryPacks Direct",
       "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.SrcQ_IO"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Int4",
-      "name": "SrcQ_IO",
-      "tagGroup": "FactoryPacks Leased",
-      "value": 0,
-      "tagType": "AtomicTag",
+      "dataType": "Float4",
+      "historyProvider": "MySQL",
+      "historyMaxAgeUnits": "SEC",
+      "historyEnabled": true,
+      "name": "Value",
+      "value": 0.0,
       "opcServer": "Ignition OPC UA Server"
     },
     {
@@ -1999,14 +504,28 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_InpPV"
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_Fault"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "InpPV",
+          "dataType": "Int4",
+          "name": "Fault",
           "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
+          "value": 0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_UnackAlmC"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "UnackAlmCount",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
@@ -2019,6 +538,34 @@
           "valueSource": "opc",
           "dataType": "Float4",
           "name": "PVMinCapture",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PVEUMax"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "PVEUMax",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_InpPV"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "InpPV",
           "tagGroup": "FactoryPacks Leased",
           "value": 0.0,
           "tagType": "AtomicTag",
@@ -2041,68 +588,26 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PVMaxCapt"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "PVMaxCapture",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_Fault"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "Fault",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PVEUMax"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "PVEUMax",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_UnackAlmC"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "UnackAlmCount",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PVEUMin"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Float4",
           "name": "PVEUMin",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PVMaxCapt"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "PVMaxCapture",
           "tagGroup": "FactoryPacks Leased",
           "value": 0.0,
           "tagType": "AtomicTag",
@@ -2114,20 +619,6 @@
       "name": "Status",
       "tagType": "Folder",
       "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Error",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -2145,25 +636,12 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_SubstPV"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SubstPV",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_MaintByp"
+            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "MaintByp",
+          "name": "Ready Ack",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -2200,12 +678,39 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
+            "binding": "[{PLC}]{PAX Tag}.Sts_MaintByp"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Ready Ack",
+          "name": "MaintByp",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Error",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_SubstPV"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "SubstPV",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -2228,7 +733,1607 @@
       ]
     },
     {
-      "name": "Set",
+      "name": "Alarm",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "dataType": "Int4",
+          "name": "Fail",
+          "typeId": "FactoryPacks/P_Alarm",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.Fail"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "SecToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Ready Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Ack",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error Timer",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Condition",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "Hi",
+          "typeId": "FactoryPacks/P_Alarm",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.Hi"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Condition",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "SecToUnshelve",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Ready Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Ack",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error Severity",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "Lo",
+          "typeId": "FactoryPacks/P_Alarm",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.Lo"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Condition",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "SecToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Ready Ack",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Reset",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error Severity",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "LoLo",
+          "typeId": "FactoryPacks/P_Alarm",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.LoLo"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "SecToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Ack",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error Timer",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Condition",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "HiGate",
+          "typeId": "FactoryPacks/P_Gate",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.HiGate"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Out",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "OnDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "InpCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OffDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateCond",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "HiHiGate",
+          "typeId": "FactoryPacks/P_Gate",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.HiHiGate"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Out",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "GateCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OnDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "InpCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OffDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateDly",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "LoLoGate",
+          "typeId": "FactoryPacks/P_Gate",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.LoLoGate"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "OffDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "InpCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OnDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateDly",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Out",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "LoGate",
+          "typeId": "FactoryPacks/P_Gate",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.LoGate"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "InpCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OffDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OnDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateDly",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Out",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "FailGate",
+          "typeId": "FactoryPacks/P_Gate",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.FailGate"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "GateDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OffDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OnDly",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "InpCond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "GateCond",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Out",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Input",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Gate",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "Int4",
+          "name": "HiHi",
+          "typeId": "FactoryPacks/P_Alarm",
+          "value": 0,
+          "parameters": {
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}.HiHi"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "SecToUnshelve",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Reset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Ready Ack",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Error Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Error Timer",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Condition",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.SrcQ"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Int4",
+      "name": "SrcQ",
+      "tagGroup": "FactoryPacks Leased",
+      "value": 0,
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "name": "Cmd",
       "tagType": "Folder",
       "tags": [
         {
@@ -2238,13 +2343,71 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_SubstPV"
+                "binding": "[{PLC}]{PAX Tag}.MCmd_SubstPV"
               },
               "valueSource": "opc",
-              "dataType": "Float4",
+              "dataType": "Boolean",
               "name": "SubstPV",
               "tagGroup": "FactoryPacks Leased",
-              "value": 0.0,
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MCmd_InpPV"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "InpPV",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            }
+          ]
+        },
+        {
+          "name": "O",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_ClearCapt"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "ClearCapture",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_ResetAckAll"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "ResetAckAll",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
               "tagType": "AtomicTag",
               "opcServer": "Ignition OPC UA Server"
             }
@@ -2253,74 +2416,19 @@
       ]
     },
     {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "historyMaxAge": 2.0,
-      "HistoricalDeadband": 0.1,
-      "tagGroup": "FactoryPacks Direct",
-      "tagType": "AtomicTag",
-      "dataType": "Float4",
-      "historyProvider": "MySQL",
-      "historyMaxAgeUnits": "SEC",
-      "historyEnabled": true,
-      "name": "Value",
-      "value": 0.0,
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "name": "Config",
+      "name": "Error",
       "tagType": "Folder",
       "tags": [
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HiHiLim"
+            "binding": "[{PLC}]{PAX Tag}.Err_Alarm"
           },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "historyProvider": "MySQL",
-          "historyEnabled": true,
-          "name": "HiHiLim",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HiDB"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "HiDB",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_NoSubstPV"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "NoSubstPV",
+          "name": "Alarm",
+          "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
@@ -2328,15 +2436,13 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasChanObj"
+            "binding": "[{PLC}]{PAX Tag}.Err_EU"
           },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "HasChanObj",
+          "name": "EU",
+          "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
@@ -2344,17 +2450,103 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLoLim"
+            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
           },
-          "tagGroup": {
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Timer",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
             "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
+            "binding": "[{PLC}]{PAX Tag}.Err_Raw"
           },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Raw",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Err_Filt"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Filter",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "Input",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Inp_PVNotify"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PVNotify",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Inp_PVUncertain"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PVUncertain",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Inp_Reset"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Reset",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Inp_PV"
+          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Float4",
-          "historyProvider": "MySQL",
-          "historyEnabled": true,
-          "name": "LoLoLim",
+          "name": "PV",
+          "tagGroup": "FactoryPacks Leased",
           "value": 0.0,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
@@ -2362,31 +2554,13 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_FailHiLim"
+            "binding": "[{PLC}]{PAX Tag}.Inp_PVSrcQ"
           },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "FailHiLim",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLoDB"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Int4",
-          "name": "LoLoDB",
+          "name": "PVSrcQ",
+          "tagGroup": "FactoryPacks Leased",
           "value": 0,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
@@ -2394,97 +2568,13 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_FiltTC"
+            "binding": "[{PLC}]{PAX Tag}.Inp_Sim"
           },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "FilterTC",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_InpRawMin"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "RawMin",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_EU"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "EU",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_InpRawMax"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "RawMax",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_LoLim"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "historyProvider": "MySQL",
-          "historyEnabled": true,
-          "name": "LoLim",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_UseChanSrcQ"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "UseChanSrcQ",
+          "name": "Sim",
+          "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
@@ -2492,118 +2582,32 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_FailDB"
+            "binding": "[{PLC}]{PAX Tag}.Inp_PVBad"
           },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "FailDB",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HiHiDB"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "HiHiDB",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_PVEUMin"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "EUMin",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_LoDB"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "LoDB",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_FailLoLim"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "FailLoLim",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HiLim"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "historyProvider": "MySQL",
-          "historyEnabled": true,
-          "name": "HiLim",
-          "value": 0.0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_PVEUMax"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "EUMax",
-          "value": 0.0,
+          "dataType": "Boolean",
+          "name": "PVBad",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         }
       ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.SrcQ_IO"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Int4",
+      "name": "SrcQ_IO",
+      "tagGroup": "FactoryPacks Leased",
+      "value": 0,
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
     }
   ]
 }
