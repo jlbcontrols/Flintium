@@ -2183,49 +2183,10 @@
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
           },
           "valueSource": "opc",
-          "dataType": "String",
-          "name": "Cfg_CVNavTag",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
           "dataType": "Boolean",
           "name": "MCmd_Check",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Cfg_CVEU",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Cfg_CascSPNavTag",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
@@ -2249,33 +2210,7 @@
           },
           "valueSource": "opc",
           "dataType": "String",
-          "name": "Cfg_PVEU",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
           "name": "HMI_Lib",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Cfg_PVNavTag",
           "tagGroup": "FactoryPacks Leased",
           "value": "",
           "tagType": "AtomicTag",
@@ -5457,6 +5392,19 @@
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
           },
           "valueSource": "opc",
+          "dataType": "String",
+          "name": "PVNavTag",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+          },
+          "valueSource": "opc",
           "dataType": "Float4",
           "name": "LoDevOnDly",
           "tagGroup": "FactoryPacks Leased",
@@ -5513,6 +5461,19 @@
           "name": "HasCascSPNav",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CVNavTag",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "",
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
@@ -6174,6 +6135,19 @@
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
           },
           "valueSource": "opc",
+          "dataType": "String",
+          "name": "CVEU",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+          },
+          "valueSource": "opc",
           "dataType": "Float4",
           "name": "HiHiDevOnDly",
           "tagGroup": "FactoryPacks Leased",
@@ -6217,6 +6191,19 @@
           "name": "HiDevDB",
           "tagGroup": "FactoryPacks Leased",
           "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CascSPNavTag",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "",
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
@@ -6608,6 +6595,19 @@
           "name": "HiDevAckReqd",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "PVEU",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "",
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
