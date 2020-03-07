@@ -37,20 +37,6 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Out"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Out",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
         "binding": "[{PLC}]{PAX Tag}.Inp"
       },
       "accessRights": "Read_Only",
@@ -63,97 +49,23 @@
       "opcServer": "Ignition OPC UA Server"
     },
     {
-      "name": "Config",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_InpCond"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "InpCond",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OnDly"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "OnDly",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "engUnit": "s",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_GateDly"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "GateDly",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "engUnit": "s",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OffDly"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "OffDly",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0.0,
-          "engUnit": "s",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_GateCond"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "GateCond",
-          "tagGroup": "FactoryPacks Leased",
-          "value": "",
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        }
-      ]
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Out"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Out",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
     },
     {
       "name": "Status",
       "tagType": "Folder",
       "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Timer",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -171,6 +83,20 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Timer",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Sts_Gate"
           },
           "accessRights": "Read_Only",
@@ -179,6 +105,95 @@
           "name": "Gate",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        }
+      ]
+    },
+    {
+      "name": "Config",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_OnDly"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "OnDly",
+          "value": 0.0,
+          "engUnit": "s",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_GateCond"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "GateCond",
+          "value": "",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_GateDly"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "GateDly",
+          "value": 0.0,
+          "engUnit": "s",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_OffDly"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "OffDly",
+          "value": 0.0,
+          "engUnit": "s",
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_InpCond"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "InpCond",
+          "value": "",
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         }
