@@ -19,50 +19,21 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.2"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "OperKeep_2",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ProgKeep.2"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "ProgKeep_2",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
         "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.1"
       },
       "tagGroup": {
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "ExtKeep_1",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
@@ -73,44 +44,91 @@
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "ExtKeep_2",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.0"
       },
       "tagGroup": {
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
-      "valueSource": "opc",
-      "dataType": "Int1",
-      "name": "ProgKeep",
-      "value": 0,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
+      "opcServer": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ProgKeep.3"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
+        "binding": "{OPC Server}"
       },
       "valueSource": "opc",
       "dataType": "Boolean",
-      "name": "ProgKeep_3",
+      "name": "ExtKeep_0",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ProgKeep.2"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "ProgKeep_2",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.0"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "OperKeep_0",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.1"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "OperKeep_1",
+      "value": false,
+      "tagType": "AtomicTag"
     },
     {
       "valueSource": "memory",
@@ -128,92 +146,15 @@
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "ProgKeep_1",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.0"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "OperKeep_0",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.3"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "ExtKeep_3",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Int1",
-      "name": "OperKeep",
-      "value": 0,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Int1",
-      "name": "ExtKeep",
-      "value": 0,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.1"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "FactoryPacks Leased-Slow"
-      },
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "OperKeep_1",
-      "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
@@ -224,12 +165,34 @@
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "OperKeep_3",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Int1",
+      "name": "OperKeep",
+      "value": 0,
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
@@ -240,28 +203,110 @@
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "ProgKeep_0",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.0"
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
       },
       "tagGroup": {
         "bindType": "parameter",
         "binding": "FactoryPacks Leased-Slow"
       },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Int1",
+      "name": "ExtKeep",
+      "value": 0,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Int1",
+      "name": "ProgKeep",
+      "value": 0,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.2"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
       "valueSource": "opc",
       "dataType": "Boolean",
-      "name": "ExtKeep_0",
+      "name": "OperKeep_2",
       "value": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ProgKeep.3"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "ProgKeep_3",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.3"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "ExtKeep_3",
+      "value": false,
+      "tagType": "AtomicTag"
     }
   ]
 }

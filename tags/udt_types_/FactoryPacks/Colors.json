@@ -3,6 +3,48 @@
   "tagType": "UdtType",
   "tags": [
     {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Fault",
+      "value": "#D90000",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Background",
+      "value": "#D5D5D5",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Running",
+      "value": "#FFFFFF",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Inactive",
+      "value": "#2B2B2B",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Diagnostic",
+      "value": "#AC00AC",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Open",
+      "value": "#FFFFFF",
+      "tagType": "AtomicTag"
+    },
+    {
       "name": "Highlight",
       "tagType": "Folder",
       "tags": [
@@ -32,15 +74,8 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Fault",
-      "value": "#D90000",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Advisory Background",
-      "value": "#bfbfbf",
+      "name": "Stopped",
+      "value": "#808080",
       "tagType": "AtomicTag"
     },
     {
@@ -53,41 +88,6 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Stopping",
-      "value": "#00cbd9",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Inactive",
-      "value": "#2B2B2B",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Advisory",
-      "value": "#FFFF00",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Diagnostic",
-      "value": "#AC00AC",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Running",
-      "value": "#FFFFFF",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
       "name": "Closed",
       "value": "#808080",
       "tagType": "AtomicTag"
@@ -95,8 +95,22 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Background",
-      "value": "#D5D5D5",
+      "name": "Advisory Background",
+      "value": "#bfbfbf",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Starting",
+      "value": "#00cbd9",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Advisory",
+      "value": "#FFFF00",
       "tagType": "AtomicTag"
     },
     {
@@ -113,15 +127,15 @@
         {
           "valueSource": "memory",
           "dataType": "String",
-          "name": "Static Value",
-          "value": "#000000",
+          "name": "Secondary",
+          "value": "#0000D9",
           "tagType": "AtomicTag"
         },
         {
           "valueSource": "memory",
           "dataType": "String",
-          "name": "Secondary",
-          "value": "#0000D9",
+          "name": "Inactive",
+          "value": "#7a7a7a",
           "tagType": "AtomicTag"
         },
         {
@@ -141,8 +155,8 @@
         {
           "valueSource": "memory",
           "dataType": "String",
-          "name": "Inactive",
-          "value": "#7a7a7a",
+          "name": "Static Value",
+          "value": "#000000",
           "tagType": "AtomicTag"
         }
       ]
@@ -150,29 +164,15 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Warning",
-      "value": "D9D900",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Open",
-      "value": "#FFFFFF",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Starting",
+      "name": "Stopping",
       "value": "#00cbd9",
       "tagType": "AtomicTag"
     },
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Stopped",
-      "value": "#808080",
+      "name": "Warning",
+      "value": "D9D900",
       "tagType": "AtomicTag"
     }
   ]
