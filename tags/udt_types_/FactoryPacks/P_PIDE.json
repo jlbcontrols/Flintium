@@ -2196,19 +2196,6 @@
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
           },
           "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "Val_Notify",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
           "dataType": "Boolean",
           "name": "HMI_HasAutotune",
           "tagGroup": "FactoryPacks Leased",
@@ -2257,6 +2244,19 @@
           "name": "SPRampT",
           "tagGroup": "FactoryPacks Leased",
           "value": 0.0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_{TagName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "Notify",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
         },
