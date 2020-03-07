@@ -2170,32 +2170,6 @@
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
           },
           "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "MCmd_Bypass",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "MCmd_Check",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.{TagName}"
-          },
-          "valueSource": "opc",
           "dataType": "String",
           "name": "HMI_Type",
           "tagGroup": "FactoryPacks Leased",
@@ -2725,7 +2699,33 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
+              "name": "Bypass",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.MCmd_{TagName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
               "name": "Rel",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.MCmd_{TagName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Check",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag",
