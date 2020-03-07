@@ -15755,14 +15755,6 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "ValueEU",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Value",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "StsColor",
                   "tagType": "AtomicTag"
                 },
@@ -24943,15 +24935,7 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "ValueEU",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "StsText",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Value",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -26419,15 +26403,7 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "ValueEU",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "StsText",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Value",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -30304,14 +30280,6 @@
               "tags": [
                 {
                   "name": "StsText",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ValueEU",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Value",
                   "tagType": "AtomicTag"
                 },
                 {
