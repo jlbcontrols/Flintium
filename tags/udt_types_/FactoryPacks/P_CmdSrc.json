@@ -25,12 +25,12 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Unlock"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Oper"
               },
               "accessRights": "Read_Only",
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Unlock",
+              "name": "Oper",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag",
@@ -67,12 +67,12 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Lock"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Unlock"
               },
               "accessRights": "Read_Only",
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Lock",
+              "name": "Unlock",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag",
@@ -81,12 +81,12 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Oper"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Lock"
               },
               "accessRights": "Read_Only",
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Oper",
+              "name": "Lock",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag",
@@ -107,6 +107,20 @@
               "valueSource": "opc",
               "dataType": "Boolean",
               "name": "OutOfService",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MRdy_Rel"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Rel",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag",
@@ -139,22 +153,238 @@
               "value": false,
               "tagType": "AtomicTag",
               "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MRdy_Rel"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Rel",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Config",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasExt"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasExt",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasMOoS"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasMOoS",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_ProgNormal"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ProgNormal",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_ProgPwrUp"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ProgPwrUp",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasOper"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasOper",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasOperLocked"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasOperLocked",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_OvrdOverLock"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OvrdOverLock",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasProg"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasProg",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasMaint"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasMaint",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdLockAsLevel"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PCmdLockAsLevel",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdProgAsLevel"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PCmdProgAsLevel",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_ExtOverLock"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ExtOverLock",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_HasProgLocked"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasProgLocked",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdPriority"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PCmdPriority",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
         }
       ]
     },
@@ -165,12 +395,12 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Ext"
+            "binding": "[{PLC}]{PAX Tag}.Sts_Oper"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Ext",
+          "name": "Oper",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -179,12 +409,12 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_OoS"
+            "binding": "[{PLC}]{PAX Tag}.Sts_OperLocked"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "OutOfService",
+          "name": "OperLocked",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -193,54 +423,12 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_ProgLocked"
+            "binding": "[{PLC}]{PAX Tag}.Sts_ExtReqInh"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "ProgLocked",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_MAcqRcvd"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "MAcqRcvd",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Ovrd"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Ovrd",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_ProgOperLock"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ProgOperLock",
+          "name": "ExtReqInh",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -277,34 +465,6 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_ProgOperSel"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ProgOperSel",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_OperLocked"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OperLocked",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Sts_Normal"
           },
           "accessRights": "Read_Only",
@@ -319,26 +479,12 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_bSrc"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "bSrc",
-          "tagGroup": "FactoryPacks Leased",
-          "value": 0,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_ExtReqInh"
+            "binding": "[{PLC}]{PAX Tag}.Sts_ProgOperLock"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "ExtReqInh",
+          "name": "ProgOperLock",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -361,6 +507,48 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Ovrd"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Ovrd",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_ProgLocked"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ProgLocked",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Ext"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Ext",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Sts_eSrc"
           },
           "accessRights": "Read_Only",
@@ -375,12 +563,40 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Oper"
+            "binding": "[{PLC}]{PAX Tag}.Sts_bSrc"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "bSrc",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_MAcqRcvd"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Oper",
+          "name": "MAcqRcvd",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_OoS"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OutOfService",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -399,190 +615,16 @@
           "value": false,
           "tagType": "AtomicTag",
           "opcServer": "Ignition OPC UA Server"
-        }
-      ]
-    },
-    {
-      "name": "Config",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasExt"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasExt",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasProg"
+            "binding": "[{PLC}]{PAX Tag}.Sts_ProgOperSel"
           },
+          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "HasProg",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasMaint"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasMaint",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_ExtOverLock"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ExtOverLock",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_ProgNormal"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ProgNormal",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_ProgPwrUp"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ProgPwrUp",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasProgLocked"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasProgLocked",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasOperLocked"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasOperLocked",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OvrdOverLock"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OvrdOverLock",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasMOoS"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasMOoS",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdPriority"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PCmdPriority",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_HasOper"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasOper",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdLockAsLevel"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PCmdLockAsLevel",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_PCmdProgAsLevel"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PCmdProgAsLevel",
+          "name": "ProgOperSel",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",
@@ -594,77 +636,6 @@
       "name": "Cmd",
       "tagType": "Folder",
       "tags": [
-        {
-          "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Oper"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Oper",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Normal"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Normal",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Unlock"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Unlock",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Prog"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Prog",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Lock"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Lock",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag",
-              "opcServer": "Ignition OPC UA Server"
-            }
-          ]
-        },
         {
           "name": "M",
           "tagType": "Folder",
@@ -722,6 +693,77 @@
               "opcServer": "Ignition OPC UA Server"
             }
           ]
+        },
+        {
+          "name": "O",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Unlock"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Unlock",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Prog"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Prog",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Oper"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Oper",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Normal"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Normal",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Lock"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Lock",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag",
+              "opcServer": "Ignition OPC UA Server"
+            }
+          ]
         }
       ]
     },
@@ -729,6 +771,20 @@
       "name": "Input",
       "tagType": "Folder",
       "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Inp_Ovrd"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Override",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag",
+          "opcServer": "Ignition OPC UA Server"
+        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -752,20 +808,6 @@
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Hand",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag",
-          "opcServer": "Ignition OPC UA Server"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_Ovrd"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Override",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag",

@@ -17,38 +17,15 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
-      },
-      "valueSource": "opc",
-      "dataType": "String",
-      "name": "PLCTag",
-      "tagGroup": "FactoryPacks Leased",
-      "value": "",
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
         "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
       },
       "valueSource": "opc",
       "dataType": "String",
       "name": "Label",
-      "tagGroup": "FactoryPacks Leased",
-      "value": "",
-      "tagType": "AtomicTag",
-      "opcServer": "Ignition OPC UA Server"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
-      },
-      "valueSource": "opc",
-      "dataType": "String",
-      "name": "Description",
-      "tagGroup": "FactoryPacks Leased",
       "value": "",
       "tagType": "AtomicTag",
       "opcServer": "Ignition OPC UA Server"
@@ -58,10 +35,45 @@
         "bindType": "parameter",
         "binding": "[{PLC}]{PAX Tag}.Cfg_Area"
       },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
       "valueSource": "opc",
       "dataType": "String",
       "name": "Area",
-      "tagGroup": "FactoryPacks Leased",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Description",
+      "value": "",
+      "tagType": "AtomicTag",
+      "opcServer": "Ignition OPC UA Server"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "FactoryPacks Leased-Slow"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "PLCTag",
       "value": "",
       "tagType": "AtomicTag",
       "opcServer": "Ignition OPC UA Server"
