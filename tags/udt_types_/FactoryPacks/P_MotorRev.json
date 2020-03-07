@@ -1418,6 +1418,24 @@
           "tagType": "AtomicTag"
         },
         {
+          "valueSource": "memory",
+          "expression": "{[.]../Config/SpeedFdbkEU}",
+          "dataType": "String",
+          "name": "ValueEU",
+          "tagGroup": "FactoryPacks Leased",
+          "value": "N/A",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "memory",
+          "expression": "{[.]../Val/SpeedFdbk}",
+          "dataType": "Float4",
+          "name": "Value",
+          "tagGroup": "FactoryPacks Leased",
+          "value": 0,
+          "tagType": "AtomicTag"
+        },
+        {
           "valueSource": "expr",
           "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n7,\r\n8,\r\n9,\r\n10,\r\n14,\r\n{[~]_types_/FactoryPacks/Colors/Diagnostic}, //\"Unknown\",\r\n{[~]_types_/FactoryPacks/Colors/Stopped}, //\"Stopped\",\r\n{[~]_types_/FactoryPacks/Colors/Running}, //\"Running \" + {[.]Config/FwdText},\r\n{[~]_types_/FactoryPacks/Colors/Running}, //\"Running \" + {[.]Config/RevText},\r\n{[~]_types_/FactoryPacks/Colors/Running}, //\"Running Slow\",\r\n{[~]_types_/FactoryPacks/Colors/Starting}, //\"Starting \" + {[.]Config/FwdText},\r\n{[~]_types_/FactoryPacks/Colors/Starting}, //\"Starting \" + {[.]Config/RevText},\r\n{[~]_types_/FactoryPacks/Colors/Starting}, //\"Starting Slow\",\r\n{[~]_types_/FactoryPacks/Colors/Jogging}, //\"Jogging \" + {[.]Config/FwdText},\r\n{[~]_types_/FactoryPacks/Colors/Jogging}, //\"Jogging \" + {[.]Config/RevText},\r\n{[~]_types_/FactoryPacks/Colors/Stopping}, //\"Stopping\",\r\n{[~]_types_/FactoryPacks/Colors/Starting}, //\"Horn\",\r\n{[~]_types_/FactoryPacks/Colors/Diagnostic} //\"Unknown\"\r\n)",
           "dataType": "String",
