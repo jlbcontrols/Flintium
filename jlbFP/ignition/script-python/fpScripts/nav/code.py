@@ -93,6 +93,20 @@ P_Intlk = Nav(
 	)
 )
 
+P_Perm = Nav(
+	name='P_Perm',
+	main=Main(
+		trends=False,
+		diagnostics=False,
+		alarms=False
+	),
+	advanced=Advanced(
+		faults=0,
+		maintenance=0,
+		engineering=2
+	)
+)
+
 P_CmdSrc = Nav(
 	name='P_CmdSrc',
 	main=Main(
@@ -141,7 +155,7 @@ P_Alarm = Nav(
 
 
 def getNavObject(udtTypeName):
-	navList = [P_VSD, P_PIDE, P_AIn, P_Intlk, P_CmdSrc, P_Gate, P_Alarm, P_ValveC]
+	navList = [P_VSD, P_PIDE, P_AIn, P_Intlk, P_Perm, P_CmdSrc, P_Gate, P_Alarm, P_ValveC]
 	for obj in navList:
 		if(obj.name==udtTypeName):
 			return obj	
