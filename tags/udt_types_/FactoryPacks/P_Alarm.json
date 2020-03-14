@@ -575,7 +575,7 @@
       "tags": [
         {
           "valueSource": "expr",
-          "expression": "{[.]../../../Meta/Label} + //Parent Device Meta/Label\r\n\" \" +\r\n{[.]../Config/Condition} //This alarm\u0027s condition description",
+          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the alarm label,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/Condition},\r\n\t{[.]../Config/Condition}\r\n)",
           "dataType": "String",
           "name": "Label",
           "tagType": "AtomicTag"
