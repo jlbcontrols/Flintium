@@ -13,6 +13,12 @@ def updateOpcServer(udtName):
 	opcServerString = "{OPC Server}"
 	return system.udtHelper.updateOpcServer(udtPath, opcServerString)
 
+def updateHistoryProvider(udtName):
+		import system
+		udtPath = "_types_/FactoryPacks/" + udtName
+		historyDbString = "{History DB}"
+		return system.udtHelper.updateHistoryProvider(udtPath, historyDbString)
+
 def folderize(udtName):
 	import system
 	udtPath = "_types_/FactoryPacks/" + udtName
@@ -39,7 +45,7 @@ def updateTagGroup(udtName):
 # Use this to apply a function to all the UDT tags.  The function must take udtName as the sole input (i.e. one of the functions listed above)
 # Example: UdtConversion.updateAllUdts(UdtConversion.updateTagGroup)
 def updateAllUdts(updateFunction):
-	udtList = ["Meta","P_AIn","P_Alarm","P_CmdSrc","P_Gate","P_Intlk","P_MotorRev","P_PIDE","P_ValveC","P_ValveSO","P_VSD","ProgOperKeep"]
+	udtList = ["Meta","P_AIn","P_Alarm","P_CmdSrc","P_Gate","P_Intlk","P_Motor","P_MotorRev","P_PIDE","P_ValveC","P_ValveSO","P_VSD","ProgOperKeep"]
 	for udtName in udtList:
 		updateFunction(udtName)
 
