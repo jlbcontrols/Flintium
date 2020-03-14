@@ -19,9 +19,258 @@
   "tagType": "UdtType",
   "tags": [
     {
+      "name": "Config",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "Tag",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_ResetReqd"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ResetReqd",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Exists"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Exists",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_AllowDisable"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AllowDisable",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_AlmMinOnT"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "AlmMinOnT",
+          "value": 0,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.PCfg_AllowExist"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AllowExist",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Cond"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "Condition",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_MaxShelfT"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "MaxShelfT",
+          "value": 0,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_AllowShelve"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AllowShelve",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Severity"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "Severity",
+          "value": 0,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_AckReqd"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "FactoryPacks Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AckReqd",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Suppressed"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Suppressed",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
       "name": "Val",
       "tagType": "Folder",
       "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Val_MinToUnshelve"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "MinToUnshelve",
+          "tagGroup": "FactoryPacks Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -35,23 +284,6 @@
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Error",
-          "tagGroup": "FactoryPacks Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Val_SecToUnshelve"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SecToUnshelve",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag"
@@ -76,7 +308,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Val_MinToUnshelve"
+            "binding": "[{PLC}]{PAX Tag}.Val_SecToUnshelve"
           },
           "opcServer": {
             "bindType": "parameter",
@@ -85,9 +317,267 @@
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "MinToUnshelve",
+          "name": "SecToUnshelve",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Shelved"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Shelved",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Ack"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Ack",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Inp"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Inp",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "Ready",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "O",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Shelve"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Shelve",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Unshelve"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Unshelve",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Ack"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Ack",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "M",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MRdy_Enable"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Enable",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MRdy_Test"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Test",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MRdy_Disable"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Disable",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Alm"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "alarms": [
+        {
+          "setpointA": 1.0,
+          "mode": "Equality",
+          "name": "Alarm",
+          "shelvingAllowed": {
+            "bindType": "Tag",
+            "value": "[.]../Config/AllowShelve"
+          },
+          "displayPath": {
+            "bindType": "Expression",
+            "value": "{[.]../Config/Condition}"
+          },
+          "priority": {
+            "bindType": "Expression",
+            "value": "if (\n\t{[.]../Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]../Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]../Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
+          },
+          "enabled": {
+            "bindType": "Tag",
+            "value": "[.]Config/Exists"
+          }
+        }
+      ],
+      "name": "Alarm",
+      "tagGroup": "FactoryPacks Direct",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Disabled"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Disabled",
+      "tagGroup": "FactoryPacks Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "Meta",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "expr",
+          "expression": "{[.]../../../Meta/Label} + //Parent Device Meta/Label\r\n\" \" +\r\n{[.]../Config/Condition} //This alarm\u0027s condition description",
+          "dataType": "String",
+          "name": "Label",
           "tagType": "AtomicTag"
         }
       ]
@@ -139,7 +629,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_AlmInh"
+            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
           },
           "opcServer": {
             "bindType": "parameter",
@@ -148,7 +638,7 @@
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Inhibit",
+          "name": "Ready Ack",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag"
@@ -173,7 +663,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
+            "binding": "[{PLC}]{PAX Tag}.Sts_AlmInh"
           },
           "opcServer": {
             "bindType": "parameter",
@@ -182,7 +672,7 @@
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Ready Ack",
+          "name": "Inhibit",
           "tagGroup": "FactoryPacks Leased",
           "value": false,
           "tagType": "AtomicTag"
@@ -207,268 +697,6 @@
       ]
     },
     {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Alm"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "alarms": [
-        {
-          "setpointA": 1.0,
-          "mode": "Equality",
-          "name": "Alarm",
-          "shelvingAllowed": {
-            "bindType": "Tag",
-            "value": "[.]../Config/AllowShelve"
-          },
-          "displayPath": {
-            "bindType": "Expression",
-            "value": "{[.]../Config/Condition}"
-          },
-          "priority": {
-            "bindType": "Expression",
-            "value": "if (\n\t{[.]../Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]../Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]../Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]../Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
-          },
-          "enabled": {
-            "bindType": "Tag",
-            "value": "[.]Config/Exists"
-          }
-        }
-      ],
-      "name": "Alarm",
-      "tagGroup": "FactoryPacks Direct",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Suppressed"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Suppressed",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Ack"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Ack",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Shelved"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Shelved",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Inp"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Inp",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Disabled"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Disabled",
-      "tagGroup": "FactoryPacks Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "name": "Ready",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Unshelve"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Unshelve",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Ack"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Ack",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Shelve"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Shelve",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "M",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MRdy_Disable"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Disable",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MRdy_Enable"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Enable",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MRdy_Test"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Test",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Cmd",
       "tagType": "Folder",
       "tags": [
@@ -479,7 +707,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Unshelve"
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
               },
               "opcServer": {
                 "bindType": "parameter",
@@ -487,23 +715,7 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Unshelve",
-              "tagGroup": "FactoryPacks Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Ack"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Ack",
+              "name": "Reset",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -527,7 +739,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Ack"
               },
               "opcServer": {
                 "bindType": "parameter",
@@ -535,7 +747,23 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Reset",
+              "name": "Ack",
+              "tagGroup": "FactoryPacks Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Unshelve"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Unshelve",
               "tagGroup": "FactoryPacks Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -595,221 +823,6 @@
               "tagType": "AtomicTag"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Config",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_ResetReqd"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ResetReqd",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Severity"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "Severity",
-          "value": 0,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_AllowDisable"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AllowDisable",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.PCfg_AllowExist"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AllowExist",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Tag",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_AllowShelve"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AllowShelve",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_AlmMinOnT"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "AlmMinOnT",
-          "value": 0,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Exists"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Exists",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Cond"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Condition",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_MaxShelfT"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "MaxShelfT",
-          "value": 0,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_AckReqd"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "FactoryPacks Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AckReqd",
-          "value": false,
-          "tagType": "AtomicTag"
         }
       ]
     }
