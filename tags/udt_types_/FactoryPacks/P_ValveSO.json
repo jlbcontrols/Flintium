@@ -2626,6 +2626,15 @@
       "tags": [
         {
           "valueSource": "expr",
+          "expression": "if(\r\n\t{[.]../Output/Out},\r\n\t{[~]_types_/FactoryPacks/Colors/Open},\r\n\t{[~]_types_/FactoryPacks/Colors/Closed}\r\n)",
+          "dataType": "String",
+          "name": "Color1",
+          "executionMode": "EventDriven",
+          "tagGroup": "FactoryPacks Leased",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "expr",
           "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n5,\r\n6,\r\n{[~]_types_/FactoryPacks/Colors/Diagnostic}, //\"Unknown\",\r\n{[~]_types_/FactoryPacks/Colors/Closed},\r\n{[~]_types_/FactoryPacks/Colors/Open},\r\n{[~]_types_/FactoryPacks/Colors/Closing},\r\n{[~]_types_/FactoryPacks/Colors/Opening},\r\n{[~]_types_/FactoryPacks/Colors/Diagnostic}\r\n)",
           "dataType": "String",
           "name": "Color0",
