@@ -3,11 +3,12 @@
 # Note: Originally a "Nav" UDT was created to store this information.  Nav instances were nested in the process object UDT definitions.  That strategy was abandoned because subsequent changes to the Nav type definition deleted the configurations in the Nav instances.
 
 class Main():
-	def __init__(self, operator=True, maintenance=True, trends=True, diagnostics=True, alarms=True):
+	def __init__(self, operator=True, maintenance=True, trends=True, diagnostics=True, customDiagnostics=False, alarms=True):
 		self.operator=operator
 		self.maintenance=maintenance
 		self.trends=trends
 		self.diagnostics=diagnostics
+		self.customDiagnostics=customDiagnostics
 		self.alarms=alarms
 	def getTabDict(self):
 		return {
@@ -15,6 +16,7 @@ class Main():
 			'hasMaintenance':self.maintenance,
 			'hasTrends':self.trends,
 			'hasDiagnostics':self.diagnostics,
+			'hasCustomDiagnostics':self.customDiagnostics,
 			'hasAlarms':self.alarms
 		}
 
@@ -85,6 +87,9 @@ P_PIDE = Nav(
 
 P_AIn = Nav(
 	name='P_AIn',
+	main=Main(
+		customDiagnostics=True
+	),
 	advanced=Advanced(
 		maintenance=0,
 		faults=0
