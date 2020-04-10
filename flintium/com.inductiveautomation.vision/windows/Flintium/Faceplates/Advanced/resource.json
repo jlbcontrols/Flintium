@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-04-10T23:18:35Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "engineeringPages,faultsPages,hideEngineering,hideFaults,hideHmi,hideMaintenance,hmiPages,instancePath,label,maintenancePages,templateFolder",
+    "lastModificationSignature": "cbf6e7650fcbf7a7e6157c58cfd206d5f02aa93b611c0b51020cd63e921d7d2a"
+  }
+}
