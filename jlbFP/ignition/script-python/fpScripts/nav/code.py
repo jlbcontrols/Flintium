@@ -54,9 +54,6 @@ P_VSD = Nav(
 
 P_ValveC = Nav(
 	name='P_ValveC',
-	main=Main(
-		trends=False
-	),
 	advanced=Advanced(
 		engineering=3,
 		faults=0,
