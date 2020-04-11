@@ -1,0 +1,98 @@
+{
+  "dataType": "Int4",
+  "name": "Meta",
+  "value": 0,
+  "parameters": {
+    "PLC": {
+      "bindType": "parameter",
+      "binding": "{PLC}"
+    },
+    "OPC Server": {
+      "bindType": "parameter",
+      "binding": "{OPC Server}"
+    },
+    "PAX Tag": {
+      "bindType": "parameter",
+      "binding": "{PAX Tag}"
+    }
+  },
+  "tagType": "UdtType",
+  "tags": [
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "PLCTag",
+      "value": "",
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Description",
+      "value": "",
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Area"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Area",
+      "value": "",
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Label",
+      "value": "",
+      "tagType": "AtomicTag"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "dataType": "Int4",
+  "name": "P_PIDE_TuningDataRecorder",
+  "value": 0,
+  "parameters": {
+    "PLC": {
+      "bindType": "parameter",
+      "binding": "{PLC}"
+    },
+    "OPC Server": {
+      "bindType": "parameter",
+      "binding": "{OPC Server}"
+    },
+    "PAX Tag": {
+      "bindType": "parameter",
+      "binding": "{PAX Tag}"
+    },
+    "Tuning DB": {
+      "bindType": "parameter",
+      "binding": "{History DB}"
+    },
+    "Enable": "False"
+  },
+  "tagType": "UdtType",
+  "tags": [
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_{TagName}"
+      },
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{Tuning DB}"
+      },
+      "enabled": {
+        "bindType": "parameter",
+        "binding": "{Enable}"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "historyTimeDeadband": 0.0,
+      "dataType": "Float4",
+      "historicalDeadband": 0.0,
+      "historyEnabled": true,
+      "name": "PV",
+      "tagGroup": "Flintium Direct-Fast",
+      "value": 0.0,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_{TagName}"
+      },
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{Tuning DB}"
+      },
+      "enabled": {
+        "bindType": "parameter",
+        "binding": "{Enable}"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "historyTimeDeadband": 0.0,
+      "historicalDeadband": 0.0,
+      "dataType": "Float4",
+      "historicalDeadbandStyle": "Discrete",
+      "historyEnabled": true,
+      "name": "CVOut",
+      "tagGroup": "Flintium Direct-Fast",
+      "value": 0.0,
+      "tagType": "AtomicTag",
+      "sampleMode": "OnChange"
+    }
+  ]
+}
