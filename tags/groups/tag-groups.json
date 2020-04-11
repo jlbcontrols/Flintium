@@ -20,21 +20,21 @@
     "opcDataMode": "Subscribed"
   },
   {
-    "name": "FactoryPacks Direct"
+    "name": "Flintium Direct"
   },
   {
     "rate": 200,
-    "name": "FactoryPacks Direct-Fast"
+    "name": "Flintium Direct-Fast"
   },
   {
     "mode": "Leased",
     "leasedRate": 50,
     "rate": 5000,
-    "name": "FactoryPacks Leased"
+    "name": "Flintium Leased"
   },
   {
     "mode": "Leased",
     "rate": 60000,
-    "name": "FactoryPacks Leased-Slow"
+    "name": "Flintium Leased-Slow"
   }
 ]

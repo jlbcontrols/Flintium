@@ -42,16 +42,14 @@
       },
       "accessRights": "Read_Only",
       "valueSource": "opc",
-      "historyTimeDeadband": 0,
-      "historicalDeadband": 0.0,
-      "historicalDeadbandStyle": "Discrete",
-      "tagGroup": "FactoryPacks Direct-Fast",
-      "tagType": "AtomicTag",
+      "historyTimeDeadband": 0.0,
       "dataType": "Float4",
+      "historicalDeadband": 0.0,
       "historyEnabled": true,
-      "name": "CVOut",
+      "name": "PV",
+      "tagGroup": "Flintium Direct-Fast",
       "value": 0.0,
-      "sampleMode": "OnChange"
+      "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
@@ -72,14 +70,16 @@
       },
       "accessRights": "Read_Only",
       "valueSource": "opc",
-      "historyTimeDeadband": 0,
-      "dataType": "Float4",
+      "historyTimeDeadband": 0.0,
       "historicalDeadband": 0.0,
+      "dataType": "Float4",
+      "historicalDeadbandStyle": "Discrete",
       "historyEnabled": true,
-      "name": "PV",
-      "tagGroup": "FactoryPacks Direct-Fast",
+      "name": "CVOut",
+      "tagGroup": "Flintium Direct-Fast",
       "value": 0.0,
-      "tagType": "AtomicTag"
+      "tagType": "AtomicTag",
+      "sampleMode": "OnChange"
     }
   ]
 }
