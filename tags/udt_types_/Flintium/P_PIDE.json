@@ -2141,77 +2141,6 @@
           "tagType": "AtomicTag"
         },
         {
-          "name": "ProgOperKeep",
-          "typeId": "Flintium/ProgOperKeep",
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "ExtKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_3",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_2",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "RepeaterDataset",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_2",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_3",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_3",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_2",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
           "opcItemPath": {
             "bindType": "parameter",
             "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
@@ -8029,6 +7958,272 @@
           "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "VariableOwners",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "CV",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": ".",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "1"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SP",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": ".",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "2"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cmd",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": ".",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "0"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ratio",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": ".",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "3"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

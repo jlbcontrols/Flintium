@@ -2181,6 +2181,195 @@
       ]
     },
     {
+      "name": "VariableOwners",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "SpeedRef",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "bitPatternForHas": "",
+            "bitNumber": "3"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OutDatalink",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": "",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "3"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cmd",
+          "typeId": "Flintium/VariableOwner",
+          "parameters": {
+            "PLC": {
+              "bindType": "parameter",
+              "binding": "{PLC}"
+            },
+            "bitPatternForHas": "",
+            "OPC Server": {
+              "bindType": "parameter",
+              "binding": "{OPC Server}"
+            },
+            "PAX Tag": {
+              "bindType": "parameter",
+              "binding": "{PAX Tag}"
+            },
+            "bitNumber": "3"
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "P",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "X",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Keep",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Has",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "dataType": "Int4",
       "name": "Meta",
       "typeId": "Flintium/Meta",
@@ -4204,78 +4393,6 @@
           "dataType": "Float4",
           "name": "StartHornT",
           "tagType": "AtomicTag"
-        },
-        {
-          "name": "ProgOperKeep",
-          "typeId": "Flintium/ProgOperKeep",
-          "tagType": "UdtInstance",
-          "tags": [
-            {
-              "name": "ProgKeep_3",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_3",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_2",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_2",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_0",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_1",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgKeep_2",
-              "tagType": "AtomicTag"
-            },
-            {
-              "value": "{\"columns\":[{\"name\":\"label\",\"type\":\"java.lang.String\"},{\"name\":\"path\",\"type\":\"java.lang.String\"}],\"rows\":[[\"Speed Reference\",\"\"]]}",
-              "name": "RepeaterDataset",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperKeep_3",
-              "tagType": "AtomicTag"
-            }
-          ]
         },
         {
           "opcItemPath": {
