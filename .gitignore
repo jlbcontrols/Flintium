@@ -1,6 +1,7 @@
 # Ignition #
 conversion-report.txt
 /.resources/
+**/thumbnail.png
 
 # Studio 5000 #
 *.Sem
