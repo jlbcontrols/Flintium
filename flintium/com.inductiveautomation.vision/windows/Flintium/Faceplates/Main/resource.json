@@ -9,11 +9,11 @@
   ],
   "attributes": {
     "lastModification": {
-      "actor": "admin",
-      "timestamp": "2020-04-13T18:43:24Z"
+      "actor": "external",
+      "timestamp": "2020-04-15T16:44:47Z"
     },
     "xml-format-version": 1,
     "parameter-names": "hasAlarms,hasCustomDiagnostics,hasDiagnostics,hasMaintenance,hasOperator,hasTrends,instancePath,label,templateFolder",
-    "lastModificationSignature": "11cecfa62cc13628f15690a9729c0596c077c2c35f25858e140e14a9b871dcc0"
+    "lastModificationSignature": "d902ac7fea39fb541f19965ee4008a1a719a2a274816b7b3602ce2339160273e"
   }
 }

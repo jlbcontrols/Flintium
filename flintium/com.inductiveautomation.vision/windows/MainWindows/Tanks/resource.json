@@ -9,10 +9,10 @@
   ],
   "attributes": {
     "lastModification": {
-      "actor": "admin",
-      "timestamp": "2020-04-13T19:30:23Z"
+      "actor": "external",
+      "timestamp": "2020-04-15T16:44:47Z"
     },
     "xml-format-version": 1,
-    "lastModificationSignature": "fb9c0b1fcd40899ffa5e31cf1390d2f709218e0ae51f3437c172a9a2f129611d"
+    "lastModificationSignature": "d6926b5821d5950352d142203bca8e0d3ebfe5618c60966007d8fc9e41c59347"
   }
 }
