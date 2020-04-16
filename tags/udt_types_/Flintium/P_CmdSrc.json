@@ -947,7 +947,7 @@
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Override",
+          "name": "Ovrd",
           "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"
