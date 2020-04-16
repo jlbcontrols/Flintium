@@ -53,7 +53,7 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "OutOfService",
+              "name": "OoS",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -85,7 +85,7 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "InService",
+              "name": "IS",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
