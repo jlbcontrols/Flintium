@@ -51,14 +51,14 @@
         {
           "valueSource": "memory",
           "dataType": "String",
-          "name": "Dynamic Value",
+          "name": "DynamicValue",
           "value": "#0000D9",
           "tagType": "AtomicTag"
         },
         {
           "valueSource": "memory",
           "dataType": "String",
-          "name": "Static Value",
+          "name": "StaticValue",
           "value": "#000000",
           "tagType": "AtomicTag"
         }
