@@ -4,7 +4,7 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "window.bin",
+    "template.bin",
     "thumbnail.png"
   ],
   "attributes": {
@@ -12,8 +12,6 @@
       "actor": "admin",
       "timestamp": "2020-04-16T22:57:22Z"
     },
-    "xml-format-version": 1,
-    "open-on-start": true,
-    "lastModificationSignature": "94cca63da8772dd73cc383a64f0aee906f3ca28589dd3f4c8d77a258005a798e"
+    "lastModificationSignature": "d83688804cd856c5e175a792470070d61f57f0f6cb431db3a97993028ed5241c"
   }
 }
