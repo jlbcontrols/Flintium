@@ -19,69 +19,21 @@
   "tagType": "UdtType",
   "tags": [
     {
-      "name": "O",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.{bitNumber}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Keep",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "accessRights": "Read_Only",
-          "dataType": "Boolean",
-          "name": "Has",
-          "value": false,
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
       "name": "X",
       "tagType": "Folder",
       "tags": [
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_ExtHas{bitPatternForHas}{bitNumber}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
           },
           "opcServer": {
             "bindType": "parameter",
             "binding": "{OPC Server}"
           },
-          "valueSource": "opc",
+          "valueSource": "expr",
           "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Ext has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Ext} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../P/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Prog}) \u0026\u0026 {[.]Keep}\r\n)",
           "dataType": "Boolean",
           "name": "Has",
           "value": false,
@@ -109,13 +61,13 @@
       ]
     },
     {
-      "name": "P",
+      "name": "O",
       "tagType": "Folder",
       "tags": [
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_ProgHas{bitPatternForHas}{bitNumber}"
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.{bitNumber}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -126,12 +78,34 @@
             "binding": "{OPC Server}"
           },
           "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Keep",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "expr",
           "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Oper has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Oper} \u0026\u0026 !{[.]../P/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n{[.]../../../CmdSrc/Status/Maint}\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Prog} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
           "dataType": "Boolean",
           "name": "Has",
           "value": false,
           "tagType": "AtomicTag"
-        },
+        }
+      ]
+    },
+    {
+      "name": "P",
+      "tagType": "Folder",
+      "tags": [
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -148,6 +122,23 @@
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Keep",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "expr",
+          "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Prog has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Prog} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
+          "dataType": "Boolean",
+          "name": "Has",
           "value": false,
           "tagType": "AtomicTag"
         }
