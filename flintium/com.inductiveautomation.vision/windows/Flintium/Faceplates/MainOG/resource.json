@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-04-21T22:34:28Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "hasAlarms,hasCustomDiagnostics,hasDiagnostics,hasMaintenance,hasOperator,hasTrends,instancePath,label,templateFolder",
+    "lastModificationSignature": "a41713f415422a51f2a8600ce15ec6f62a1ac33534589c63a210e6315be676ad"
+  }
+}
