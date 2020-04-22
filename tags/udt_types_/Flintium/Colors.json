@@ -5,43 +5,8 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Jogging",
-      "value": "#00cbd9",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Closed",
-      "value": "#808080",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Starting",
-      "value": "#00cbd9",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
       "name": "Closing",
       "value": "#00cbd9",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Open",
-      "value": "#FFFFFF",
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "String",
-      "name": "Inactive",
-      "value": "#2B2B2B",
       "tagType": "AtomicTag"
     },
     {
@@ -58,6 +23,13 @@
         {
           "valueSource": "memory",
           "dataType": "String",
+          "name": "Disabled",
+          "value": "#808080",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "memory",
+          "dataType": "String",
           "name": "StaticValue",
           "value": "#000000",
           "tagType": "AtomicTag"
@@ -65,9 +37,30 @@
       ]
     },
     {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Open",
+      "value": "#FFFFFF",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Starting",
+      "value": "#00cbd9",
+      "tagType": "AtomicTag"
+    },
+    {
       "name": "Alarm",
       "tagType": "Folder",
       "tags": [
+        {
+          "valueSource": "memory",
+          "dataType": "String",
+          "name": "PriorityLo",
+          "value": "#FF00FF",
+          "tagType": "AtomicTag"
+        },
         {
           "valueSource": "memory",
           "dataType": "String",
@@ -88,15 +81,29 @@
           "name": "PriorityHi",
           "value": "#FF8C00",
           "tagType": "AtomicTag"
-        },
-        {
-          "valueSource": "memory",
-          "dataType": "String",
-          "name": "PriorityLo",
-          "value": "#FF00FF",
-          "tagType": "AtomicTag"
         }
       ]
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Closed",
+      "value": "#808080",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Inactive",
+      "value": "#2B2B2B",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "Stopped",
+      "value": "#808080",
+      "tagType": "AtomicTag"
     },
     {
       "valueSource": "memory",
@@ -115,15 +122,15 @@
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Opening",
+      "name": "Jogging",
       "value": "#00cbd9",
       "tagType": "AtomicTag"
     },
     {
       "valueSource": "memory",
       "dataType": "String",
-      "name": "Stopped",
-      "value": "#808080",
+      "name": "Opening",
+      "value": "#00cbd9",
       "tagType": "AtomicTag"
     }
   ]

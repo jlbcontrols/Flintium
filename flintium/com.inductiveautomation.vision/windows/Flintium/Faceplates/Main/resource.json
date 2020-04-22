@@ -9,11 +9,11 @@
   ],
   "attributes": {
     "lastModification": {
-      "actor": "external",
-      "timestamp": "2020-04-15T16:44:47Z"
+      "actor": "admin",
+      "timestamp": "2020-04-22T16:46:11Z"
     },
     "xml-format-version": 1,
-    "parameter-names": "hasAlarms,hasCustomDiagnostics,hasDiagnostics,hasMaintenance,hasOperator,hasTrends,instancePath,label,templateFolder",
-    "lastModificationSignature": "d902ac7fea39fb541f19965ee4008a1a719a2a274816b7b3602ce2339160273e"
+    "parameter-names": "hasAlarms,hasCustomDiagnostics,hasDiagnostics,hasMaintenance,hasOperator,hasTrends,instancePath,label,selectedTabName,templateFolder",
+    "lastModificationSignature": "cbbe4e01ac65025fe01539ccae9caf5ae8991df72f381bec49a698939d89f422"
   }
 }

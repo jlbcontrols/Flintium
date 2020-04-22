@@ -9,11 +9,11 @@
   ],
   "attributes": {
     "lastModification": {
-      "actor": "external",
-      "timestamp": "2020-04-15T16:44:47Z"
+      "actor": "admin",
+      "timestamp": "2020-04-22T16:46:11Z"
     },
     "xml-format-version": 1,
-    "parameter-names": "engineeringPages,faultsPages,hideEngineering,hideFaults,hideHmi,hideMaintenance,hmiPages,instancePath,label,maintenancePages,templateFolder",
-    "lastModificationSignature": "b005e0c635fd51fa710403f391c2d6c6a1be53a6ff2942059ec6c0e025f1adb6"
+    "parameter-names": "engineeringPages,faultsPages,hmiPages,instancePath,label,maintenancePages,selectedTabName,templateFolder",
+    "lastModificationSignature": "3edb17fd81973f2a4aa8ed59448a0538dfd1d656a2982268552289746c27bade"
   }
 }
