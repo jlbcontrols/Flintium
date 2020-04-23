@@ -19,36 +19,6 @@
   "tagType": "UdtType",
   "tags": [
     {
-      "name": "Meta",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "valueSource": "expr",
-          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the alarm label,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/Condition},\r\n\t{[.]../Config/Condition}\r\n)",
-          "dataType": "String",
-          "name": "Label",
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Suppressed"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Suppressed",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
       "name": "Cmd",
       "tagType": "Folder",
       "tags": [
@@ -113,6 +83,22 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Shelve"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Shelve",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
                 "binding": "[{PLC}]{PAX Tag}.OCmd_Unshelve"
               },
               "opcServer": {
@@ -122,22 +108,6 @@
               "valueSource": "opc",
               "dataType": "Boolean",
               "name": "Unshelve",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -161,7 +131,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.OCmd_Shelve"
+                "binding": "[{PLC}]{PAX Tag}.OCmd_Reset"
               },
               "opcServer": {
                 "bindType": "parameter",
@@ -169,7 +139,7 @@
               },
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Shelve",
+              "name": "Reset",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -181,7 +151,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Alm"
+        "binding": "[{PLC}]{PAX Tag}.Inp"
       },
       "opcServer": {
         "bindType": "parameter",
@@ -190,31 +160,8 @@
       "accessRights": "Read_Only",
       "valueSource": "opc",
       "dataType": "Boolean",
-      "alarms": [
-        {
-          "setpointA": 1.0,
-          "mode": "Equality",
-          "name": "Alarm",
-          "shelvingAllowed": {
-            "bindType": "Tag",
-            "value": "[.]Config/AllowShelve"
-          },
-          "displayPath": {
-            "bindType": "Tag",
-            "value": "[.]Config/Condition"
-          },
-          "priority": {
-            "bindType": "Expression",
-            "value": "if (\n\t{[.]Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
-          },
-          "enabled": {
-            "bindType": "Tag",
-            "value": "[.]Config/Exists"
-          }
-        }
-      ],
-      "name": "Alarm",
-      "tagGroup": "Flintium Direct",
+      "name": "Inp",
+      "tagGroup": "Flintium Leased",
       "value": false,
       "tagType": "AtomicTag"
     },
@@ -225,7 +172,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
+            "binding": "[{PLC}]{PAX Tag}.Val_SecToUnshelve"
           },
           "opcServer": {
             "bindType": "parameter",
@@ -234,24 +181,7 @@
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Error",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Val_Notify"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "Notify",
+          "name": "SecToUnshelve",
           "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"
@@ -276,7 +206,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Val_SecToUnshelve"
+            "binding": "[{PLC}]{PAX Tag}.Val_Notify"
           },
           "opcServer": {
             "bindType": "parameter",
@@ -284,10 +214,41 @@
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SecToUnshelve",
+          "dataType": "Int4",
+          "name": "Notify",
           "tagGroup": "Flintium Leased",
-          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Meta",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "expr",
+          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the alarm label,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/Cond},\r\n\t{[.]../Config/Cond}\r\n)",
+          "dataType": "String",
+          "name": "Label",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "Tag",
+          "value": "",
           "tagType": "AtomicTag"
         }
       ]
@@ -296,44 +257,6 @@
       "name": "Config",
       "tagType": "Folder",
       "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Exists"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Exists",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.PCfg_AllowExist"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AllowExist",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -356,44 +279,6 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Severity"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "Severity",
-          "value": 0,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_AckReqd"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AckReqd",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Cfg_Cond"
           },
           "tagGroup": {
@@ -406,8 +291,27 @@
           },
           "valueSource": "opc",
           "dataType": "String",
-          "name": "Condition",
+          "name": "Cond",
           "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Exists"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Exists",
+          "value": false,
           "tagType": "AtomicTag"
         },
         {
@@ -451,6 +355,25 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.PCfg_AllowExist"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AllowExist",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Cfg_MaxShelfT"
           },
           "tagGroup": {
@@ -470,7 +393,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+            "binding": "[{PLC}]{PAX Tag}.Cfg_Severity"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -481,9 +404,9 @@
             "binding": "{OPC Server}"
           },
           "valueSource": "opc",
-          "dataType": "String",
-          "name": "Tag",
-          "value": "",
+          "dataType": "Int4",
+          "name": "Severity",
+          "value": 0,
           "tagType": "AtomicTag"
         },
         {
@@ -504,152 +427,23 @@
           "name": "AllowShelve",
           "value": false,
           "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Status",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Ready Ack",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
+            "binding": "[{PLC}]{PAX Tag}.Cfg_AckReqd"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
           },
           "opcServer": {
             "bindType": "parameter",
             "binding": "{OPC Server}"
           },
-          "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Ready Reset",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_AlmInh"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Inhibit",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Error",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Disabled"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Disabled",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Inp"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Inp",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "name": "Error",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Error Timer",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_Severity"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Error Severity",
-          "tagGroup": "Flintium Leased",
+          "name": "AckReqd",
           "value": false,
           "tagType": "AtomicTag"
         }
@@ -666,7 +460,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Ack"
               },
               "opcServer": {
                 "bindType": "parameter",
@@ -675,24 +469,7 @@
               "accessRights": "Read_Only",
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Reset",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Shelve"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Shelve",
+              "name": "Ack",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -717,7 +494,7 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.ORdy_Ack"
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Shelve"
               },
               "opcServer": {
                 "bindType": "parameter",
@@ -726,7 +503,24 @@
               "accessRights": "Read_Only",
               "valueSource": "opc",
               "dataType": "Boolean",
-              "name": "Ack",
+              "name": "Shelve",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.ORdy_Reset"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
@@ -737,6 +531,23 @@
           "name": "M",
           "tagType": "Folder",
           "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "[{PLC}]{PAX Tag}.MRdy_Test"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{OPC Server}"
+              },
+              "accessRights": "Read_Only",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Test",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
             {
               "opcItemPath": {
                 "bindType": "parameter",
@@ -770,25 +581,139 @@
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MRdy_Test"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Only",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Test",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Err_Timer"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Timer",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Err_Severity"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Severity",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Shelved"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Shelved",
+      "tagGroup": "Flintium Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "Status",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Err",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_AlmInh"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Inhibit",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RdyAck",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_RdyAck"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RdyReset",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
         }
       ]
     },
@@ -812,7 +737,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Shelved"
+        "binding": "[{PLC}]{PAX Tag}.Alm"
       },
       "opcServer": {
         "bindType": "parameter",
@@ -821,7 +746,64 @@
       "accessRights": "Read_Only",
       "valueSource": "opc",
       "dataType": "Boolean",
-      "name": "Shelved",
+      "alarms": [
+        {
+          "setpointA": 1.0,
+          "mode": "Equality",
+          "name": "Alarm",
+          "shelvingAllowed": {
+            "bindType": "Tag",
+            "value": "[.]Config/AllowShelve"
+          },
+          "displayPath": {
+            "bindType": "Tag",
+            "value": "[.]Config/Cond"
+          },
+          "priority": {
+            "bindType": "Expression",
+            "value": "if (\n\t{[.]Config/Severity} \u003e\u003d 1 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 250,\n\t\u0027Diagnostic\u0027,\n\tif ( \n\t\t{[.]Config/Severity} \u003e\u003d 251 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 500,\n\t\t\u0027Medium\u0027,\n\t\tif (\n\t\t\t{[.]Config/Severity} \u003e\u003d  751 \u0026\u0026 {[.]Config/Severity} \u003c\u003d 1000,\n\t\t\t\u0027Critical\u0027,\n\t\t\t\u0027Low\u0027\n\t\t\t)\n\t\t)\n\t)"
+          },
+          "enabled": {
+            "bindType": "Tag",
+            "value": "[.]Config/Exists"
+          }
+        }
+      ],
+      "name": "Alarm",
+      "tagGroup": "Flintium Direct",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Disabled"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Disabled",
+      "tagGroup": "Flintium Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Suppressed"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Suppressed",
       "tagGroup": "Flintium Leased",
       "value": false,
       "tagType": "AtomicTag"

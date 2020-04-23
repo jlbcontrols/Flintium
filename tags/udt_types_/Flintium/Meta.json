@@ -21,7 +21,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -33,7 +33,7 @@
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "PLCTag",
+      "name": "Label",
       "value": "",
       "tagType": "AtomicTag"
     },
@@ -52,7 +52,7 @@
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "Description",
+      "name": "Desc",
       "value": "",
       "tagType": "AtomicTag"
     },
@@ -78,7 +78,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
+        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -90,7 +90,7 @@
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "Label",
+      "name": "Tag",
       "value": "",
       "tagType": "AtomicTag"
     }
