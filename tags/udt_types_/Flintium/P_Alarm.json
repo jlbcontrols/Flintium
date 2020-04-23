@@ -757,7 +757,7 @@
           },
           "displayPath": {
             "bindType": "Tag",
-            "value": "[.]Config/Condition"
+            "value": "[.]Config/Cond"
           },
           "priority": {
             "bindType": "Expression",
