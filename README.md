@@ -1,4 +1,4 @@
-# Flintium - Ignition with PlantPAX AOIs
+# Flintium - Ignition Faceplates for PlantPAX AOIs
 
 SOFTWARE  
 -Studio v32.02  
