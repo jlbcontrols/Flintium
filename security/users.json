@@ -1,0 +1,131 @@
+{
+    "userSource": "FlintiumUserSource", 
+    "userList": [
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "fRole_Engr", 
+                "fRole_Maint", 
+                "fRole_MaintSupv", 
+                "fRole_Oper", 
+                "fRole_OperSupv", 
+                "fRole_Area01_Advanced", 
+                "fRole_Area01_Basic"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [], 
+            "username": "defaultEngr"
+        }, 
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "fRole_Maint", 
+                "fRole_Oper", 
+                "fRole_Area01_Advanced", 
+                "fRole_Area01_Basic"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [
+                {
+                    "note": "note1", 
+                    "start": "2020-05-20 9:11:21", 
+                    "available": true, 
+                    "end": "2020-05-20 10:11:21"
+                }, 
+                {
+                    "note": "note2", 
+                    "start": "2020-05-20 10:11:21", 
+                    "available": false, 
+                    "end": "2020-05-20 11:11:21"
+                }, 
+                {
+                    "note": "", 
+                    "start": "2020-05-29 11:11:00", 
+                    "available": true, 
+                    "end": "2020-05-20 12:11:21"
+                }, 
+                {
+                    "note": "note1", 
+                    "start": "2020-05-20 9:11:21", 
+                    "available": true, 
+                    "end": "2020-05-20 10:11:21"
+                }, 
+                {
+                    "note": "note2", 
+                    "start": "2020-05-20 10:11:21", 
+                    "available": false, 
+                    "end": "2020-05-20 11:11:21"
+                }, 
+                {
+                    "note": "", 
+                    "start": "2020-05-29 11:11:00", 
+                    "available": true, 
+                    "end": "2020-05-20 12:11:21"
+                }
+            ], 
+            "username": "defaultMaint"
+        }, 
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "fRole_Maint", 
+                "fRole_MaintSupv", 
+                "fRole_Oper", 
+                "fRole_OperSupv", 
+                "fRole_Area01_Advanced", 
+                "fRole_Area01_Basic"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [], 
+            "username": "defaultMaintSuper"
+        }, 
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "fRole_Oper", 
+                "fRole_Area01_Basic", 
+                "fRole_Area01_Advanced"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [], 
+            "username": "defaultOper"
+        }, 
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "fRole_OperSupv", 
+                "fRole_Oper", 
+                "fRole_Area01_Advanced", 
+                "fRole_Area01_Basic"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [], 
+            "username": "defaultOperSuper"
+        }
+    ]
+}
