@@ -19,14 +19,24 @@
   "tagType": "UdtType",
   "tags": [
     {
-      "name": "Meta",
+      "name": "Error",
       "tagType": "Folder",
       "tags": [
         {
-          "valueSource": "expr",
-          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the gate label,\r\n// otherwise just use the gate label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/GateCond},\r\n\t{[.]../Config/GateCond}\r\n)",
-          "dataType": "String",
-          "name": "Label",
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Err_{TagName}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Timer",
+          "tagGroup": "Flintium Leased",
+          "value": false,
           "tagType": "AtomicTag"
         }
       ]
@@ -44,6 +54,63 @@
       "valueSource": "opc",
       "dataType": "Boolean",
       "name": "Inp",
+      "tagGroup": "Flintium Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "Status",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Gate"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Gate",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{OPC Server}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Err",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "[{PLC}]{PAX Tag}.Out"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Out",
       "tagGroup": "Flintium Leased",
       "value": false,
       "tagType": "AtomicTag"
@@ -94,26 +161,6 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OnDly"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "OnDly",
-          "value": 0.0,
-          "engUnit": "s",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
             "binding": "[{PLC}]{PAX Tag}.Cfg_OffDly"
           },
           "tagGroup": {
@@ -149,65 +196,55 @@
           "name": "InpCond",
           "value": "",
           "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Status",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Err",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Gate"
+            "binding": "[{PLC}]{PAX Tag}.Cfg_OnDly"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
           },
           "opcServer": {
             "bindType": "parameter",
             "binding": "{OPC Server}"
           },
-          "accessRights": "Read_Only",
           "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Gate",
-          "tagGroup": "Flintium Leased",
-          "value": false,
+          "dataType": "Float4",
+          "name": "OnDly",
+          "value": 0.0,
+          "engUnit": "s",
           "tagType": "AtomicTag"
         }
       ]
     },
     {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Out"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Out",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
+      "name": "Meta",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "expr",
+          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent device\u0027s area,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Area}),\r\n\t{[.]../../../Meta/Area},\r\n\t{[.]AltArea}\r\n)",
+          "dataType": "String",
+          "name": "Area",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "expr",
+          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the gate label,\r\n// otherwise just use the gate label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/GateCond},\r\n\t{[.]../Config/GateCond}\r\n)",
+          "dataType": "String",
+          "name": "Label",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "memory",
+          "dataType": "String",
+          "documentation": "If this object is not nested, this will be the Security Area",
+          "name": "AltArea",
+          "tagType": "AtomicTag"
+        }
+      ]
     },
     {
       "name": "Input",
@@ -226,29 +263,6 @@
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Gate",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Error",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_{TagName}"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Timer",
           "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"
