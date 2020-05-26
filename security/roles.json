@@ -1,1 +1,1 @@
-{"userSource": "FlintiumUserSource", "roles": ["fRole_Oper", "fRole_Maint", "fRole_OperSupv", "fRole_MaintSupv", "fRole_Engr", "fRole_Area01_Basic", "fRole_Area01_Advanced"]}
+{"userSource": "FlintiumUserSource", "roles": ["Oper", "Maint", "OperSup", "MaintSup", "Engr", "Area01", "Administrator"]}
