@@ -6,20 +6,21 @@ SOFTWARE
 -Emulate 32.00  
 -Ignition 8.0.6  
 
-IGNITION LOGIN  
-u: admin
-pw: password
-
 SETUP  
 Clone this repo to /Ignition/data/projects  
 Import UDTs into Ignition (files located at /tags/udt_types_/Flintium/...). To import all at once, use the tool located on project window: Administration/Utilities/Export Import All UDTs Individually  
 Import /tags/instance.json into the root Tags folder in the Ignition Designer  
-Import the tag-groups file (/tags/groups folder) into Ignition using the Designer  
+Import the tag-groups file (/tags/groups folder) into Ignition using the Designer   
+Create a Logix Driver device called "plc1" on the gateway webpage  
+Create a database connection called "historydb" on the gateway webpage  
 Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource"  
 Import /security/roles.json using the tool located on project window: Administration/Utilities/Export Import Roles and Users  
 Import /security/users.json using the tool located on proejct window: Administration/Utilities/Export Import Roles and Users  
-Create a Logix Driver device called "plc1" on the gateway webpage  
-Create a database connection called "historydb" on the gateway webpage  
+
+USER SOURCE, USERNAMES & PASSWORDS  
+The project's user source set to 'FlintiumUserSource' by default. Note: This means that users must belong to FlintiumUserSource to log into a client.  
+Default users and roles are imported into the FlintiumUserSource in the SETUP section above.  
+The default password for all imported users is 'password'.  
 
 MODULES  
 Two third party modules are used in this project, but neither are required.  
