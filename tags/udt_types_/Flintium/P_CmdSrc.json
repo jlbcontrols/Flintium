@@ -833,7 +833,7 @@
         },
         {
           "valueSource": "expr",
-          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent device\u0027s area,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Area}),\r\n\t{[.]../../../Meta/Area},\r\n\t{[.]AltArea}\r\n)",
+          "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent device\u0027s area,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../Meta/Area}),\r\n\t{[.]../../Meta/Area},\r\n\t{[.]AltArea}\r\n)",
           "dataType": "String",
           "name": "Area",
           "tagType": "AtomicTag"
