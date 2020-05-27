@@ -10,6 +10,7 @@ class Main():
 		self.diagnostics=diagnostics
 		self.customDiagnostics=customDiagnostics
 		self.alarms=alarms
+		self.advanced=False
 	def getTabDict(self):
 		return {
 			'hasOperator':self.operator,
@@ -17,7 +18,8 @@ class Main():
 			'hasTrends':self.trends,
 			'hasDiagnostics':self.diagnostics,
 			'hasCustomDiagnostics':self.customDiagnostics,
-			'hasAlarms':self.alarms
+			'hasAlarms':self.alarms,
+			'hasAdvanced':self.advanced
 		}
 
 class Advanced():
@@ -33,12 +35,18 @@ class Advanced():
 			'hmiPages':self.hmi,
 			'faultsPages':self.faults
 		}
+	def getTotalPageCount(self):
+		totalCount = 0
+		for pageCount in self.getPageCountDict().values():
+			totalCount+=pageCount
+		return totalCount
 
 class Nav():
 	def __init__(self, name='',main=Main(), advanced=Advanced()):
 		self.name=name
 		self.main=main
 		self.advanced=advanced
+		self.main.advanced = advanced.getTotalPageCount()>0
 
 
 

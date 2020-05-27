@@ -6,13 +6,23 @@
             "notes": null, 
             "contactInfo": [], 
             "roles": [
-                "fRole_Engr", 
-                "fRole_Maint", 
-                "fRole_MaintSupv", 
-                "fRole_Oper", 
-                "fRole_OperSupv", 
-                "fRole_Area01_Advanced", 
-                "fRole_Area01_Basic"
+                "Administrator", 
+                "area01"
+            ], 
+            "language": "en", 
+            "lastname": null, 
+            "schedule": "Always", 
+            "badge": null, 
+            "scheduleAdjustements": [], 
+            "username": "defaultAdmin"
+        }, 
+        {
+            "firstname": null, 
+            "notes": null, 
+            "contactInfo": [], 
+            "roles": [
+                "Engr", 
+                "area01"
             ], 
             "language": "en", 
             "lastname": null, 
@@ -26,10 +36,8 @@
             "notes": null, 
             "contactInfo": [], 
             "roles": [
-                "fRole_Maint", 
-                "fRole_Oper", 
-                "fRole_Area01_Advanced", 
-                "fRole_Area01_Basic"
+                "Maint", 
+                "area01"
             ], 
             "language": "en", 
             "lastname": null, 
@@ -80,28 +88,23 @@
             "notes": null, 
             "contactInfo": [], 
             "roles": [
-                "fRole_Maint", 
-                "fRole_MaintSupv", 
-                "fRole_Oper", 
-                "fRole_OperSupv", 
-                "fRole_Area01_Advanced", 
-                "fRole_Area01_Basic"
+                "MaintSup", 
+                "area01"
             ], 
             "language": "en", 
             "lastname": null, 
             "schedule": "Always", 
             "badge": null, 
             "scheduleAdjustements": [], 
-            "username": "defaultMaintSuper"
+            "username": "defaultMaintSup"
         }, 
         {
             "firstname": null, 
             "notes": null, 
             "contactInfo": [], 
             "roles": [
-                "fRole_Oper", 
-                "fRole_Area01_Basic", 
-                "fRole_Area01_Advanced"
+                "Oper", 
+                "area01"
             ], 
             "language": "en", 
             "lastname": null, 
@@ -115,10 +118,8 @@
             "notes": null, 
             "contactInfo": [], 
             "roles": [
-                "fRole_OperSupv", 
-                "fRole_Oper", 
-                "fRole_Area01_Advanced", 
-                "fRole_Area01_Basic"
+                "OperSup", 
+                "area01"
             ], 
             "language": "en", 
             "lastname": null, 
