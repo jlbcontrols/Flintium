@@ -56,7 +56,20 @@ P_VSD = Nav(
 	name='P_VSD',
 	advanced=Advanced(
 		engineering=5,
-		faults=0
+		faults=0,
+		hmi=2
+	)
+)
+
+P_MotorRev = Nav(
+	name='P_MotorRev',
+	main=Main(
+		trends=False
+	),
+	advanced=Advanced(
+		engineering=2,
+		faults=0,
+		hmi=2
 	)
 )
 
@@ -177,7 +190,7 @@ P_Alarm = Nav(
 
 
 def getNavObject(udtTypeName):
-	navList = [P_VSD, P_PIDE, P_AIn, P_Intlk, P_Perm, P_CmdSrc, P_Gate, P_Alarm, P_ValveC, P_ValveSO]
+	navList = [P_VSD, P_MotorRev, P_PIDE, P_AIn, P_Intlk, P_Perm, P_CmdSrc, P_Gate, P_Alarm, P_ValveC, P_ValveSO]
 	for obj in navList:
 		if(obj.name==udtTypeName):
 			return obj	
