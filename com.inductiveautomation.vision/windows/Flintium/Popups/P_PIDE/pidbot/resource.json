@@ -9,11 +9,11 @@
   ],
   "attributes": {
     "lastModification": {
-      "actor": "external",
-      "timestamp": "2020-04-15T16:44:47Z"
+      "actor": "admin",
+      "timestamp": "2020-05-31T19:09:51Z"
     },
     "xml-format-version": 1,
     "parameter-names": "instancePath,label",
-    "lastModificationSignature": "fe3e05cde8d2f04b9277971e45b04096c821603afc232ab89a2bfbd5bf9db735"
+    "lastModificationSignature": "54f501447bc97aa17e443c583f2fb4f7530d356442119a27c2ff6dd09960c86b"
   }
 }
