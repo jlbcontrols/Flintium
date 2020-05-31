@@ -10,10 +10,10 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2020-05-23T23:51:18Z"
+      "timestamp": "2020-05-31T18:56:02Z"
     },
     "xml-format-version": 1,
     "parameter-names": "hasAdvanced,hasAlarms,hasCustomDiagnostics,hasDiagnostics,hasMaintenance,hasOperator,hasTrends,instancePath,label,selectedTabName,templateFolder",
-    "lastModificationSignature": "4fe5f0f51135600e8515fffc79428098758f6d5a3aafed8c0994a6d78f41631f"
+    "lastModificationSignature": "d5f71498304c17c8faf6183910e53ae5599edfb5638142c0cdf0fd93897f0166"
   }
 }
