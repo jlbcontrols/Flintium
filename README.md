@@ -4,7 +4,7 @@ SOFTWARE
 -Studio v32.02  
 -PlantPAx_Process_Library_v4.10.01  
 -Emulate 32.00  
--Ignition 8.0.6  
+-Ignition 8.0.12  
 
 SETUP  
 Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
