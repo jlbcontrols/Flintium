@@ -1,6 +1,7 @@
 {
-  "title": "",
-  "description": "",
+  "title": "Flintium",
+  "description": "Faceplates for Rockwell PlantPAx_Process_Library_v4.10.01",
+  "parent": "",
   "enabled": true,
-  "inheritable": false
+  "inheritable": true
 }
