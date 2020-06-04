@@ -1684,7 +1684,7 @@
       "tags": [
         {
           "valueSource": "expr",
-          "expression": "if(\r\n\t{[.]../Output/Out},\r\n\t\"Open\",\r\n\t\"Closed\"\r\n)",
+          "expression": "if(\r\n\t!{[.]../Input/Sim},\r\n\tif(\r\n\t\t{[.]../Output/Out},\r\n\t\t\"Active\",\r\n\t\t\"Inactive\"\r\n\t),\r\n\tif(\r\n\t\t{[.]../Config/FailOpen},\r\n\t\tif(\t\t\r\n\t\t\t{[.]../Status/Closed} || {[.]../Status/Closing},\r\n\t\t\t\"Active\",\r\n\t\t\t\"Inactive\"\r\n\t\t),\r\n\t\tif(\r\n\t\t\t{[.]../Status/Opened} || {[.]../Status/Opening},\r\n\t\t\t\"Active\",\r\n\t\t\t\"Inactive\"\r\n\t\t)\r\n\t)\r\n)",
           "dataType": "String",
           "name": "StsColorKey1",
           "executionMode": "EventDriven",
