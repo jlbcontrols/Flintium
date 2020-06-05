@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/46946127/83900821-f093c280-a727-11ea-9bd5-7f5cd4714d05.png"/><br/>
+  <img src="https://user-images.githubusercontent.com/46946127/83900821-f093c280-a727-11ea-9bd5-7f5cd4714d05.png" alt="Flintium"/><br/>
 </p>  
 
-# Flintium: Ignition Faceplates for Rockwell Process Library AOIs
+# Ignition Faceplates for Rockwell Process Library AOIs
 
 ## Software  
 * Studio v32.02  
