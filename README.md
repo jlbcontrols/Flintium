@@ -1,33 +1,33 @@
-# Flintium - Ignition Faceplates for PlantPAX AOIs
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/46946127/83900821-f093c280-a727-11ea-9bd5-7f5cd4714d05.png"/><br/>
+</p>  
 
-SOFTWARE  
--Studio v32.02  
--PlantPAx_Process_Library_v4.10.01  
--Emulate 32.00  
--Ignition 8.0.12  
+# Flintium: Ignition Faceplates for Rockwell Process Library AOIs
 
-SETUP  
-Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
-Import UDTs into Ignition (files located at /flintium-tags/udt_types_/Flintium/...). To import all at once, use the tool located on project window: Flintium/Administration/Utilities/ExportImportUDTs  
-Import /flintium-tags/instance.json into the root Tags folder in the Ignition Designer  
-Import the tag-groups file (/flintium-tags/groups folder) into Ignition using the Designer   
-Create a Logix Driver device called "plc1" on the gateway webpage  
-Create a database connection called "historydb" on the gateway webpage  
-Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource"  
-Import /flintium-security/roles.json using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
-Import /flintium-security/users.json using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
+## Software  
+* Studio v32.02  
+* PlantPAx_Process_Library_v4.10.01  
+* Emulate v32.00  
+* Ignition v8.0.12  
 
-USER SOURCE, USERNAMES & PASSWORDS  
+## Setup  
+* Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
+* Import UDTs into Ignition (files located at /flintium-tags/udt_types_/Flintium/...). To import all at once, use the tool located on project window: Flintium/Administration/Utilities/ExportImportUDTs  
+* Import /flintium-tags/instance.json into the root Tags folder in the Ignition Designer  
+* Import the tag-groups file (/flintium-tags/groups folder) into Ignition using the Designer   
+* Create a Logix Driver device called "plc1" on the gateway webpage  
+* Create a database connection called "historydb" on the gateway webpage  
+* Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource"  
+* Import /flintium-security/roles.json using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
+* Import /flintium-security/users.json using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
+
+## User Source, Usernames & Passwords 
 The project's user source is 'FlintiumUserSource' by default. Note: This means that users must belong to FlintiumUserSource to log into a client.  
 Default users and roles are imported into the FlintiumUserSource in the SETUP section above.  
 The default password for all imported users is 'password'.  
 If logging into the designer with default (or other) user source - To have full permissions for all example project faceplates in the designer, add these roles to your user: 'Administrator' and 'area01'.  
 
-MODULES  
-Two third party modules are used in this project, but neither are required.  
--pidbot: used for PIDE tuning faceplate.  Download the latest version at jlbcontrols.com/pidbot.  
--tagScriptModule: used to automate configuration of UDTs.  Converts PlantPax UDTs from OPC drag/drop closer to the format required for this project.  Included in the flintium-modules folder.
-
-ALLOW UNSIGNED MODULES (Only needed if using the tagScriptModule)  
-Modify /Ignition/data/ignition.conf to add this line to #Java Additional Parameters:  
-wrapper.java.additional.4=-Dignition.allowunsignedmodules=true
+## Modules 
+Two third party modules are used in this project.  
+* pidbot: Used for PIDE tuning faceplate. Download the latest version at jlbcontrols.com/pidbot.  
+* tagScriptModule: Used to automate configuration of UDTs. This module is used for development only, and is not required when using the Flintium library. Converts PlantPax UDTs from OPC drag/drop closer to the format required for this project. The modl file is included in the flintium-modules folder. If using the tagScriptModule, you need to allow unsigned modules in your /Ignition/data/ignition.conf file, by adding this line to #Java Additional Parameters: ```wrapper.java.additional.4=-Dignition.allowunsignedmodules=true```
