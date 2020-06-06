@@ -19,7 +19,7 @@
       "bindType": "parameter",
       "binding": "{History DB}"
     },
-    "Enable": "False"
+    "Record": "False"
   },
   "tagType": "UdtType",
   "tags": [
@@ -34,7 +34,7 @@
       },
       "enabled": {
         "bindType": "parameter",
-        "binding": "{Enable}"
+        "binding": "{Record}"
       },
       "opcServer": {
         "bindType": "parameter",
@@ -43,13 +43,18 @@
       "accessRights": "Read_Only",
       "valueSource": "opc",
       "historyTimeDeadband": 0.0,
-      "dataType": "Float4",
-      "historicalDeadband": 0.0,
-      "historyEnabled": true,
-      "name": "PV",
+      "historyMaxAge": 0,
+      "historicalDeadband": -1.0,
+      "historicalDeadbandStyle": "Discrete",
       "tagGroup": "Flintium Direct-Fast",
+      "historyTagGroup": "Flintium Direct-Fast",
+      "tagType": "AtomicTag",
+      "dataType": "Float4",
+      "historyMaxAgeUnits": "HOUR",
+      "historyEnabled": true,
+      "name": "CVOut",
       "value": 0.0,
-      "tagType": "AtomicTag"
+      "sampleMode": "TagGroup"
     },
     {
       "opcItemPath": {
@@ -62,7 +67,7 @@
       },
       "enabled": {
         "bindType": "parameter",
-        "binding": "{Enable}"
+        "binding": "{Record}"
       },
       "opcServer": {
         "bindType": "parameter",
@@ -71,15 +76,16 @@
       "accessRights": "Read_Only",
       "valueSource": "opc",
       "historyTimeDeadband": 0.0,
-      "historicalDeadband": 0.0,
-      "dataType": "Float4",
+      "historicalDeadband": -1.0,
       "historicalDeadbandStyle": "Discrete",
-      "historyEnabled": true,
-      "name": "CVOut",
       "tagGroup": "Flintium Direct-Fast",
-      "value": 0.0,
+      "historyTagGroup": "Flintium Direct-Fast",
       "tagType": "AtomicTag",
-      "sampleMode": "OnChange"
+      "dataType": "Float4",
+      "historyEnabled": true,
+      "name": "PV",
+      "value": 0.0,
+      "sampleMode": "TagGroup"
     }
   ]
 }
