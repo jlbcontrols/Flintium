@@ -34,6 +34,25 @@
       },
       "sourceTagPath": {
         "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Config/CVEUMax"
+      },
+      "valueSource": "memory",
+      "dataType": "Float8",
+      "historicalDeadband": 0.0,
+      "historicalDeadbandStyle": "Discrete",
+      "name": "processGain",
+      "historyEnabled": true,
+      "deadband": 0.0,
+      "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
+    },
+    {
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{TuningDB}"
+      },
+      "sourceTagPath": {
+        "bindType": "parameter",
         "binding": "{P_PIDE_Path}/Config/PVEUMin"
       },
       "valueSource": "reference",
@@ -53,13 +72,13 @@
       },
       "sourceTagPath": {
         "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/IGain"
+        "binding": "{P_PIDE_Path}/Config/CVEUMax"
       },
-      "valueSource": "reference",
+      "valueSource": "memory",
       "dataType": "Float8",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "currentI",
+      "name": "processDeadTime",
       "historyEnabled": true,
       "deadband": 0.0,
       "historyTimeDeadbandUnits": "MIN",
@@ -68,37 +87,16 @@
     {
       "historyProvider": {
         "bindType": "parameter",
-        "binding": "{Tuning DB}"
+        "binding": "{TuningDB}"
       },
-      "sourceTagPath": {
-        "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Meta/Label"
-      },
-      "valueSource": "reference",
-      "accessRights": "Read_Only",
-      "dataType": "String",
+      "valueSource": "memory",
+      "dataType": "Int4",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "loopName",
-      "historyEnabled": false,
-      "deadband": 0.0,
-      "tagType": "AtomicTag"
-    },
-    {
-      "historyProvider": {
-        "bindType": "parameter",
-        "binding": "{TuningDB}"
-      },
-      "sourceTagPath": {
-        "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/Depend"
-      },
-      "valueSource": "reference",
-      "dataType": "Int4",
-      "historicalDeadbandStyle": "Discrete",
-      "name": "pidForm",
+      "name": "processType",
       "historyEnabled": true,
       "historyTimeDeadbandUnits": "MIN",
+      "value": 0,
       "tagType": "AtomicTag"
     },
     {
@@ -108,30 +106,13 @@
       },
       "sourceTagPath": {
         "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/CtrlAction"
-      },
-      "valueSource": "reference",
-      "dataType": "Int4",
-      "historicalDeadbandStyle": "Discrete",
-      "name": "pidAction",
-      "historyEnabled": true,
-      "historyTimeDeadbandUnits": "MIN",
-      "tagType": "AtomicTag"
-    },
-    {
-      "historyProvider": {
-        "bindType": "parameter",
-        "binding": "{TuningDB}"
-      },
-      "sourceTagPath": {
-        "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/PVEUMax"
+        "binding": "{P_PIDE_Path}/Config/DGain"
       },
       "valueSource": "reference",
       "dataType": "Float8",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "pvScaleHigh",
+      "name": "currentD",
       "historyEnabled": true,
       "deadband": 0.0,
       "historyTimeDeadbandUnits": "MIN",
@@ -178,16 +159,20 @@
     {
       "historyProvider": {
         "bindType": "parameter",
-        "binding": "{TuningDB}"
+        "binding": "{Tuning DB}"
       },
-      "valueSource": "memory",
-      "dataType": "Int4",
+      "sourceTagPath": {
+        "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Meta/Label"
+      },
+      "valueSource": "reference",
+      "accessRights": "Read_Only",
+      "dataType": "String",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "processType",
-      "historyEnabled": true,
-      "historyTimeDeadbandUnits": "MIN",
-      "value": 0,
+      "name": "loopName",
+      "historyEnabled": false,
+      "deadband": 0.0,
       "tagType": "AtomicTag"
     },
     {
@@ -217,13 +202,30 @@
       },
       "sourceTagPath": {
         "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/DGain"
+        "binding": "{P_PIDE_Path}/Config/CtrlAction"
+      },
+      "valueSource": "reference",
+      "dataType": "Int4",
+      "historicalDeadbandStyle": "Discrete",
+      "name": "pidAction",
+      "historyEnabled": true,
+      "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
+    },
+    {
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{TuningDB}"
+      },
+      "sourceTagPath": {
+        "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Config/PVEUMax"
       },
       "valueSource": "reference",
       "dataType": "Float8",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "currentD",
+      "name": "pvScaleHigh",
       "historyEnabled": true,
       "deadband": 0.0,
       "historyTimeDeadbandUnits": "MIN",
@@ -232,7 +234,58 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_{TagName}"
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_PV"
+      },
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{TuningDB}"
+      },
+      "enabled": {
+        "bindType": "parameter",
+        "binding": "{Recording}"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{OPC Server}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "historyTimeDeadband": 0.0,
+      "historicalDeadband": -1.0,
+      "historicalDeadbandStyle": "Discrete",
+      "tagGroup": "Flintium Direct-Fast",
+      "historyTagGroup": "Flintium Direct-Fast",
+      "tagType": "AtomicTag",
+      "dataType": "Float4",
+      "historyEnabled": true,
+      "name": "pv",
+      "deadband": 0.0,
+      "value": 0.0,
+      "sampleMode": "TagGroup"
+    },
+    {
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{TuningDB}"
+      },
+      "sourceTagPath": {
+        "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Config/CVEUMax"
+      },
+      "valueSource": "reference",
+      "dataType": "Float8",
+      "historicalDeadband": 0.0,
+      "historicalDeadbandStyle": "Discrete",
+      "name": "cvScaleHigh",
+      "historyEnabled": true,
+      "deadband": 0.0,
+      "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_CVOut"
       },
       "historyProvider": {
         "bindType": "parameter",
@@ -270,49 +323,53 @@
       },
       "sourceTagPath": {
         "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Config/CVEUMax"
+        "binding": "{P_PIDE_Path}/Config/Depend"
+      },
+      "valueSource": "reference",
+      "dataType": "Int4",
+      "historicalDeadbandStyle": "Discrete",
+      "name": "pidForm",
+      "historyEnabled": true,
+      "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
+    },
+    {
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{TuningDB}"
+      },
+      "sourceTagPath": {
+        "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Config/IGain"
       },
       "valueSource": "reference",
       "dataType": "Float8",
       "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "name": "cvScaleHigh",
+      "name": "currentI",
       "historyEnabled": true,
       "deadband": 0.0,
       "historyTimeDeadbandUnits": "MIN",
       "tagType": "AtomicTag"
     },
     {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Val_{TagName}"
-      },
       "historyProvider": {
         "bindType": "parameter",
         "binding": "{TuningDB}"
       },
-      "enabled": {
+      "sourceTagPath": {
         "bindType": "parameter",
-        "binding": "{Recording}"
+        "binding": "{P_PIDE_Path}/Config/CVEUMax"
       },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "historyTimeDeadband": 0.0,
-      "historicalDeadband": -1.0,
+      "valueSource": "memory",
+      "dataType": "Float8",
+      "historicalDeadband": 0.0,
       "historicalDeadbandStyle": "Discrete",
-      "tagGroup": "Flintium Direct-Fast",
-      "historyTagGroup": "Flintium Direct-Fast",
-      "tagType": "AtomicTag",
-      "dataType": "Float4",
+      "name": "processTimeConst",
       "historyEnabled": true,
-      "name": "pv",
       "deadband": 0.0,
-      "value": 0.0,
-      "sampleMode": "TagGroup"
+      "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
     }
   ]
 }
