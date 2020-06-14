@@ -72,7 +72,7 @@
     {
       "historyProvider": {
         "bindType": "parameter",
-        "binding": "{TuningDB}"
+        "binding": "{HistoryDB}"
       },
       "sourceTagPath": {
         "bindType": "parameter",
@@ -291,7 +291,7 @@
     {
       "historyProvider": {
         "bindType": "parameter",
-        "binding": "{TuningDB}"
+        "binding": "{HistoryDB}"
       },
       "sourceTagPath": {
         "bindType": "parameter",
