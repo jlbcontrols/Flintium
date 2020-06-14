@@ -1,5 +1,5 @@
 {
-  "scope": "A",
+  "scope": "DG",
   "version": 1,
   "restricted": false,
   "overridable": true,
@@ -9,8 +9,8 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2020-06-06T18:48:18Z"
+      "timestamp": "2020-06-12T21:42:55Z"
     },
-    "lastModificationSignature": "e5d9ebc2546c2980df6117f4523ae8131405563a5ae51fe59f9393a79b44aeb4"
+    "lastModificationSignature": "02d74b655635bda144748a03788343dde71199ef21df9629cd68d86a93a6c033"
   }
 }
