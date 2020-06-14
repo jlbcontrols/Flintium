@@ -78,14 +78,11 @@
         "bindType": "parameter",
         "binding": "{P_PIDE_Path}/Config/Depend"
       },
-      "historyEnabled": {
-        "bindType": "parameter",
-        "binding": "{HistoryDB}"
-      },
       "valueSource": "reference",
       "dataType": "Int4",
       "historicalDeadbandStyle": "Discrete",
       "name": "pidForm",
+      "historyEnabled": true,
       "historyTimeDeadbandUnits": "MIN",
       "tagType": "AtomicTag"
     },
@@ -111,25 +108,6 @@
     {
       "historyProvider": {
         "bindType": "parameter",
-        "binding": "{Tuning DB}"
-      },
-      "sourceTagPath": {
-        "bindType": "parameter",
-        "binding": "{P_PIDE_Path}/Meta/Label"
-      },
-      "valueSource": "reference",
-      "accessRights": "Read_Only",
-      "dataType": "String",
-      "historicalDeadband": 0.0,
-      "historicalDeadbandStyle": "Discrete",
-      "name": "loopName",
-      "historyEnabled": false,
-      "deadband": 0.0,
-      "tagType": "AtomicTag"
-    },
-    {
-      "historyProvider": {
-        "bindType": "parameter",
         "binding": "{HistoryDB}"
       },
       "sourceTagPath": {
@@ -144,6 +122,25 @@
       "historyEnabled": true,
       "deadband": 0.0,
       "historyTimeDeadbandUnits": "MIN",
+      "tagType": "AtomicTag"
+    },
+    {
+      "historyProvider": {
+        "bindType": "parameter",
+        "binding": "{Tuning DB}"
+      },
+      "sourceTagPath": {
+        "bindType": "parameter",
+        "binding": "{P_PIDE_Path}/Meta/Label"
+      },
+      "valueSource": "reference",
+      "accessRights": "Read_Only",
+      "dataType": "String",
+      "historicalDeadband": 0.0,
+      "historicalDeadbandStyle": "Discrete",
+      "name": "loopName",
+      "historyEnabled": false,
+      "deadband": 0.0,
       "tagType": "AtomicTag"
     },
     {
@@ -300,14 +297,11 @@
         "bindType": "parameter",
         "binding": "{P_PIDE_Path}/Config/CtrlAction"
       },
-      "historyEnabled": {
-        "bindType": "parameter",
-        "binding": "{HistoryDB}"
-      },
       "valueSource": "reference",
       "dataType": "Int4",
       "historicalDeadbandStyle": "Discrete",
       "name": "pidAction",
+      "historyEnabled": true,
       "historyTimeDeadbandUnits": "MIN",
       "tagType": "AtomicTag"
     },
