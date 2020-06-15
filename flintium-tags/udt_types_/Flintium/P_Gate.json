@@ -3,118 +3,25 @@
   "name": "P_Gate",
   "value": 0,
   "parameters": {
-    "PLC": {
+    "plcName": {
       "bindType": "parameter",
-      "binding": "{PLC}"
+      "binding": "{plcName}"
     },
-    "OPC Server": {
+    "opcPrefix": {
       "bindType": "parameter",
-      "binding": "{OPC Server}"
+      "binding": "{opcPrefix}"
     },
-    "PAX Tag": {
+    "opcServName": {
       "bindType": "parameter",
-      "binding": "{PAX Tag}"
+      "binding": "{opcServName}"
+    },
+    "plcTag": {
+      "bindType": "parameter",
+      "binding": "{plcTag}"
     }
   },
   "tagType": "UdtType",
   "tags": [
-    {
-      "name": "Error",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Err_{TagName}"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Timer",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Inp"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Inp",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
-    {
-      "name": "Status",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Gate"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Gate",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Err"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Err",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Out"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{OPC Server}"
-      },
-      "accessRights": "Read_Only",
-      "valueSource": "opc",
-      "dataType": "Boolean",
-      "name": "Out",
-      "tagGroup": "Flintium Leased",
-      "value": false,
-      "tagType": "AtomicTag"
-    },
     {
       "name": "Config",
       "tagType": "Folder",
@@ -122,7 +29,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_GateCond"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_GateCond"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -130,7 +37,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "String",
@@ -141,7 +48,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_GateDly"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OffDly"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -149,27 +56,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "GateDly",
-          "value": 0.0,
-          "engUnit": "s",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OffDly"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Float4",
@@ -181,7 +68,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_InpCond"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_InpCond"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -189,7 +76,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "String",
@@ -200,7 +87,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OnDly"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OnDly"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -208,7 +95,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Float4",
@@ -216,13 +103,97 @@
           "value": 0.0,
           "engUnit": "s",
           "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_GateDly"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "GateDly",
+          "value": 0.0,
+          "engUnit": "s",
+          "tagType": "AtomicTag"
         }
       ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{opcServName}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Inp",
+      "tagGroup": "Flintium Leased",
+      "value": false,
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "Input",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_Gate"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Gate",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Out"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{opcServName}"
+      },
+      "accessRights": "Read_Only",
+      "valueSource": "opc",
+      "dataType": "Boolean",
+      "name": "Out",
+      "tagGroup": "Flintium Leased",
+      "value": false,
+      "tagType": "AtomicTag"
     },
     {
       "name": "Meta",
       "tagType": "Folder",
       "tags": [
+        {
+          "valueSource": "memory",
+          "dataType": "String",
+          "documentation": "If this object is not nested, this will be the Security Area",
+          "name": "AltArea",
+          "tagType": "AtomicTag"
+        },
         {
           "valueSource": "expr",
           "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent device\u0027s area,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Area}),\r\n\t{[.]../../../Meta/Area},\r\n\t{[.]AltArea}\r\n)",
@@ -236,33 +207,66 @@
           "dataType": "String",
           "name": "Label",
           "tagType": "AtomicTag"
-        },
-        {
-          "valueSource": "memory",
-          "dataType": "String",
-          "documentation": "If this object is not nested, this will be the Security Area",
-          "name": "AltArea",
-          "tagType": "AtomicTag"
         }
       ]
     },
     {
-      "name": "Input",
+      "name": "Error",
       "tagType": "Folder",
       "tags": [
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Inp_Gate"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Timer",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Gate"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "accessRights": "Read_Only",
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Gate",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Err"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Err",
           "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"

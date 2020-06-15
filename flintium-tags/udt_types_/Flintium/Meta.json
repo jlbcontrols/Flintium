@@ -3,17 +3,21 @@
   "name": "Meta",
   "value": 0,
   "parameters": {
-    "PLC": {
+    "plcName": {
       "bindType": "parameter",
-      "binding": "{PLC}"
+      "binding": "{plcName}"
     },
-    "OPC Server": {
+    "opcPrefix": {
       "bindType": "parameter",
-      "binding": "{OPC Server}"
+      "binding": "{opcPrefix}"
     },
-    "PAX Tag": {
+    "opcServName": {
       "bindType": "parameter",
-      "binding": "{PAX Tag}"
+      "binding": "{opcServName}"
+    },
+    "plcTag": {
+      "bindType": "parameter",
+      "binding": "{plcTag}"
     }
   },
   "tagType": "UdtType",
@@ -21,7 +25,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Label"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Label"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -29,7 +33,7 @@
       },
       "opcServer": {
         "bindType": "parameter",
-        "binding": "{OPC Server}"
+        "binding": "{opcServName}"
       },
       "valueSource": "opc",
       "dataType": "String",
@@ -40,7 +44,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Desc"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Tag"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -48,18 +52,18 @@
       },
       "opcServer": {
         "bindType": "parameter",
-        "binding": "{OPC Server}"
+        "binding": "{opcServName}"
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "Desc",
+      "name": "Tag",
       "value": "",
       "tagType": "AtomicTag"
     },
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Area"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Area"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -67,7 +71,7 @@
       },
       "opcServer": {
         "bindType": "parameter",
-        "binding": "{OPC Server}"
+        "binding": "{opcServName}"
       },
       "valueSource": "opc",
       "dataType": "String",
@@ -78,7 +82,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "[{PLC}]{PAX Tag}.Cfg_Tag"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Desc"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -86,11 +90,11 @@
       },
       "opcServer": {
         "bindType": "parameter",
-        "binding": "{OPC Server}"
+        "binding": "{opcServName}"
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "Tag",
+      "name": "Desc",
       "value": "",
       "tagType": "AtomicTag"
     }

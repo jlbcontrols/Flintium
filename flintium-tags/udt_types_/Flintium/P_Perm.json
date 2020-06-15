@@ -1,371 +1,25 @@
 {
   "name": "P_Perm",
   "parameters": {
-    "PLC": {
+    "plcName": {
       "bindType": "parameter",
-      "binding": "{PLC}"
+      "binding": "{plcName}"
     },
-    "OPC Server": {
+    "opcPrefix": {
       "bindType": "parameter",
-      "binding": "{OPC Server}"
+      "binding": "{opcPrefix}"
     },
-    "PAX TAG": {
+    "opcServName": {
       "bindType": "parameter",
-      "binding": "{PAX Tag}"
+      "binding": "{opcServName}"
+    },
+    "plcTag": {
+      "bindType": "parameter",
+      "binding": "{plcTag}"
     }
   },
   "tagType": "UdtType",
   "tags": [
-    {
-      "name": "Status",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.8"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm08",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.10"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm10",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "NBPermOK",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.11"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm11",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.9"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm09",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.15"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm15",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.1"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm01",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.12"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm12",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.5"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm05",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int2",
-          "name": "Perm",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "BypActive",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.13"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm13",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.3"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm03",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.0"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm00",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.7"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm07",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.6"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm06",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.14"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm14",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.4"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm04",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Sts_Perm.2"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "accessRights": "Read_Only",
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm02",
-          "tagGroup": "Flintium Leased",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PermOK",
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
     {
       "name": "Set",
       "tagType": "Folder",
@@ -377,248 +31,11 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.12"
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.15"
               },
               "opcServer": {
                 "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass12",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.4"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass04",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.2"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass02",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.1"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass01",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.6"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass06",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.13"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass13",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.11"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass11",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_{TagName}"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "valueSource": "opc",
-              "dataType": "Int4",
-              "name": "Bypass",
-              "tagGroup": "Flintium Leased",
-              "value": 0,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.7"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass07",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.0"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass00",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.14"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass14",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.5"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass05",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.3"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass03",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.10"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
-              },
-              "accessRights": "Read_Write",
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass10",
-              "tagGroup": "Flintium Leased",
-              "value": false,
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.15"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{OPC Server}"
+                "binding": "{opcServName}"
               },
               "accessRights": "Read_Write",
               "valueSource": "opc",
@@ -631,11 +48,45 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.8"
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.7"
               },
               "opcServer": {
                 "bindType": "parameter",
-                "binding": "{OPC Server}"
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass07",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.5"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass05",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.8"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
               },
               "accessRights": "Read_Write",
               "valueSource": "opc",
@@ -648,11 +99,62 @@
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "[{PLC}]{PAX Tag}.MSet_Bypass.9"
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.2"
               },
               "opcServer": {
                 "bindType": "parameter",
-                "binding": "{OPC Server}"
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass02",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.11"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass11",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.1"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass01",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.9"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
               },
               "accessRights": "Read_Write",
               "valueSource": "opc",
@@ -661,8 +163,472 @@
               "tagGroup": "Flintium Leased",
               "value": false,
               "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.3"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass03",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.13"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass13",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.12"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass12",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.0"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass00",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.6"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass06",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.4"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass04",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.10"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass10",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.14"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "accessRights": "Read_Write",
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass14",
+              "tagGroup": "Flintium Leased",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_{TagName}"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Int4",
+              "name": "Bypass",
+              "tagGroup": "Flintium Leased",
+              "value": 0,
+              "tagType": "AtomicTag"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Input",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm05",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm10",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm08",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm06",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm13",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm04",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm02",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm14",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm11",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm12",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm03",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm01",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm15",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "BypActive",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm00",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm07",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm09",
+          "tagType": "AtomicTag"
         }
       ]
     },
@@ -674,331 +640,19 @@
       "tagType": "UdtInstance",
       "tags": [
         {
-          "name": "Area",
-          "tagType": "AtomicTag"
-        },
-        {
-          "name": "PLCTag",
-          "tagType": "AtomicTag"
-        },
-        {
-          "name": "Description",
+          "name": "Tag",
           "tagType": "AtomicTag"
         },
         {
           "name": "Label",
           "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Input",
-      "tagType": "Folder",
-      "tags": [
+        },
         {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm01",
+          "name": "Desc",
           "tagType": "AtomicTag"
         },
         {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm04",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm09",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm13",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm11",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm06",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm00",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm03",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm12",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm07",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm10",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm05",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm02",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm08",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm15",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Perm14",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "BypActive",
+          "name": "Area",
           "tagType": "AtomicTag"
         }
       ]
@@ -1010,7 +664,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[4]"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.1"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1018,821 +672,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText04",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.2"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState02",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.12"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable12",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[11]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText11",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.5"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState05",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.14"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable14",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.8"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable08",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.0"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable00",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.11"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState11",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[13]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText13",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.10"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState10",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[8]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText08",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.15"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState15",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.6"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState06",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[15]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText15",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int2",
-          "name": "Bypassable",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.1"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable01",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.3"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable03",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.4"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState04",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[14]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText14",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.8"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState08",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[0]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText00",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.10"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable10",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[1]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText01",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.7"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState07",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.11"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable11",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.3"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState03",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.2"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable02",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.13"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable13",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.12"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState12",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.7"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable07",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.14"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState14",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int2",
-          "name": "OKState",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[7]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText07",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.6"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable06",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int2",
-          "name": "HasNav",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.9"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState09",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[10]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText10",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.0"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState00",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[12]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText12",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.13"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "OkState13",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.5"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypassable05",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[3]"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText03",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_OKState.1"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
@@ -1843,7 +683,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[2]"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.11"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1851,37 +691,18 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "CondText02",
-          "value": "",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.4"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Bypassable04",
+          "name": "OkState11",
           "value": false,
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.9"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.10"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1889,18 +710,18 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Bypassable09",
+          "name": "Bypassable10",
           "value": false,
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_{TagName}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.2"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1908,7 +729,26 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable02",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
@@ -1918,7 +758,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[5]"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.0"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1926,18 +766,37 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState00",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[8]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "String",
-          "name": "CondText05",
+          "name": "CondText08",
           "value": "",
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[9]"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.8"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1945,7 +804,140 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable08",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[15]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText15",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.5"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable05",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[14]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText14",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.9"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState09",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[12]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText12",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.6"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable06",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[9]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "String",
@@ -1956,7 +948,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_CondTxt[6]"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[10]"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1964,7 +956,386 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText10",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.15"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState15",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.9"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable09",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.6"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState06",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.14"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState14",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[0]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText00",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.5"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState05",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[11]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText11",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[5]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText05",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.4"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState04",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.13"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable13",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.11"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable11",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.3"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState03",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[7]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText07",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[2]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText02",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.12"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState12",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[3]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText03",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.3"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable03",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int2",
+          "name": "OKState",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.7"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState07",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[6]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "String",
@@ -1975,7 +1346,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "[{PLC}]{PAX Tag}.Cfg_Bypassable.15"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[4]"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1983,11 +1354,644 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText04",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int2",
+          "name": "Bypassable",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.4"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable04",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.12"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable12",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.13"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState13",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.1"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable01",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[13]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText13",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.0"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable00",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.15"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Bypassable15",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[1]"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "CondText01",
+          "value": "",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.14"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable14",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.2"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState02",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.7"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypassable07",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int2",
+          "name": "HasNav",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.10"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState10",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OKState.8"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OkState08",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Status",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.6"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm06",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.12"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm12",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.15"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm15",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.14"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm14",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PermOK",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "BypActive",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.1"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm01",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.2"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm02",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.13"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm13",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.0"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm00",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.11"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm11",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.5"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm05",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.7"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm07",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.8"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm08",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.4"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm04",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int2",
+          "name": "Perm",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.3"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm03",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.10"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm10",
+          "tagGroup": "Flintium Leased",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "NBPermOK",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Perm.9"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "accessRights": "Read_Only",
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm09",
+          "tagGroup": "Flintium Leased",
           "value": false,
           "tagType": "AtomicTag"
         }

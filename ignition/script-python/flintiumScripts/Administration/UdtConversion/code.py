@@ -4,20 +4,20 @@
 def updateOpcPaths(udtName):
 	import system
 	udtPath = "_types_/Flintium/" + udtName
-	opcStartString = "ns=1;s=[{LeasedPLC}]{PAX Tag}."
+	opcStartString = "{opcPrefix}[{plcName}]{plcTag}."
 	return system.udtHelper.updateOpcPath(udtPath, opcStartString)
 	
 def updateOpcServer(udtName):
 	import system
 	udtPath = "_types_/Flintium/" + udtName
-	opcServerString = "{OPC Server}"
+	opcServerString = "{opcServName}"
 	return system.udtHelper.updateOpcServer(udtPath, opcServerString)
 
 def updateHistoryProvider(udtName):
-		import system
-		udtPath = "_types_/Flintium/" + udtName
-		historyDbString = "{History DB}"
-		return system.udtHelper.updateHistoryProvider(udtPath, historyDbString)
+	import system
+	udtPath = "_types_/Flintium/" + udtName
+	historyProviderString = "{histProvName}"
+	return system.udtHelper.updateHistoryProvider(udtPath, historyProviderString)
 
 def folderize(udtName):
 	import system
@@ -57,10 +57,10 @@ def convertFromOpcDrop(udtName):
 	
 	folderizedQty = system.udtHelper.folderize(udtPath)
 	
-	opcStartString = "ns=1;s=[{PLC}]{PAX Tag}."
+	opcStartString = "{opcPrefix}[{plcName}]{plcTag}."
 	opcPathQty = system.udtHelper.updateOpcPath(udtPath, opcStartString)
 	
-	opcServerString = "{OPC Server}"
+	opcServerString = "{opcServName}"
 	opcServerQty = system.udtHelper.updateOpcServer(udtPath, opcServerString)
 	
 	prefixUpdatedQty = system.udtHelper.removePrefixes(udtPath)
