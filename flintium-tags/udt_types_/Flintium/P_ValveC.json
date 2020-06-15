@@ -3815,7 +3815,7 @@
           "dataType": "Float4",
           "historicalDeadband": 0.001,
           "historyMaxAgeUnits": "DAY",
-          "historicalDeadbandStyle": "Analog_Compressed",
+          "historicalDeadbandStyle": "Discrete",
           "name": "Pos",
           "historyEnabled": true,
           "tagType": "AtomicTag"
