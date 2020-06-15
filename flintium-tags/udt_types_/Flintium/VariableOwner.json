@@ -1,17 +1,21 @@
 {
   "name": "VariableOwner",
   "parameters": {
-    "PLC": {
+    "plcName": {
       "bindType": "parameter",
-      "binding": "{PLC}"
+      "binding": "{plcName}"
     },
-    "OPC Server": {
+    "opcPrefix": {
       "bindType": "parameter",
-      "binding": "{OPC Server}"
+      "binding": "{opcPrefix}"
     },
-    "PAX Tag": {
+    "opcServName": {
       "bindType": "parameter",
-      "binding": "{PAX Tag}"
+      "binding": "{opcServName}"
+    },
+    "plcTag": {
+      "bindType": "parameter",
+      "binding": "{plcTag}"
     },
     "bitNumber": "0"
   },
@@ -24,24 +28,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "expr",
-          "accessRights": "Read_Only",
-          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Ext has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Ext} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../P/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Prog}) \u0026\u0026 {[.]Keep}\r\n)",
-          "dataType": "Boolean",
-          "name": "Has",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ExtKeep.{bitNumber}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_ExtKeep.{bitNumber}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -49,11 +36,28 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Keep",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "expr",
+          "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Ext has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Ext} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../P/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Prog}) \u0026\u0026 {[.]Keep}\r\n)",
+          "dataType": "Boolean",
+          "name": "Has",
           "value": false,
           "tagType": "AtomicTag"
         }
@@ -66,7 +70,24 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_OperKeep.{bitNumber}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "expr",
+          "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Oper has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Oper} \u0026\u0026 !{[.]../P/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n{[.]../../../CmdSrc/Status/Maint}\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Prog} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
+          "dataType": "Boolean",
+          "name": "Has",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_OperKeep.{bitNumber}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -74,28 +95,11 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Keep",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{OPC Server}"
-          },
-          "valueSource": "expr",
-          "accessRights": "Read_Only",
-          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Oper has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Oper} \u0026\u0026 !{[.]../P/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n{[.]../../../CmdSrc/Status/Maint}\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Prog} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
-          "dataType": "Boolean",
-          "name": "Has",
           "value": false,
           "tagType": "AtomicTag"
         }
@@ -108,7 +112,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Cfg_ProgKeep.{bitNumber}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_ProgKeep.{bitNumber}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -116,7 +120,7 @@
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "opc",
           "dataType": "Boolean",
@@ -127,11 +131,11 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "ns\u003d1;s\u003d[{PLC}]{PAX Tag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
           },
           "opcServer": {
             "bindType": "parameter",
-            "binding": "{OPC Server}"
+            "binding": "{opcServName}"
           },
           "valueSource": "expr",
           "accessRights": "Read_Only",
