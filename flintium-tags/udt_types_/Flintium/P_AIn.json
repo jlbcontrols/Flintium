@@ -2249,7 +2249,7 @@
       "historyMaxAge": 1.0,
       "historyTimeDeadband": 3,
       "HistoricalDeadband": 0.001,
-      "historicalDeadbandStyle": "Analog_Compressed",
+      "historicalDeadbandStyle": "Discrete",
       "tagGroup": "Flintium Direct",
       "tagType": "AtomicTag",
       "dataType": "Float4",

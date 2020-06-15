@@ -2250,7 +2250,7 @@
           "dataType": "Float4",
           "historicalDeadband": 0.001,
           "historyMaxAgeUnits": "DAY",
-          "historicalDeadbandStyle": "Analog_Compressed",
+          "historicalDeadbandStyle": "Discrete",
           "name": "SpeedFdbk",
           "historyEnabled": true,
           "tagType": "AtomicTag"
@@ -2528,6 +2528,7 @@
           "historyTimeDeadband": 3,
           "historyMaxAge": 1,
           "dataType": "Float4",
+          "historicalDeadband": 0.001,
           "historyMaxAgeUnits": "DAY",
           "historicalDeadbandStyle": "Discrete",
           "name": "SpeedRef",
