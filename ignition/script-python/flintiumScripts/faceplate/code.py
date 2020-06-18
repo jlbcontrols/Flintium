@@ -1,6 +1,6 @@
 ##### Fucntions to open the correct faceplate, depending on UDT of a given instance, and Main or Advanced popup. #####
 
-# Called from vision component scripts
+# Called from vision component scripts to open a devices faceplate
 def open(event, instancePath, faceplateType):
 
 	udtName = flintiumScripts.util.getTypeName(instancePath)
@@ -16,7 +16,7 @@ def open(event, instancePath, faceplateType):
 	window = system.nav.openWindowInstance(popupPath, params)
 	system.nav.centerWindow(window)
 	
-
+# Return a dictionary of tab data for the faceplate instance. Visible tabs depend on what panel templates exist for a given UDT.
 def getTabProperties(event,udtName,faceplateType):
 	templateManager = event.source.getAppContext().getTemplateManager()
 	if(faceplateType=='Main'):
@@ -26,8 +26,7 @@ def getTabProperties(event,udtName,faceplateType):
 	print "Must select 'Main' or 'Advanced' faceplate type. Received:'" + faceplateType + "'"
 	return {}
 
-
-
+# Count all templates in folder with sequential integer names "1", "2" ...
 def getNumberedTemplateCount(folderPath,templateManager):
 	max = 10
 	for i in range(1,max):
@@ -35,16 +34,19 @@ def getNumberedTemplateCount(folderPath,templateManager):
 		if not templateExists(templatePath,templateManager):
 			break
 	return i-1
-	
+
+# Check if a template with given path exists in this project
 def templateExists(templatePath,templateManager):
 	if templateManager.getId(templatePath):
 		return True
 	else:
 		return False
-	
+
+# Return the UDT's template folder path
 def getUdtTemplFolderPath(udtName):
 	return "Flintium/Panels/" + udtName
 
+# Dictionary of template page counts for advanced templates
 def getAdvancedPageCountDict(udtName, templateManager):
 	advTemplFolderPath = getUdtTemplFolderPath(udtName)+"/Advanced"
 	return{
@@ -54,6 +56,7 @@ def getAdvancedPageCountDict(udtName, templateManager):
 		'faultsPages':getNumberedTemplateCount(advTemplFolderPath+"/Faults",templateManager)
 	}
 
+# Find which main templates exist for a particular UDT
 def getMainTabDict(udtName, templateManager):
 	mainTemplFolderPath = getUdtTemplFolderPath(udtName)+"/Main"
 	return{
@@ -65,3 +68,5 @@ def getMainTabDict(udtName, templateManager):
 		'hasAdvanced':sum(getAdvancedPageCountDict(udtName, templateManager).values())>0
 	}
 	
+
+
