@@ -7350,6 +7350,16 @@
                   ]
                 },
                 {
+                  "name": "Display",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "StsText",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
                   "name": "CmdSrc",
                   "tagType": "UdtInstance",
                   "tags": [
@@ -20769,6 +20779,16 @@
                   ]
                 },
                 {
+                  "name": "Display",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "StsText",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
                   "name": "VariableOwners",
                   "tagType": "Folder",
                   "tags": [
@@ -22354,6 +22374,16 @@
                     },
                     {
                       "name": "BypActive",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Display",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "StsText",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -33840,6 +33870,16 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Display",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "StsText",
+                      "tagType": "AtomicTag"
                     }
                   ]
                 },
@@ -45507,6 +45547,16 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Display",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "StsText",
+                      "tagType": "AtomicTag"
                     }
                   ]
                 },
