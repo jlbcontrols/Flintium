@@ -4,14 +4,13 @@
   "restricted": false,
   "overridable": true,
   "files": [
-    "template.bin",
-    "thumbnail.png"
+    "template.bin"
   ],
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2020-06-06T12:55:48Z"
+      "timestamp": "2020-06-19T21:25:59Z"
     },
-    "lastModificationSignature": "df8d41c05101cf751931c7415eca1c350cf68a3ea6b8433e184162c2507821ec"
+    "lastModificationSignature": "d54298b1ae37400c6768a76fd39d54174e267a15141cee8e67210736be6fa900"
   }
 }
