@@ -13,6 +13,9 @@ class ImporterNode():
 		
 	def getFilePath(self):
 		return os.path.join(self.dirPath, "nodeconfig.json")
+	
+	def getTagPath(self,parentTagPath):
+		return parentTagPath + "/" + self.getName()
 
 	# tag config json without "name" or "tags" items. name and tags information is read from the folder structure.
 	def getNodeConfig(self):
@@ -50,17 +53,39 @@ class ImporterNode():
 
 	# delete any existing tags that current use this nodes tagpath
 	def removeExistingTag(self,parentTagPath):
-		tagPath = parentTagPath + "/" + self.getName()
+		tagPath = self.getTagPath(parentTagPath)
 		system.tag.removeTag(tagPath)
-		
+
+# Import tags into the provided parentTagPath. Prompts to select tag directories to be imported and confirm.	
 def importWithPrompts(parentTagPath):
 	if parentTagPath:
 		parentConfig = system.tag.getConfiguration(parentTagPath)[0]
 		if not str(parentConfig["tagType"]).lower() in ["folder","udttype","udtinstance"]:
 			system.gui.errorBox("Parent tag must be a folder, udtType or udtInstance")
 			return
-		dirPath = flintiumScripts.util.openFolderDialog("Select Tag Directory")
-		if dirPath:
-			node = ImporterNode(dirPath)
-			if system.gui.confirm("Are you sure you want to create or replace the following tag?\n" + parentTagPath + "/" + node.getName()):
-				node.importTag(parentTagPath)
+		dirPaths = openFolderDialog("Select Tag Directory")
+		if dirPaths:
+			nodes=[]
+			confirmMessage = "Are you sure you want to create or replace the following tag(s)?"
+			for dirPath in dirPaths:
+				node = ImporterNode(dirPath)
+				confirmMessage += "\n" + node.getTagPath(parentTagPath)
+				nodes.append(node)
+			if system.gui.confirm(confirmMessage):
+				# Repeat import twice in case imported tags are interdependent (one of the tags contains an instance of another). Avoids the need to sort imports by order of dependency.
+				for _ in range(2):
+					for node in nodes:
+						node.importTag(parentTagPath)
+				system.gui.messageBox("Import Complete")
+
+def openFolderDialog(dialogTitle):
+	from javax.swing import JFileChooser
+	chooser = JFileChooser()
+	chooser.setMultiSelectionEnabled(True);
+	chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+	chooser.setDialogTitle(dialogTitle)
+	if chooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+		folderPathStrings = []
+		for folderPath in chooser.getSelectedFiles():
+			folderPathStrings.append(str(folderPath))
+		return folderPathStrings

@@ -72,7 +72,7 @@ def exportWithPrompts(tagPaths):
 	if not tagPaths:
 		system.gui.errorBox("Select at least one tag for export.")
 		return
-	parentDirPath = flintiumScripts.util.openFolderDialog("Select Parent Directory")
+	parentDirPath = openFolderDialog("Select Parent Directory")
 	if parentDirPath:
 		nodes = []
 		for tagPath in tagPaths:
@@ -92,9 +92,18 @@ def exportWithPrompts(tagPaths):
 				node.exportFiles()
 			system.gui.messageBox("Export Complete")
 
+# Get lowercase list of node names from list of nodes
 def getNodeNamesLower(nodes):
 	names = []
 	for node in nodes:
 		names.append(node.fullConfig["name"].lower())
 	return names
-	
+
+
+def openFolderDialog(dialogTitle):
+	from javax.swing import JFileChooser
+	chooser = JFileChooser()
+	chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+	chooser.setDialogTitle(dialogTitle)
+	if chooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+		return str(chooser.getSelectedFile())
