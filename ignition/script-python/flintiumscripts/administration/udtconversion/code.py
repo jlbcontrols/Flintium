@@ -37,13 +37,13 @@ def updateTagGroup(udtName):
 	return system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
 
 # Examples:		
-# UdtConversion.updateOpcPaths("P_VSD")
-# UdtConversion.folderize("P_VSD")
-# UdtConversion.removePrefixes("P_VSD")
-# UdtConversion.updateTagGroup("P_VSD")
+# udtconversion.updateOpcPaths("P_VSD")
+# udtconversion.folderize("P_VSD")
+# udtconversion.removePrefixes("P_VSD")
+# udtconversion.updateTagGroup("P_VSD")
 
 # Use this to apply a function to all the UDT tags.  The function must take udtName as the sole input (i.e. one of the functions listed above)
-# Example: UdtConversion.updateAllUdts(UdtConversion.updateTagGroup)
+# Example: udtconversion.updateAllUdts(udtconversion.updateTagGroup)
 def updateAllUdts(updateFunction):
 	udtList = ["Meta","P_AIn","P_Alarm","P_CmdSrc","P_Gate","P_Intlk","P_Motor","P_MotorRev","P_PIDE","P_ValveC","P_ValveSO","P_VSD","ProgOperKeep"]
 	for udtName in udtList:

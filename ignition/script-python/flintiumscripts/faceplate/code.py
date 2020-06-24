@@ -3,7 +3,7 @@
 # Called from vision component scripts to open a devices faceplate
 def open(event, instancePath, faceplateType):
 
-	udtName = flintiumScripts.util.getTypeName(instancePath)
+	udtName = flintiumscripts.util.getTypeName(instancePath)
 	
 	params = {
 		'instancePath':instancePath,

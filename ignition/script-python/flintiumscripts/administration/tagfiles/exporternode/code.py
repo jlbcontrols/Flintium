@@ -41,10 +41,10 @@ class ExporterNode():
 		return nodes
 
 	# save all tag information as a directory of files (recursive).
-	def exportFiles(self):
+	def exportToFiles(self):
 		self.exportNodeConfig()
 		for node in self.getChildNodes():
-			node.exportFiles()
+			node.exportToFiles()
 	
 	# export the json for this node's top level tag.
 	def exportNodeConfig(self):
@@ -70,26 +70,24 @@ def getFullConfigFromGateway(tagPath):
 # Export a list of tags, with prompts to select export directory and confirm.
 def exportWithPrompts(tagPaths):
 	if not tagPaths:
-		system.gui.errorBox("Select at least one tag for export.")
-		return
+		raise ValueError("At least one tag required for export.")
 	parentDirPath = openFolderDialog("Select Parent Directory")
 	if parentDirPath:
 		nodes = []
 		for tagPath in tagPaths:
 			nodes.append(ExporterNode(parentDirPath,tagPath=tagPath))
-		nodeNames = getNodeNamesLower(nodes)
-		if flintiumScripts.util.containsDuplicate(nodeNames):
-			system.gui.errorBox("Duplicate node names are not permitted.")
-			return
+		nodeNamesLower = getNodeNamesLower(nodes)
+		if flintiumscripts.util.containsDuplicate(nodeNamesLower):
+			raise ValueError("Duplicate node names are not permitted.")
 		confirmMessage = "Are you sure you want to create or overwrite the following folder(s)?"
 		for node in nodes:
 			confirmMessage += "\n" + node.getDirPath()
 		parentDirName = os.path.basename(parentDirPath)
-		if (parentDirName.lower() in nodeNames):
+		if (parentDirName.lower() in nodeNamesLower):
 			confirmMessage += "\n\n WARNING: Parent directory name matches tag name."
 		if system.gui.confirm(confirmMessage):
 			for node in nodes:
-				node.exportFiles()
+				node.exportToFiles()
 			system.gui.messageBox("Export Complete")
 
 # Get lowercase list of node names from list of nodes

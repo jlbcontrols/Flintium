@@ -46,8 +46,9 @@ class ImporterNode():
 		return fullConfig
 
 	# import tag from file structure to a specified tag folder
-	def importTag(self,parentTagPath):
-		self.removeExistingTag(parentTagPath)
+	def importToTag(self,parentTagPath,removeExisting=True):
+		if removeExisting:
+			self.removeExistingTag(parentTagPath)
 		fullConfig = self.getFullConfig()
 		system.tag.configure(parentTagPath, fullConfig, "o")
 
@@ -61,8 +62,7 @@ def importWithPrompts(parentTagPath):
 	if parentTagPath:
 		parentConfig = system.tag.getConfiguration(parentTagPath)[0]
 		if not str(parentConfig["tagType"]).lower() in ["provider","folder","udttype","udtinstance"]:
-			system.gui.errorBox("Parent tag must be a Provider, folder, udtType or udtInstance")
-			return
+			raise ValueError("Parent tag must be a Provider, folder, udtType or udtInstance")
 		dirPaths = openFolderDialog("Select Tag Directory")
 		if dirPaths:
 			nodes=[]
@@ -73,10 +73,12 @@ def importWithPrompts(parentTagPath):
 				nodes.append(node)
 			if system.gui.confirm(confirmMessage):
 				# Repeat import twice in case imported tags are interdependent (one of the tags contains an instance of another). Avoids the need to sort imports by order of dependency.
-				for _ in range(2):
-					for node in nodes:
-						node.importTag(parentTagPath)
+				for node in nodes:
+					node.importToTag(parentTagPath)
+				for node in nodes:
+					node.importToTag(parentTagPath,removeExisting=False)
 				system.gui.messageBox("Import Complete")
+
 
 def openFolderDialog(dialogTitle):
 	from javax.swing import JFileChooser
