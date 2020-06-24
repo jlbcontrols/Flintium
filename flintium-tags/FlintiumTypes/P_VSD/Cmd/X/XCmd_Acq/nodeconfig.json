@@ -1,0 +1,10 @@
+{
+    "dataType": "Boolean", 
+    "opcItemPath": "{opcPrefix}[{plcName}]{plcTag}.XCmd_Acq", 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "opc"
+}

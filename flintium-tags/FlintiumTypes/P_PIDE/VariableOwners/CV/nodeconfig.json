@@ -1,0 +1,19 @@
+{
+    "parameters": {
+        "bitNumber": "1", 
+        "opcServName": {
+            "bindType": "parameter", 
+            "binding": "{opcServName}"
+        }, 
+        "plcName": {
+            "bindType": "parameter", 
+            "binding": "{plcName}"
+        }, 
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}"
+        }
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/VariableOwner"
+}

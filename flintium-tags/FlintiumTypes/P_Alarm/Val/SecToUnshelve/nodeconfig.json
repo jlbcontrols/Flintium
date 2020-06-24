@@ -1,0 +1,15 @@
+{
+    "accessRights": "Read_Only", 
+    "dataType": "Int4", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_SecToUnshelve"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "opc"
+}

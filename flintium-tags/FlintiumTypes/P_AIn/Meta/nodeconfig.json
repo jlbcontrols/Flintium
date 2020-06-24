@@ -1,0 +1,12 @@
+{
+    "dataType": "Int4", 
+    "parameters": {
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}"
+        }
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/Meta", 
+    "value": 0
+}

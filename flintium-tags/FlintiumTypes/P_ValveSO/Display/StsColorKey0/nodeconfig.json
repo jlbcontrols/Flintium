@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n5,\r\n6,\r\n\"Diagnostic\", //\"Unknown\",\r\n\"Closed\",\r\n\"Open\",\r\n\"Closing\",\r\n\"Opening\",\r\n\"Diagnostic\"\r\n)", 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

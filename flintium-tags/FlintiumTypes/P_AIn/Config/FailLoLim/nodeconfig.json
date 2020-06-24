@@ -1,0 +1,18 @@
+{
+    "dataType": "Float4", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_FailLoLim"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "Flintium Leased-Slow"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": 0.0, 
+    "valueSource": "opc"
+}

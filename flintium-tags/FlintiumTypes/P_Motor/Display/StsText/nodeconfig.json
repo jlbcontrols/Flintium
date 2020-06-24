@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n7,\r\n8,\r\n9,\r\n10,\r\n14,\r\n16,\r\n17,\r\n32,\r\n34,\r\n\"Unknown\",\r\n\"Stopped\",\r\n\"Running\",\r\n\"Running Reverse\", //Not possible, no reverse\r\n\"Running Slow\", //Not possible, single speed\r\n\"Starting\",\r\n\"Starting Reverse\", //Not possible\r\n\"Starting Slow\", //Not possible, single speed\r\n\"Jogging\",\r\n\"Jogging Reverse\", //Not possible, no reverse\r\n\"Stopping\",\r\n\"Horn\",\r\n\"Device Failure\",\r\n\"Fail to Stop\",\r\n\"IO Fault\",\r\n\"Config Error\",\r\n\"Unknown\"\r\n)", 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

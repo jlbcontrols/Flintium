@@ -1,0 +1,17 @@
+{
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "Flintium Leased"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "opc"
+}

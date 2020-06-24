@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n\"At Target\",\r\n\"Ramp Close\",\r\n\"Ramp Open\",\r\n\"At Minimum\",\r\n\"At Maximum\",\r\n\"Bump Close\",\r\n\"Bump Open\",\r\n\"Unknown\"\r\n)", 
+    "tagGroup": "Flintium Direct", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

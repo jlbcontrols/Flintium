@@ -1,0 +1,39 @@
+{
+    "accessRights": "Read_Only", 
+    "alarms": [
+        {
+            "displayPath": {
+                "bindType": "Tag", 
+                "value": "[.]Config/Cond"
+            }, 
+            "enabled": {
+                "bindType": "Tag", 
+                "value": "[.]Config/Exists"
+            }, 
+            "mode": "Equality", 
+            "name": "Alarm", 
+            "priority": {
+                "bindType": "Expression", 
+                "value": "if (\n\t{[.]Config/Severity} >= 1 && {[.]Config/Severity} <= 250,\n\t'Diagnostic',\n\tif ( \n\t\t{[.]Config/Severity} >= 251 && {[.]Config/Severity} <= 500,\n\t\t'Medium',\n\t\tif (\n\t\t\t{[.]Config/Severity} >=  751 && {[.]Config/Severity} <= 1000,\n\t\t\t'Critical',\n\t\t\t'Low'\n\t\t\t)\n\t\t)\n\t)"
+            }, 
+            "setpointA": 1.0, 
+            "shelvingAllowed": {
+                "bindType": "Tag", 
+                "value": "[.]Config/AllowShelve"
+            }
+        }
+    ], 
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Alm"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": "Flintium Direct", 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

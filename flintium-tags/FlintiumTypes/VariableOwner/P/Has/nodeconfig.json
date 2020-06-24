@@ -1,0 +1,16 @@
+{
+    "accessRights": "Read_Only", 
+    "dataType": "Boolean", 
+    "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Prog has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Prog} && !{[.]../O/Keep} && !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Ext}) && {[.]Keep}\r\n)", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "expr"
+}

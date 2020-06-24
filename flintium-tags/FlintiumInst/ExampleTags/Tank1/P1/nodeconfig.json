@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "histProvName": "historydb", 
+        "opcPrefix": "", 
+        "opcServName": "Ignition OPC UA Server", 
+        "plcName": "plc1", 
+        "plcTag": "P1"
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_VSD"
+}

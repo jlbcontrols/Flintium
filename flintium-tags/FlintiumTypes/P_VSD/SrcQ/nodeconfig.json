@@ -1,0 +1,17 @@
+{
+    "dataType": "Int4", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.SrcQ"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "Flintium Leased"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "opc"
+}

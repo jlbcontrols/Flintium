@@ -1,0 +1,22 @@
+{
+    "parameters": {
+        "bitNumber": "0", 
+        "opcPrefix": {
+            "bindType": "parameter", 
+            "binding": "{opcPrefix}"
+        }, 
+        "opcServName": {
+            "bindType": "parameter", 
+            "binding": "{opcServName}"
+        }, 
+        "plcName": {
+            "bindType": "parameter", 
+            "binding": "{plcName}"
+        }, 
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}"
+        }
+    }, 
+    "tagType": "UdtType"
+}

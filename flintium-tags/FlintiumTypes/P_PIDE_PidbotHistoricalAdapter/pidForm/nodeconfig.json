@@ -1,0 +1,16 @@
+{
+    "dataType": "Int4", 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": true, 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{histProvName}"
+    }, 
+    "historyTimeDeadbandUnits": "MIN", 
+    "sourceTagPath": {
+        "bindType": "parameter", 
+        "binding": "{P_PIDE_Path}/Config/Depend"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "reference"
+}

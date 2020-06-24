@@ -1,0 +1,6 @@
+{
+    "dataType": "String", 
+    "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then prepend the parent label to the gate label,\r\n// otherwise just use the gate label\r\n\r\nif(isGood({[.]../../../Meta/Label}),\r\n\t{[.]../../../Meta/Label} + \" \" + {[.]../Config/GateCond},\r\n\t{[.]../Config/GateCond}\r\n)", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}
