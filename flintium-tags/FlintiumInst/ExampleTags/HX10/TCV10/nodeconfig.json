@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "histProvName": "historydb", 
+        "opcPrefix": "", 
+        "opcServName": "Ignition OPC UA Server", 
+        "plcName": "plc1", 
+        "plcTag": "TCV10"
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_ValveC"
+}

@@ -1,0 +1,18 @@
+{
+    "dataType": "Float8", 
+    "deadband": 0.0, 
+    "historicalDeadband": 0.0, 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": true, 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{histProvName}"
+    }, 
+    "historyTimeDeadbandUnits": "MIN", 
+    "sourceTagPath": {
+        "bindType": "parameter", 
+        "binding": "{P_PIDE_Path}/Config/CVEUMin"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "reference"
+}

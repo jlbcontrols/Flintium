@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "if({[.]../Status/Active},\r\n\t\"Open\",//\t{[~]_types_/Flintium/Colors/Open},\r\n\t\"Closed\"//\t{[~]_types_/Flintium/Colors/Closed}\r\n)", 
+    "tagGroup": "Flintium Direct", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

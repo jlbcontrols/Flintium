@@ -1,0 +1,12 @@
+{
+    "dataType": "Int4", 
+    "parameters": {
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}.FailGate"
+        }
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_Gate", 
+    "value": 0
+}

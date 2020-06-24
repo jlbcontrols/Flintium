@@ -1,0 +1,6 @@
+{
+    "dataType": "String", 
+    "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent device's area,\r\n// otherwise just use the alarm label\r\n\r\nif(isGood({[.]../../../Meta/Area}),\r\n\t{[.]../../../Meta/Area},\r\n\t{[.]AltArea}\r\n)", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

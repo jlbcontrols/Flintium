@@ -1,0 +1,18 @@
+{
+    "accessRights": "Read_Only", 
+    "dataType": "String", 
+    "deadband": 0.0, 
+    "historicalDeadband": 0.0, 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": false, 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{Tuning DB}"
+    }, 
+    "sourceTagPath": {
+        "bindType": "parameter", 
+        "binding": "{P_PIDE_Path}/Meta/Label"
+    }, 
+    "tagType": "AtomicTag", 
+    "valueSource": "reference"
+}
