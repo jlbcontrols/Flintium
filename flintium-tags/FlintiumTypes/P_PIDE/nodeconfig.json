@@ -1,0 +1,27 @@
+{
+    "dataType": "Int4", 
+    "parameters": {
+        "histProvName": {
+            "bindType": "parameter", 
+            "binding": "{histProvName}"
+        }, 
+        "opcPrefix": {
+            "bindType": "parameter", 
+            "binding": "{opcPrefix}"
+        }, 
+        "opcServName": {
+            "bindType": "parameter", 
+            "binding": "{opcServName}"
+        }, 
+        "plcName": {
+            "bindType": "parameter", 
+            "binding": "{plcName}"
+        }, 
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}"
+        }
+    }, 
+    "tagType": "UdtType", 
+    "value": 0
+}

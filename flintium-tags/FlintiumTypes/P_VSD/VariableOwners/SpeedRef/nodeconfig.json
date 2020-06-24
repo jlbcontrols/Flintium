@@ -1,0 +1,7 @@
+{
+    "parameters": {
+        "bitNumber": "3"
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/VariableOwner"
+}

@@ -1,0 +1,14 @@
+{
+    "dataType": "Int4", 
+    "historicalDeadband": 0.0, 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": true, 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{histProvName}"
+    }, 
+    "historyTimeDeadbandUnits": "MIN", 
+    "tagType": "AtomicTag", 
+    "value": 0, 
+    "valueSource": "memory"
+}

@@ -1,0 +1,7 @@
+{
+    "dataType": "Float4", 
+    "expression": "{[.]../Val/Pos}", 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

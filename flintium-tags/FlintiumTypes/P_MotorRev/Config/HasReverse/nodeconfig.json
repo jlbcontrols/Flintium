@@ -1,0 +1,6 @@
+{
+    "dataType": "Boolean", 
+    "tagType": "AtomicTag", 
+    "value": true, 
+    "valueSource": "memory"
+}

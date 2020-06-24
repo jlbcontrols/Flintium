@@ -1,0 +1,19 @@
+{
+    "dataType": "Float4", 
+    "engUnit": "s", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_GateDly"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "Flintium Leased-Slow"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": 0.0, 
+    "valueSource": "opc"
+}

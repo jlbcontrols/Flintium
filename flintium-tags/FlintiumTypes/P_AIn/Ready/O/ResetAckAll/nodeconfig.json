@@ -1,0 +1,15 @@
+{
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_ResetAckAll"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

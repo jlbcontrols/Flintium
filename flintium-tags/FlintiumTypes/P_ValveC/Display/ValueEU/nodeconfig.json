@@ -1,0 +1,7 @@
+{
+    "dataType": "String", 
+    "expression": "{[.]../Config/EU}", 
+    "tagGroup": "Flintium Leased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

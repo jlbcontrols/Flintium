@@ -1,0 +1,10 @@
+{
+    "parameters": {
+        "opcPrefix": "", 
+        "opcServName": "Ignition OPC UA Server", 
+        "plcName": "plc1", 
+        "plcTag": "LC1_Intlk"
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_Intlk"
+}

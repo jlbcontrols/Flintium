@@ -1,0 +1,10 @@
+{
+    "parameters": {
+        "opcPrefix": "", 
+        "opcServName": "Ignition OPC UA Server", 
+        "plcName": "plc1", 
+        "plcTag": "C110_RevPerm"
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_Perm"
+}

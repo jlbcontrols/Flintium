@@ -1,0 +1,18 @@
+{
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Latched.5"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "Flintium Leased-Slow"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

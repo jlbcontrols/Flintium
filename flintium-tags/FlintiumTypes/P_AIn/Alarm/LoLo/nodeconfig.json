@@ -1,0 +1,12 @@
+{
+    "dataType": "Int4", 
+    "parameters": {
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}.LoLo"
+        }
+    }, 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_Alarm", 
+    "value": 0
+}

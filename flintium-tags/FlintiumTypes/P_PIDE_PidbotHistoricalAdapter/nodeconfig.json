@@ -1,0 +1,36 @@
+{
+    "dataType": "Int4", 
+    "parameters": {
+        "P_PIDE_Path": {
+            "bindType": "parameter", 
+            "binding": "{PathToParentFolder}"
+        }, 
+        "histProvName": {
+            "bindType": "parameter", 
+            "binding": "{histProvName}"
+        }, 
+        "opcPrefix": {
+            "bindType": "parameter", 
+            "binding": "{opcPrefix}"
+        }, 
+        "opcServName": {
+            "bindType": "parameter", 
+            "binding": "{opcServName}"
+        }, 
+        "plcName": {
+            "bindType": "parameter", 
+            "binding": "{plcName}"
+        }, 
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}"
+        }, 
+        "recording": 0, 
+        "tuningLogDatabase": {
+            "bindType": "parameter", 
+            "binding": "{histProvName}"
+        }
+    }, 
+    "tagType": "UdtType", 
+    "value": 0
+}
