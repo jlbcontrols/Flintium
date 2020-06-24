@@ -60,8 +60,8 @@ class ImporterNode():
 def importWithPrompts(parentTagPath):
 	if parentTagPath:
 		parentConfig = system.tag.getConfiguration(parentTagPath)[0]
-		if not str(parentConfig["tagType"]).lower() in ["folder","udttype","udtinstance"]:
-			system.gui.errorBox("Parent tag must be a folder, udtType or udtInstance")
+		if not str(parentConfig["tagType"]).lower() in ["provider","folder","udttype","udtinstance"]:
+			system.gui.errorBox("Parent tag must be a Provider, folder, udtType or udtInstance")
 			return
 		dirPaths = openFolderDialog("Select Tag Directory")
 		if dirPaths:
