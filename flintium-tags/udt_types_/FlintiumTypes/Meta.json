@@ -25,25 +25,6 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Label"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "Flintium Leased-Slow"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{opcServName}"
-      },
-      "valueSource": "opc",
-      "dataType": "String",
-      "name": "Label",
-      "value": "",
-      "tagType": "AtomicTag"
-    },
-    {
-      "opcItemPath": {
-        "bindType": "parameter",
         "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Tag"
       },
       "tagGroup": {
@@ -57,6 +38,25 @@
       "valueSource": "opc",
       "dataType": "String",
       "name": "Tag",
+      "value": "",
+      "tagType": "AtomicTag"
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Desc"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased-Slow"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{opcServName}"
+      },
+      "valueSource": "opc",
+      "dataType": "String",
+      "name": "Desc",
       "value": "",
       "tagType": "AtomicTag"
     },
@@ -82,7 +82,7 @@
     {
       "opcItemPath": {
         "bindType": "parameter",
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Desc"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Label"
       },
       "tagGroup": {
         "bindType": "parameter",
@@ -94,7 +94,7 @@
       },
       "valueSource": "opc",
       "dataType": "String",
-      "name": "Desc",
+      "name": "Label",
       "value": "",
       "tagType": "AtomicTag"
     }

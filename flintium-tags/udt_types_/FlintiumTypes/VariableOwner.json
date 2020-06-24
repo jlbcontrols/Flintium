@@ -112,6 +112,23 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "expr",
+          "accessRights": "Read_Only",
+          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Prog has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Prog} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
+          "dataType": "Boolean",
+          "name": "Has",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
             "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_ProgKeep.{bitNumber}"
           },
           "tagGroup": {
@@ -125,23 +142,6 @@
           "valueSource": "opc",
           "dataType": "Boolean",
           "name": "Keep",
-          "value": false,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Wrk_OperHas{bitPatternForHas}{bitNumber}"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "expr",
-          "accessRights": "Read_Only",
-          "expression": "//Use CmdSrc status tags in parent device, and Keep settings, to determine if Prog has ownership of the variable\r\n\r\n( \r\n{[.]../../../CmdSrc/Status/Prog} \u0026\u0026 !{[.]../O/Keep} \u0026\u0026 !{[.]../X/Keep}\r\n)\r\n\r\n||\r\n\r\n(\r\n({[.]../../../CmdSrc/Status/Oper} || {[.]../../../CmdSrc/Status/Ext}) \u0026\u0026 {[.]Keep}\r\n)",
-          "dataType": "Boolean",
-          "name": "Has",
           "value": false,
           "tagType": "AtomicTag"
         }

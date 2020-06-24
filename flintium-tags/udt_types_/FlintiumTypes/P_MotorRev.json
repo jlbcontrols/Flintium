@@ -1,10 +1,6 @@
 {
-  "name": "P_ValveC",
+  "name": "P_MotorRev",
   "parameters": {
-    "histProvName": {
-      "bindType": "parameter",
-      "binding": "{histProvName}"
-    },
     "plcName": {
       "bindType": "parameter",
       "binding": "{plcName}"
@@ -25,102 +21,6 @@
   "tagType": "UdtType",
   "tags": [
     {
-      "name": "Set",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "name": "X",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.XSet_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Float4",
-              "name": "CV",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "P",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PSet_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Float4",
-              "name": "CV",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PSet_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Int4",
-              "name": "Owner",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.OSet_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Float4",
-              "name": "CV",
-              "tagType": "AtomicTag"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Config",
       "tagType": "Folder",
       "tags": [
@@ -139,61 +39,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "OvrdIntlk",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Label",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SetTrack",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVRoCLimDec",
+          "name": "OperStopPrio",
           "tagType": "AtomicTag"
         },
         {
@@ -211,7 +57,25 @@
           },
           "valueSource": "opc",
           "dataType": "Int4",
-          "name": "ActuatorFaultSeverity",
+          "name": "FailToStartSeverity",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "FailToStopSeverity",
           "tagType": "AtomicTag"
         },
         {
@@ -229,25 +93,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "HasClosedLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "Deadtime",
+          "name": "HasFailToStartAlm",
           "tagType": "AtomicTag"
         },
         {
@@ -265,7 +111,7 @@
           },
           "valueSource": "opc",
           "dataType": "String",
-          "name": "Desc",
+          "name": "FwdText",
           "tagType": "AtomicTag"
         },
         {
@@ -282,44 +128,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVRawMin",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CycleT",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "MinOnT",
+          "dataType": "Int4",
+          "name": "IntlkTripSeverity",
           "tagType": "AtomicTag"
         },
         {
@@ -337,7 +147,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "HasCVNav",
+          "name": "HasRevPermObj",
           "tagType": "AtomicTag"
         },
         {
@@ -354,26 +164,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "String",
-          "name": "EU",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "FdbkRawMax",
+          "dataType": "Boolean",
+          "name": "FailToStopAckReqd",
           "tagType": "AtomicTag"
         },
         {
@@ -408,44 +200,15 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SetTrackOvrdHand",
+          "dataType": "String",
+          "name": "Tag",
           "tagType": "AtomicTag"
         },
         {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
+          "valueSource": "memory",
           "dataType": "Boolean",
-          "name": "ShedHold",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasActuatorFaultAlm",
+          "name": "HasReverse",
+          "value": true,
           "tagType": "AtomicTag"
         },
         {
@@ -463,7 +226,7 @@
           },
           "valueSource": "opc",
           "dataType": "Float4",
-          "name": "MaxCV",
+          "name": "SimFdbkT",
           "tagType": "AtomicTag"
         },
         {
@@ -481,7 +244,7 @@
           },
           "valueSource": "opc",
           "dataType": "Float4",
-          "name": "FdbkRawMin",
+          "name": "ChangeDirT",
           "tagType": "AtomicTag"
         },
         {
@@ -498,8 +261,44 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "MinCV",
+          "dataType": "Boolean",
+          "name": "XCmdResets",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "UseRunFdbk",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFaultAckReqd",
           "tagType": "AtomicTag"
         },
         {
@@ -535,276 +334,6 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "IntlkTripResetReqd",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "UseClosedLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFaultAckReqd",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IntlkTripAckReqd",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "LSFail",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasOpenLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "UseOpenLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "MaxOnT",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasIntlkTripAlm",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "IntlkCV",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVEUMax",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFaultAckReqd",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "IntlkTripSeverity",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "BumpT",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SkipRoCLim",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
           "name": "HasIOFaultAlm",
           "tagType": "AtomicTag"
         },
@@ -822,44 +351,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CloseRate",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "String",
-          "name": "Area",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "ClampPosToLS",
+          "name": "FailToStartAckReqd",
           "tagType": "AtomicTag"
         },
         {
@@ -876,8 +369,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVRawMax",
+          "dataType": "Int4",
+          "name": "IOFaultSeverity",
           "tagType": "AtomicTag"
         },
         {
@@ -913,61 +406,7 @@
           },
           "valueSource": "opc",
           "dataType": "Float4",
-          "name": "OpenRate",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "HasPosFdbk",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "MaxClosedPos",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased-Slow"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVRoCLimInc",
+          "name": "MaxJogT",
           "tagType": "AtomicTag"
         },
         {
@@ -985,7 +424,7 @@
           },
           "valueSource": "opc",
           "dataType": "String",
-          "name": "CVNavTag",
+          "name": "Desc",
           "tagType": "AtomicTag"
         },
         {
@@ -1003,7 +442,295 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "ActuatorFaultResetReqd",
+          "name": "AllowLocal",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FailToStopT",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "StartHornT",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasFwdPermObj",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OCmdResets",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasRunTimeObj",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "Label",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasOvldObj",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Float4",
+          "name": "FailToStartT",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasResInhObj",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasRunFdbk",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTripResetReqd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStopResetReqd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "Area",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "String",
+          "name": "RevText",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStartResetReqd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTripAckReqd",
           "tagType": "AtomicTag"
         },
         {
@@ -1038,8 +765,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVEUMin",
+          "dataType": "Boolean",
+          "name": "HasIntlkTripAlm",
           "tagType": "AtomicTag"
         },
         {
@@ -1056,8 +783,8 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "String",
-          "name": "Tag",
+          "dataType": "Boolean",
+          "name": "OvrdPermIntlk",
           "tagType": "AtomicTag"
         },
         {
@@ -1074,11 +801,83 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "IOFaultSeverity",
+          "dataType": "Boolean",
+          "name": "HasFailToStopAlm",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ExtStopPrio",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "ShedOnFailToStart",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased-Slow"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "HasJog",
           "tagType": "AtomicTag"
         }
       ]
+    },
+    {
+      "opcItemPath": {
+        "bindType": "parameter",
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.{TagName}"
+      },
+      "tagGroup": {
+        "bindType": "parameter",
+        "binding": "Flintium Leased"
+      },
+      "opcServer": {
+        "bindType": "parameter",
+        "binding": "{opcServName}"
+      },
+      "valueSource": "opc",
+      "dataType": "Int4",
+      "name": "SrcQ",
+      "tagType": "AtomicTag"
     },
     {
       "name": "Input",
@@ -1099,61 +898,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "OpenLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "PosFdbk",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "OvrdCV",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFault",
+          "name": "Reset",
           "tagType": "AtomicTag"
         },
         {
@@ -1189,61 +934,25 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
+          "name": "FwdPermOK",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
           "name": "Sim",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ClosedLS",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Reset",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFault",
           "tagType": "AtomicTag"
         },
         {
@@ -1281,17 +990,29 @@
           "dataType": "Boolean",
           "name": "IntlkAvail",
           "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Nrdy",
-      "tagType": "Folder",
-      "tags": [
+        },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "OvrdCmd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1303,13 +1024,49 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "OoS",
+          "name": "HornInh",
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RevNBPermOK",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FwdRunFdbk",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1327,7 +1084,7 @@
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1338,14 +1095,14 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "CfgErr",
+          "dataType": "Int4",
+          "name": "OvldNotify",
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -1357,7 +1114,43 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Intlk",
+          "name": "RevRunFdbk",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RevPermOK",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FwdNBPermOK",
           "tagType": "AtomicTag"
         }
       ]
@@ -1367,8 +1160,8 @@
       "tagType": "Folder",
       "tags": [
         {
-          "name": "IntlkTrip",
-          "typeId": "Flintium/P_Alarm",
+          "name": "FailToStart",
+          "typeId": "FlintiumTypes/P_Alarm",
           "parameters": {
             "plcTag": {
               "bindType": "parameter",
@@ -1378,175 +1171,17 @@
           "tagType": "UdtInstance",
           "tags": [
             {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
               "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Config",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowExist",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ResetReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Cond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Meta",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Label",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Area",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AltArea",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Ack",
               "tagType": "AtomicTag"
             },
             {
               "name": "Status",
               "tagType": "Folder",
               "tags": [
+                {
+                  "name": "RdyReset",
+                  "tagType": "AtomicTag"
+                },
                 {
                   "name": "RdyAck",
                   "tagType": "AtomicTag"
@@ -1558,16 +1193,44 @@
                 {
                   "name": "Inhibit",
                   "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
                 },
                 {
-                  "name": "RdyReset",
+                  "name": "Notify",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "SecToUnshelve",
                   "tagType": "AtomicTag"
                 }
               ]
             },
             {
-              "name": "Disabled",
+              "name": "Inp",
               "tagType": "AtomicTag"
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                }
+              ]
             },
             {
               "name": "Ready",
@@ -1582,15 +1245,15 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Unshelve",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -1600,26 +1263,156 @@
                   "tagType": "Folder",
                   "tags": [
                     {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "Enable",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Test",
                       "tagType": "AtomicTag"
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
                     {
                       "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
                       "tagType": "AtomicTag"
                     }
                   ]
                 }
               ]
+            },
+            {
+              "name": "Meta",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "AltArea",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Area",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Label",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Cond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
             }
           ]
         },
         {
-          "name": "ActuatorFault",
-          "typeId": "Flintium/P_Alarm",
+          "name": "IntlkTrip",
+          "typeId": "FlintiumTypes/P_Alarm",
           "parameters": {
             "plcTag": {
               "bindType": "parameter",
@@ -1629,30 +1422,172 @@
           "tagType": "UdtInstance",
           "tags": [
             {
-              "name": "Status",
+              "name": "Ready",
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "RdyReset",
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "MaxShelfT",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Err",
+                  "name": "Exists",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Inhibit",
+                  "name": "AllowExist",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "RdyAck",
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Cond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
                   "tagType": "AtomicTag"
                 }
               ]
             },
             {
-              "name": "Inp",
+              "name": "Shelved",
               "tagType": "AtomicTag"
+            },
+            {
+              "name": "Meta",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Label",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Area",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AltArea",
+                  "tagType": "AtomicTag"
+                }
+              ]
             },
             {
               "name": "Error",
@@ -1669,61 +1604,7 @@
               ]
             },
             {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Cmd",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Suppressed",
               "tagType": "AtomicTag"
             },
             {
@@ -1731,51 +1612,66 @@
               "tagType": "AtomicTag"
             },
             {
-              "name": "Config",
+              "name": "Val",
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "ResetReqd",
+                  "name": "Notify",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AllowExist",
+                  "name": "MinToUnshelve",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AllowDisable",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AlmMinOnT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "MaxShelfT",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Cond",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Exists",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AckReqd",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AllowShelve",
+                  "name": "SecToUnshelve",
                   "tagType": "AtomicTag"
                 }
               ]
             },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "RdyAck",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "RdyReset",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "FailToStop",
+          "typeId": "FlintiumTypes/P_Alarm",
+          "parameters": {
+            "plcTag": {
+              "bindType": "parameter",
+              "binding": "{plcTag}.{InstanceName}"
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
             {
               "name": "Val",
               "tagType": "Folder",
@@ -1795,13 +1691,65 @@
               ]
             },
             {
-              "name": "Ack",
+              "name": "Alarm",
               "tagType": "AtomicTag"
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "RdyReset",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "RdyAck",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Err",
+                  "tagType": "AtomicTag"
+                }
+              ]
             },
             {
               "name": "Meta",
               "tagType": "Folder",
               "tags": [
+                {
+                  "name": "Label",
+                  "tagType": "AtomicTag"
+                },
                 {
                   "name": "Tag",
                   "tagType": "AtomicTag"
@@ -1813,12 +1761,12 @@
                 {
                   "name": "AltArea",
                   "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Label",
-                  "tagType": "AtomicTag"
                 }
               ]
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
             },
             {
               "name": "Ready",
@@ -1833,15 +1781,15 @@
                       "tagType": "AtomicTag"
                     },
                     {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -1851,7 +1799,7 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "Disable",
+                      "name": "Test",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -1859,10 +1807,106 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Test",
+                      "name": "Disable",
                       "tagType": "AtomicTag"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "Cmd",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Config",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowExist",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowDisable",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Cond",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AlmMinOnT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
                 }
               ]
             }
@@ -1870,7 +1914,7 @@
         },
         {
           "name": "IOFault",
-          "typeId": "Flintium/P_Alarm",
+          "typeId": "FlintiumTypes/P_Alarm",
           "parameters": {
             "plcTag": {
               "bindType": "parameter",
@@ -1880,147 +1924,29 @@
           "tagType": "UdtInstance",
           "tags": [
             {
-              "name": "Alarm",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Shelved",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Error",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Severity",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Timer",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Val",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "MinToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "SecToUnshelve",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Notify",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Meta",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Label",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Area",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Tag",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "AltArea",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "Ack",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Disabled",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ready",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "M",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Disable",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Test",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Enable",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                },
-                {
-                  "name": "O",
-                  "tagType": "Folder",
-                  "tags": [
-                    {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Ack",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Reset",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Shelve",
-                      "tagType": "AtomicTag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Status",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Inhibit",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Err",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "RdyReset",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "RdyAck",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
               "name": "Config",
               "tagType": "Folder",
               "tags": [
+                {
+                  "name": "Exists",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MaxShelfT",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AckReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ResetReqd",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AllowShelve",
+                  "tagType": "AtomicTag"
+                },
                 {
                   "name": "AlmMinOnT",
                   "tagType": "AtomicTag"
@@ -2034,32 +1960,158 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "ResetReqd",
+                  "name": "AllowExist",
                   "tagType": "AtomicTag"
                 },
                 {
                   "name": "Cond",
                   "tagType": "AtomicTag"
-                },
+                }
+              ]
+            },
+            {
+              "name": "Shelved",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ack",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Status",
+              "tagType": "Folder",
+              "tags": [
                 {
-                  "name": "AckReqd",
+                  "name": "RdyAck",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "MaxShelfT",
+                  "name": "RdyReset",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AllowShelve",
+                  "name": "Err",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AllowExist",
+                  "name": "Inhibit",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Suppressed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Val",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Notify",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Exists",
+                  "name": "SecToUnshelve",
                   "tagType": "AtomicTag"
+                },
+                {
+                  "name": "MinToUnshelve",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Alarm",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Disabled",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Inp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Error",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Timer",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Severity",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Meta",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Label",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Tag",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "AltArea",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Area",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Ready",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "M",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Test",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Enable",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Disable",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "O",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Unshelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Reset",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Ack",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
                 }
               ]
             },
@@ -2076,15 +2128,15 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Unshelve",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "Ack",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "Shelve",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Unshelve",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -2098,497 +2150,16 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Enable",
+                      "name": "Disable",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Disable",
+                      "name": "Enable",
                       "tagType": "AtomicTag"
                     }
                   ]
                 }
               ]
-            },
-            {
-              "name": "Suppressed",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Inp",
-              "tagType": "AtomicTag"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dataType": "Int4",
-      "name": "Meta",
-      "typeId": "Flintium/Meta",
-      "value": 0,
-      "parameters": {
-        "plcName": {
-          "bindType": "parameter",
-          "binding": "{plcName}"
-        },
-        "Tag": {
-          "bindType": "parameter",
-          "binding": "{Tag}"
-        },
-        "plcTag": {
-          "bindType": "parameter",
-          "binding": "{plcTag}"
-        },
-        "DirectplcName": {
-          "bindType": "parameter",
-          "binding": "{DirectplcName}"
-        }
-      },
-      "tagType": "UdtInstance",
-      "tags": [
-        {
-          "name": "Area",
-          "tagType": "AtomicTag"
-        },
-        {
-          "name": "Label",
-          "tagType": "AtomicTag"
-        },
-        {
-          "name": "Desc",
-          "tagType": "AtomicTag"
-        },
-        {
-          "name": "Tag",
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Display",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "valueSource": "expr",
-          "expression": "if({[.]../Status/Active},\r\n\t\"Open\",//\t{[~]_types_/Flintium/Colors/Open},\r\n\t\"Closed\"//\t{[~]_types_/Flintium/Colors/Closed}\r\n)",
-          "dataType": "String",
-          "name": "StsColorKey0",
-          "executionMode": "EventDriven",
-          "tagGroup": "Flintium Direct",
-          "tagType": "AtomicTag"
-        },
-        {
-          "valueSource": "expr",
-          "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n\"At Target\",\r\n\"Ramp Close\",\r\n\"Ramp Open\",\r\n\"At Minimum\",\r\n\"At Maximum\",\r\n\"Bump Close\",\r\n\"Bump Open\",\r\n\"Unknown\"\r\n)",
-          "dataType": "String",
-          "name": "StsText",
-          "executionMode": "EventDriven",
-          "tagGroup": "Flintium Direct",
-          "tagType": "AtomicTag"
-        },
-        {
-          "valueSource": "expr",
-          "expression": "{[.]../Val/Pos}",
-          "dataType": "Float4",
-          "name": "Value",
-          "tagGroup": "Flintium Leased",
-          "tagType": "AtomicTag"
-        },
-        {
-          "valueSource": "expr",
-          "expression": "{[.]../Config/EU}",
-          "dataType": "String",
-          "name": "ValueEU",
-          "tagGroup": "Flintium Leased",
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Cmd",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ResetAckAll",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "BumpClose",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "BumpOpen",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "X",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "M",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.MCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.MCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Check",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "P",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IOFaultSuppress",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IntlkTripAck",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ActuatorFaultUnsuppress",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IntlkTripSuppress",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IntlkTripUnshelve",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IOFaultUnsuppress",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ActuatorFaultUnshelve",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IOFaultUnshelve",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ActuatorFaultAck",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ActuatorFaultSuppress",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IOFaultAck",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "IntlkTripUnsuppress",
-              "tagType": "AtomicTag"
             }
           ]
         }
@@ -2613,113 +2184,49 @@
       "tagType": "AtomicTag"
     },
     {
-      "name": "Ready",
+      "name": "Display",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "valueSource": "expr",
+          "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n7,\r\n8,\r\n9,\r\n10,\r\n14,\r\n\"Unknown\",\r\n\"Stopped\",\r\n\"Running \" + {[.]../Config/FwdText},\r\n\"Running \" + {[.]../Config/RevText},\r\n\"Running Slow\",\r\n\"Starting \" + {[.]../Config/FwdText},\r\n\"Starting \" + {[.]../Config/RevText},\r\n\"Starting Slow\",\r\n\"Jogging \" + {[.]../Config/FwdText},\r\n\"Jogging \" + {[.]../Config/RevText},\r\n\"Stopping\",\r\n\"Horn\",\r\n\"Unknown\"\r\n)",
+          "dataType": "String",
+          "name": "StsText",
+          "executionMode": "EventDriven",
+          "tagGroup": "Flintium Leased",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "expr",
+          "expression": "switch({[.]../Val/Sts},\r\n0,\r\n1,\r\n2,\r\n3,\r\n4,\r\n5,\r\n6,\r\n7,\r\n8,\r\n9,\r\n10,\r\n14,\r\n\"Diagnostic\", //\"Unknown\",\r\n\"Stopped\", //\"Stopped\",\r\n\"Running\", //\"Running \" + {[.]Config/FwdText},\r\n\"Running\", //\"Running \" + {[.]Config/RevText},\r\n\"Running\", //\"Running Slow\",\r\n\"Starting\", //\"Starting \" + {[.]Config/FwdText},\r\n\"Starting\", //\"Starting \" + {[.]Config/RevText},\r\n\"Starting\", //\"Starting Slow\",\r\n\"Jogging\", //\"Jogging \" + {[.]Config/FwdText},\r\n\"Jogging\", //\"Jogging \" + {[.]Config/RevText},\r\n\"Stopping\", //\"Stopping\",\r\n\"Starting\", //\"Horn\",\r\n\"Diagnostic\" //\"Unknown\"\r\n)",
+          "dataType": "String",
+          "name": "StsColorKey0",
+          "executionMode": "EventDriven",
+          "tagGroup": "Flintium Leased",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Set",
       "tagType": "Folder",
       "tags": [
         {
           "name": "O",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "BumpOpen",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Reset",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "ResetAckAll",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "BumpClose",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "CV",
-              "tagType": "AtomicTag"
-            }
-          ]
+          "tagType": "Folder"
         },
         {
-          "name": "M",
+          "name": "X",
+          "tagType": "Folder"
+        },
+        {
+          "name": "P",
           "tagType": "Folder",
           "tags": [
             {
               "opcItemPath": {
                 "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_{TagName}"
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PSet_{TagName}"
               },
               "tagGroup": {
                 "bindType": "parameter",
@@ -2730,26 +2237,8 @@
                 "binding": "{opcServName}"
               },
               "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Bypass",
-              "tagType": "AtomicTag"
-            },
-            {
-              "opcItemPath": {
-                "bindType": "parameter",
-                "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_{TagName}"
-              },
-              "tagGroup": {
-                "bindType": "parameter",
-                "binding": "Flintium Leased"
-              },
-              "opcServer": {
-                "bindType": "parameter",
-                "binding": "{opcServName}"
-              },
-              "valueSource": "opc",
-              "dataType": "Boolean",
-              "name": "Check",
+              "dataType": "Int4",
+              "name": "Owner",
               "tagType": "AtomicTag"
             }
           ]
@@ -2758,8 +2247,7 @@
     },
     {
       "name": "CmdSrc",
-      "typeId": "Flintium/P_CmdSrc",
-      "tagGroup": "Flintium Leased",
+      "typeId": "FlintiumTypes/P_CmdSrc",
       "parameters": {
         "plcTag": {
           "bindType": "parameter",
@@ -2768,6 +2256,250 @@
       },
       "tagType": "UdtInstance",
       "tags": [
+        {
+          "name": "Config",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "ProgPwrUp",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasExt",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ExtOverLock",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasProgLocked",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasOper",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasProg",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "OvrdOverLock",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasMOoS",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "PCmdProgAsLevel",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasOperLocked",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "PCmdLockAsLevel",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "PCmdPriority",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "HasMaint",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ProgNormal",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "Ready",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "M",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "OoS",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "IS",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Acq",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Rel",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Oper",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Unlock",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Prog",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Lock",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Normal",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cmd",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "O",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "Unlock",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Normal",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Oper",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Lock",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Prog",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "M",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "name": "IS",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Acq",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "OoS",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Rel",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Status",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "ExtReqInh",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "bSrc",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ovrd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "eSrc",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Hand",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ProgLocked",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ProgOperSel",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "OperLocked",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "OoS",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Prog",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ProgReqInh",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Oper",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Normal",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ProgOperLock",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "MAcqRcvd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Maint",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Ext",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
         {
           "name": "Meta",
           "tagType": "Folder",
@@ -2803,250 +2535,6 @@
               "tagType": "AtomicTag"
             }
           ]
-        },
-        {
-          "name": "Cmd",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "name": "O",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Unlock",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Prog",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Lock",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Normal",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Oper",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "M",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "IS",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OoS",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Acq",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Rel",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Config",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "name": "HasOperLocked",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasProg",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtOverLock",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgNormal",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "PCmdProgAsLevel",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasMaint",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasExt",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OvrdOverLock",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasOper",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgPwrUp",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "PCmdPriority",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasMOoS",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "HasProgLocked",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "PCmdLockAsLevel",
-              "tagType": "AtomicTag"
-            }
-          ]
-        },
-        {
-          "name": "Ready",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "name": "O",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "Prog",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Normal",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Unlock",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Lock",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Oper",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            },
-            {
-              "name": "M",
-              "tagType": "Folder",
-              "tags": [
-                {
-                  "name": "IS",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "OoS",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Acq",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Rel",
-                  "tagType": "AtomicTag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Status",
-          "tagType": "Folder",
-          "tags": [
-            {
-              "name": "eSrc",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ovrd",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgReqInh",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Normal",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Ext",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgOperLock",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "bSrc",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Oper",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgLocked",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Prog",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OperLocked",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ProgOperSel",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Hand",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "OoS",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Maint",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "ExtReqInh",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "MAcqRcvd",
-              "tagType": "AtomicTag"
-            }
-          ]
         }
       ]
     },
@@ -3054,6 +2542,24 @@
       "name": "Error",
       "tagType": "Folder",
       "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Sim",
+          "tagType": "AtomicTag"
+        },
         {
           "opcItemPath": {
             "bindType": "parameter",
@@ -3105,607 +2611,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Raw",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Limit",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Fdbk",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "EU",
-          "tagType": "AtomicTag"
-        }
-      ]
-    },
-    {
-      "name": "Status",
-      "tagType": "Folder",
-      "tags": [
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "RdyAck",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFaultShelved",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFault",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IntlkTrip",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Active",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IntlkTripSuppressed",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Err",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "BumpClose",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Bypass",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "LSFail",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFaultSuppressed",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "NotRdy",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFaultDisabled",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "MaintByp",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "BypActive",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Ramping",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IOFaultDisabled",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "AlmInh",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "SkipRoCLim",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFault",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "BumpOpen",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFaultSuppressed",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "RdyReset",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "PosInfNaN",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IntlkTripShelved",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Clamped",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "CVInfNaN",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "IntlkTripDisabled",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "ActuatorFaultShelved",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Boolean",
-          "name": "Available",
+          "name": "Pause",
           "tagType": "AtomicTag"
         }
       ]
@@ -3729,25 +2635,7 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Open",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Out_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CV",
+          "name": "Horn",
           "tagType": "AtomicTag"
         },
         {
@@ -3765,8 +2653,1075 @@
           },
           "valueSource": "opc",
           "dataType": "Boolean",
-          "name": "Close",
+          "name": "StartRev",
           "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Out_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Stop",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Out_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RunRev",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Out_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RunFwd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Out_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "StartFwd",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Meta",
+      "typeId": "FlintiumTypes/Meta",
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "Desc",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Area",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Label",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Tag",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Ready",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "M",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Check",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "O",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartRev",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "ResetAckAll",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogRev",
+              "tagType": "AtomicTag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nrdy",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Perm",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "OoS",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Intlk",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "CfgErr",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Fail",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFault",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Nrdy_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "PrioStop",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Cmd",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "P",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IntlkTripAck",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStopUnshelve",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IOFaultUnsuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IOFaultUnshelve",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IntlkTripUnshelve",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStopUnsuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStartAck",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStopAck",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStartUnshelve",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IOFaultAck",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStartSuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartRev",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IntlkTripSuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStartUnsuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "FailToStopSuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IOFaultSuppress",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.PCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "IntlkTripUnsuppress",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "X",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartRev",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.XCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogRev",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "M",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Bypass",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.MCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Check",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "O",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartRev",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "StartFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogFwd",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "Reset",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "JogRev",
+              "tagType": "AtomicTag"
+            },
+            {
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "{opcPrefix}[{plcName}]{plcTag}.OCmd_{TagName}"
+              },
+              "tagGroup": {
+                "bindType": "parameter",
+                "binding": "Flintium Leased"
+              },
+              "opcServer": {
+                "bindType": "parameter",
+                "binding": "{opcServName}"
+              },
+              "valueSource": "opc",
+              "dataType": "Boolean",
+              "name": "ResetAckAll",
+              "tagType": "AtomicTag"
+            }
+          ]
         }
       ]
     },
@@ -3789,17 +3744,13 @@
           },
           "valueSource": "opc",
           "dataType": "Int4",
-          "name": "Fdbk",
+          "name": "Cmd",
           "tagType": "AtomicTag"
         },
         {
           "opcItemPath": {
             "bindType": "parameter",
             "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "historyProvider": {
-            "bindType": "parameter",
-            "binding": "{histProvName}"
           },
           "tagGroup": {
             "bindType": "parameter",
@@ -3810,14 +3761,26 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "historyTimeDeadband": 3,
-          "historyMaxAge": 1,
-          "dataType": "Float4",
-          "historicalDeadband": 0.001,
-          "historyMaxAgeUnits": "DAY",
-          "historicalDeadbandStyle": "Discrete",
-          "name": "Pos",
-          "historyEnabled": true,
+          "dataType": "Int4",
+          "name": "Sts",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Int4",
+          "name": "Fdbk",
           "tagType": "AtomicTag"
         },
         {
@@ -3871,7 +3834,7 @@
           },
           "valueSource": "opc",
           "dataType": "Int4",
-          "name": "Sts",
+          "name": "UnackAlmC",
           "tagType": "AtomicTag"
         },
         {
@@ -3906,129 +3869,629 @@
             "binding": "{opcServName}"
           },
           "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVEUMin",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVEUMax",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
           "dataType": "Int4",
           "name": "NotifyAll",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Int4",
-          "name": "UnackAlmC",
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "historyProvider": {
-            "bindType": "parameter",
-            "binding": "{histProvName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "historyTimeDeadband": 3,
-          "historyMaxAge": 1,
-          "dataType": "Float4",
-          "historicalDeadband": 0.001,
-          "historyMaxAgeUnits": "DAY",
-          "historicalDeadbandStyle": "Discrete",
-          "name": "CVOut",
-          "historyEnabled": true,
-          "tagType": "AtomicTag"
-        },
-        {
-          "opcItemPath": {
-            "bindType": "parameter",
-            "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
-          },
-          "tagGroup": {
-            "bindType": "parameter",
-            "binding": "Flintium Leased"
-          },
-          "opcServer": {
-            "bindType": "parameter",
-            "binding": "{opcServName}"
-          },
-          "valueSource": "opc",
-          "dataType": "Float4",
-          "name": "CVSet",
           "tagType": "AtomicTag"
         }
       ]
     },
     {
-      "opcItemPath": {
-        "bindType": "parameter",
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.{TagName}"
-      },
-      "tagGroup": {
-        "bindType": "parameter",
-        "binding": "Flintium Leased"
-      },
-      "opcServer": {
-        "bindType": "parameter",
-        "binding": "{opcServName}"
-      },
-      "valueSource": "opc",
-      "dataType": "Int4",
-      "name": "SrcQ",
-      "tagType": "AtomicTag"
+      "name": "Status",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStartShelved",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFault",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStopDisabled",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RdyAck",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStop",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Bypass",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "StartingRev",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "StartingFwd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "JoggingFwd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTripSuppressed",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTrip",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Horn",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStopSuppressed",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Err",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Stopped",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStartDisabled",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "NotRdy",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Stopping",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStopShelved",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTripDisabled",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "BypActive",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFaultShelved",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IntlkTripShelved",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RunningRev",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFaultDisabled",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "Available",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStartSuppressed",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RdyReset",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "FailToStart",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "AlmInh",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "IOFaultSuppressed",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "RunningFwd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "MaintByp",
+          "tagType": "AtomicTag"
+        },
+        {
+          "opcItemPath": {
+            "bindType": "parameter",
+            "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
+          },
+          "tagGroup": {
+            "bindType": "parameter",
+            "binding": "Flintium Leased"
+          },
+          "opcServer": {
+            "bindType": "parameter",
+            "binding": "{opcServName}"
+          },
+          "valueSource": "opc",
+          "dataType": "Boolean",
+          "name": "JoggingRev",
+          "tagType": "AtomicTag"
+        }
+      ]
     }
   ]
 }
