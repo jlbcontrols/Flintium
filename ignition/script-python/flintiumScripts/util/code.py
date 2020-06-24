@@ -15,3 +15,6 @@ def openFolderDialog(dialogTitle):
 	chooser.setDialogTitle(dialogTitle)
 	if chooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
 		return str(chooser.getSelectedFile())
+
+def containsDuplicate(list):
+	return len(list) != len(set(list))

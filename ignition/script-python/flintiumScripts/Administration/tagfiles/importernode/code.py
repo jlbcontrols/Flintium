@@ -53,11 +53,14 @@ class ImporterNode():
 		tagPath = parentTagPath + "/" + self.getName()
 		system.tag.removeTag(tagPath)
 		
-def testImport():
-	dirPath = flintiumScripts.util.openFolderDialog("Select Tag Directory")
-	node = ImporterNode(dirPath)
-	parentTagPath = system.gui.inputBox("Import into parent tag folder path:")
+def importWithPrompts(parentTagPath):
 	if parentTagPath:
-		if system.gui.confirm("Are you sure you want to create or replace tag %s in folder %s?" % (node.getName(), parentTagPath)):
-			print node
-			node.importTag(parentTagPath)
+		parentConfig = system.tag.getConfiguration(parentTagPath)[0]
+		if not str(parentConfig["tagType"]).lower() in ["folder","udttype","udtinstance"]:
+			system.gui.errorBox("Parent tag must be a folder, udtType or udtInstance")
+			return
+		dirPath = flintiumScripts.util.openFolderDialog("Select Tag Directory")
+		if dirPath:
+			node = ImporterNode(dirPath)
+			if system.gui.confirm("Are you sure you want to create or replace the following tag?\n" + parentTagPath + "/" + node.getName()):
+				node.importTag(parentTagPath)

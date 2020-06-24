@@ -67,10 +67,34 @@ def getFullConfigFromGateway(tagPath):
 		raise ValueError(fullConfig["name"] + " tagType is Unknown. Check if tag exists.")
 	return fullConfig
 
-def testExport():
-	tagPath = system.gui.inputBox("Enter tag path to export.")
+# Export a list of tags, with prompts to select export directory and confirm.
+def exportWithPrompts(tagPaths):
+	if not tagPaths:
+		system.gui.errorBox("Select at least one tag for export.")
+		return
 	parentDirPath = flintiumScripts.util.openFolderDialog("Select Parent Directory")
 	if parentDirPath:
-		node = ExporterNode(parentDirPath,tagPath=tagPath)
-		if system.gui.confirm("Are you sure you want to create or overwrite folder %s in directory %s?" % (node.fullConfig["name"], parentDirPath)):
-			node.exportFiles()
+		nodes = []
+		for tagPath in tagPaths:
+			nodes.append(ExporterNode(parentDirPath,tagPath=tagPath))
+		nodeNames = getNodeNamesLower(nodes)
+		if flintiumScripts.util.containsDuplicate(nodeNames):
+			system.gui.errorBox("Duplicate node names are not permitted.")
+			return
+		confirmMessage = "Are you sure you want to create or overwrite the following folder(s)?"
+		for node in nodes:
+			confirmMessage += "\n" + node.getDirPath()
+		parentDirName = os.path.basename(parentDirPath)
+		if (parentDirName.lower() in nodeNames):
+			confirmMessage += "\n\n WARNING: Parent directory name matches tag name."
+		if system.gui.confirm(confirmMessage):
+			for node in nodes:
+				node.exportFiles()
+			system.gui.messageBox("Export Complete")
+
+def getNodeNamesLower(nodes):
+	names = []
+	for node in nodes:
+		names.append(node.fullConfig["name"].lower())
+	return names
+	
