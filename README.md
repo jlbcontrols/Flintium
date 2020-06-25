@@ -13,7 +13,7 @@
 ## Setup  
 * Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
 * Import UDTs into Ignition, and then import instance tags. Flintium's UDTs and tags are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Exporting & Importing Tags](https://github.com/jlbcontrols/Flintium/wiki/Exporting-&-Importing-Tags) for more info. The UDTs and tags are located in /flintium-tags/FlintiumTypes and /flintium-tags/FlintiumInst, respectively.  
-* Import /flintium-tags/groups/tag-groups.json into Ignition using the Designer     
+* Import tag group files located in the /flintium-tags/FlintiumTagGroups folder using the Ignition Designer's built-in tool  
 * Create a Logix Driver device called "plc1" on the gateway webpage  
 * Create a database connection called "historydb" on the gateway webpage  
 * Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource"  
