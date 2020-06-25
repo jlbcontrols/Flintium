@@ -13,6 +13,7 @@
         "bindType": "parameter", 
         "binding": "{P_PIDE_Path}/Config/PVEUMax"
     }, 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "valueSource": "reference"
 }

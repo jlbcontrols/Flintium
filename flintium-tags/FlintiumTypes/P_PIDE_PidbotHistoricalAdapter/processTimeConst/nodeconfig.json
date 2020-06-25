@@ -13,6 +13,7 @@
         "bindType": "parameter", 
         "binding": "{P_PIDE_Path}/Config/CVEUMax"
     }, 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "valueSource": "memory"
 }

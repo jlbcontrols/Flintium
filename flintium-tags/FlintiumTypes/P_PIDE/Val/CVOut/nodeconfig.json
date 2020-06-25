@@ -20,7 +20,7 @@
         "binding": "{opcServName}"
     }, 
     "sampleMode": "OnChange", 
-    "tagGroup": "Flintium Direct", 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "value": 0.0, 
     "valueSource": "opc"

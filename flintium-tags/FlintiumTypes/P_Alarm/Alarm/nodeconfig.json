@@ -32,7 +32,7 @@
         "bindType": "parameter", 
         "binding": "{opcServName}"
     }, 
-    "tagGroup": "Flintium Direct", 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "value": false, 
     "valueSource": "opc"

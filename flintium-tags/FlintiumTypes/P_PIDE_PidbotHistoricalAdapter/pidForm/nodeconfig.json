@@ -11,6 +11,7 @@
         "bindType": "parameter", 
         "binding": "{P_PIDE_Path}/Config/Depend"
     }, 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "valueSource": "reference"
 }

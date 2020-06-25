@@ -1,0 +1,8 @@
+[
+  {
+    "mode": "Leased",
+    "leasedRate": 1000,
+    "rate": 60000,
+    "name": "FlintiumLeased"
+  }
+]
