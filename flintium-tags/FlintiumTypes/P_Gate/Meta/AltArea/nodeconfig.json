@@ -1,6 +1,7 @@
 {
     "dataType": "String", 
     "documentation": "If this object is not nested, this will be the Security Area", 
+    "tagGroup": "FlintiumLeased", 
     "tagType": "AtomicTag", 
     "valueSource": "memory"
 }

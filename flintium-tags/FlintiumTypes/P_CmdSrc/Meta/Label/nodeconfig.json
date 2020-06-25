@@ -1,6 +1,8 @@
 {
     "dataType": "String", 
+    "executionMode": "EventDriven", 
     "expression": "// If this tag is nested in a parent device udt (P_VSD for instance)\r\n// then use the parent label + 'Command Source',\r\n// otherwise just use 'Command Source'\r\n\r\n//if(isGood({[.]../../../Meta/Label}),\r\n//\t{[.]../../../Meta/Label} + \"Command Source\",\r\n//\t\"Command Source\"\r\n//)\r\n\r\nif(isGood({[.]../../Meta/Label}),\r\n\t{[.]../../Meta/Label} + \" Command Source\",\r\n\t\"Command Source\"\r\n)", 
+    "tagGroup": "FlintiumLeased", 
     "tagType": "AtomicTag", 
     "valueSource": "expr"
 }

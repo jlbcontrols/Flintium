@@ -13,6 +13,7 @@
         "bindType": "parameter", 
         "binding": "{P_PIDE_Path}/Config/CtrlAction"
     }, 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "value": 4, 
     "valueSource": "memory"
