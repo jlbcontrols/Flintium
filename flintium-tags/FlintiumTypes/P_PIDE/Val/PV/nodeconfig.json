@@ -19,7 +19,10 @@
         "bindType": "parameter", 
         "binding": "{opcServName}"
     }, 
-    "tagGroup": "Flintium Direct", 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "FlintiumLeased"
+    }, 
     "tagType": "AtomicTag", 
     "value": 0.0, 
     "valueSource": "opc"

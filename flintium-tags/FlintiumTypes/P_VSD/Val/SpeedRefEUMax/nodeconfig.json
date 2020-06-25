@@ -10,7 +10,7 @@
     }, 
     "tagGroup": {
         "bindType": "parameter", 
-        "binding": "Flintium Leased"
+        "binding": "FlintiumLeased"
     }, 
     "tagType": "AtomicTag", 
     "valueSource": "opc"

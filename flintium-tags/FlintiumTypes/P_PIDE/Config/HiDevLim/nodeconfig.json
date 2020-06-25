@@ -11,7 +11,7 @@
     }, 
     "tagGroup": {
         "bindType": "parameter", 
-        "binding": "Flintium Leased-Slow"
+        "binding": "FlintiumLeased"
     }, 
     "tagType": "AtomicTag", 
     "value": 0.0, 

@@ -5,7 +5,7 @@
             "binding": "{plcTag}.{InstanceName}"
         }
     }, 
-    "tagGroup": "Flintium Leased", 
+    "tagGroup": "Default", 
     "tagType": "UdtInstance", 
     "typeId": "FlintiumTypes/P_CmdSrc"
 }

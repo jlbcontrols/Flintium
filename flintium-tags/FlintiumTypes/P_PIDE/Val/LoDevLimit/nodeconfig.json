@@ -12,6 +12,7 @@
         "binding": "{histProvName}"
     }, 
     "historyTimeDeadband": 3.0, 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "value": 0.0, 
     "valueSource": "expr"

@@ -8,6 +8,7 @@
         "binding": "{histProvName}"
     }, 
     "historyTimeDeadbandUnits": "MIN", 
+    "tagGroup": "FlintiumDirect", 
     "tagType": "AtomicTag", 
     "value": 0, 
     "valueSource": "memory"
