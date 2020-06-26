@@ -12,11 +12,12 @@
 
 ## Setup  
 * Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
-* Import UDTs into Ignition, and then import instance tags. Flintium's UDTs and tags are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Exporting & Importing Tags](https://github.com/jlbcontrols/Flintium/wiki/Exporting-&-Importing-Tags) for more info. The UDTs and tags are located in /flintium-tags/FlintiumTypes and /flintium-tags/FlintiumInst, respectively.  
-* Import tag group files located in the /flintium-tags/FlintiumTagGroups folder using the Ignition Designer's built-in tool  
-* Create a Logix Driver device called "plc1" on the gateway webpage  
-* Create a database connection called "historydb" on the gateway webpage  
-* Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource"  
+* Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Exporting & Importing UDTs](https://github.com/jlbcontrols/Flintium/wiki/Exporting-&-Importing-UDTs) for more info. The UDTs are stored in the /flintium-tags/FlintiumTypes folder.  
+* Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as /flintium-tags/FlintiumInst.json, which should be imported into the default provider's root folder.  
+* Import tag group files located in the /flintium-tags/FlintiumTagGroups folder using the Ignition Designer's built-in tool.  
+* Create a Logix Driver device called "plc1" on the gateway webpage.  
+* Create a database connection called "historydb" on the gateway webpage.  
+* Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource".  
 * Import /flintium-security/roles.json using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
 * Import /flintium-security/users.json using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
