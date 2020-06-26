@@ -1,0 +1,9 @@
+# Ignition #
+conversion-report.txt
+/.resources/
+
+# Studio 5000 #
+*.Sem
+*.Wrk
+*.BAK*
+*.ACD.Recovery
