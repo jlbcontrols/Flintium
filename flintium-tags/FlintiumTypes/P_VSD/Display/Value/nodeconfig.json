@@ -1,0 +1,8 @@
+{
+    "dataType": "Float4", 
+    "executionMode": "EventDriven", 
+    "expression": "{[.]../Val/SpeedFdbk}", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

@@ -1,0 +1,26 @@
+{
+    "HistoricalDeadband": 0.001, 
+    "accessRights": "Read_Only", 
+    "dataType": "Float4", 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": true, 
+    "historyMaxAge": 1.0, 
+    "historyMaxAgeUnits": "DAY", 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{histProvName}"
+    }, 
+    "historyTimeDeadband": 3.0, 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": "FlintiumDirect", 
+    "tagType": "AtomicTag", 
+    "value": 0.0, 
+    "valueSource": "opc"
+}

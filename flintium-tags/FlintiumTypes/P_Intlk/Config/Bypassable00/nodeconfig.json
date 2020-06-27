@@ -1,0 +1,18 @@
+{
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Bypassable.0"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "FlintiumLeased"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

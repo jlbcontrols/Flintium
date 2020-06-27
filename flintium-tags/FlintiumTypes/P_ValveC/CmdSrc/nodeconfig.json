@@ -1,0 +1,11 @@
+{
+    "parameters": {
+        "plcTag": {
+            "bindType": "parameter", 
+            "binding": "{plcTag}.{InstanceName}"
+        }
+    }, 
+    "tagGroup": "Default", 
+    "tagType": "UdtInstance", 
+    "typeId": "FlintiumTypes/P_CmdSrc"
+}

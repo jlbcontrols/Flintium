@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2020-06-24T18:39:33Z"
+    },
+    "xml-format-version": 1,
+    "parameter-names": "engineeringPages,faultsPages,hmiPages,instancePath,label,maintenancePages,selectedTabName,templateFolder",
+    "lastModificationSignature": "ad8a7674f1b30ffc592c9c247cba3fb44326a1504485b6ad15bd416aae7f79a6"
+  }
+}

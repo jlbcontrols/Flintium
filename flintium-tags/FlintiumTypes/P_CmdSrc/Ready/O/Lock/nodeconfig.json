@@ -1,0 +1,19 @@
+{
+    "accessRights": "Read_Only", 
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_Lock"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "FlintiumLeased"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

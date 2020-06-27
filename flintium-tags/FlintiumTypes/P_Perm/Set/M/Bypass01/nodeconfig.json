@@ -1,0 +1,19 @@
+{
+    "accessRights": "Read_Write", 
+    "dataType": "Boolean", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.MSet_Bypass.1"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "FlintiumLeased"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": false, 
+    "valueSource": "opc"
+}

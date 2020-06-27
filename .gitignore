@@ -1,0 +1,12 @@
+# Ignition #
+conversion-report.txt
+com.inductiveautomation.perspective/
+mobile/
+com.inductiveautomation.sqlbridge/
+com.inductiveautomation.reporting/
+
+# Studio 5000 #
+*.Sem
+*.Wrk
+*.BAK*
+*.ACD.Recovery

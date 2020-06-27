@@ -1,0 +1,18 @@
+{
+    "dataType": "String", 
+    "opcItemPath": {
+        "bindType": "parameter", 
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_CondTxt[6]"
+    }, 
+    "opcServer": {
+        "bindType": "parameter", 
+        "binding": "{opcServName}"
+    }, 
+    "tagGroup": {
+        "bindType": "parameter", 
+        "binding": "FlintiumLeased"
+    }, 
+    "tagType": "AtomicTag", 
+    "value": "", 
+    "valueSource": "opc"
+}

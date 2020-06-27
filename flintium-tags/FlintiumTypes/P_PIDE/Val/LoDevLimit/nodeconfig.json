@@ -1,0 +1,19 @@
+{
+    "dataType": "Float4", 
+    "executionMode": "TagGroupRate", 
+    "expression": "{[.]SP}+{[.]../Config/LoDevLim}", 
+    "historicalDeadband": 0.001, 
+    "historicalDeadbandStyle": "Discrete", 
+    "historyEnabled": true, 
+    "historyMaxAge": 1.0, 
+    "historyMaxAgeUnits": "DAY", 
+    "historyProvider": {
+        "bindType": "parameter", 
+        "binding": "{histProvName}"
+    }, 
+    "historyTimeDeadband": 3.0, 
+    "tagGroup": "FlintiumDirect", 
+    "tagType": "AtomicTag", 
+    "value": 0.0, 
+    "valueSource": "expr"
+}

@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "{[.]../Config/EU}", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

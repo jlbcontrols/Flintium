@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "{[.]../Config/SpeedFdbkEU}", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

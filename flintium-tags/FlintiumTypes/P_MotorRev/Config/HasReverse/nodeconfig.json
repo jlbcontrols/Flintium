@@ -1,0 +1,7 @@
+{
+    "dataType": "Boolean", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "value": true, 
+    "valueSource": "memory"
+}

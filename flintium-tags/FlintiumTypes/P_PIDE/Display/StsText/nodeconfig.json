@@ -1,0 +1,8 @@
+{
+    "dataType": "String", 
+    "executionMode": "EventDriven", 
+    "expression": "if(\r\n\t{[.]../Status/Initializing},\r\n\t'Output (CV) held by downstream init',\r\n\tif(\r\n\t\t{[.]../Status/Hand},\r\n\t\t'Output (CV) held by local control',\r\n\t\tif(\r\n\t\t\t{[.]../Status/IntlkCV},\r\n\t\t\t'Output (CV) held by Interlock',\r\n\t\t\tif(\r\n\t\t\t\t{[.]../Status/Man} && {[.]../CmdSrc/Status/Prog},\r\n\t\t\t\t'Output (CV) set by Program',\r\n\t\t\t\tif(\r\n\t\t\t\t\t{[.]../Status/Man},\r\n\t\t\t\t\t'Output (CV) set by Operator',\r\n\t\t\t\t\tif(\r\n\t\t\t\t\t\t{[.]../Status/Auto} && {[.]../CmdSrc/Status/Prog},\r\n\t\t\t\t\t\t'Controlling to Program setpoint (SP)',\r\n\t\t\t\t\t\tif(\r\n\t\t\t\t\t\t\t{[.]../Status/Auto},\r\n\t\t\t\t\t\t\t'Controlling to Operator SP',\r\n\t\t\t\t\t\t\tif(\r\n\t\t\t\t\t\t\t\t{[.]../Status/Casc} && {[.]../Config/HasRatio} && ({[.]../Val/Ratio} != 1.0),\r\n\t\t\t\t\t\t\t\t'Controlling to Ratio of Cascade setpoint (SP)',\r\n\t\t\t\t\t\t\t\tif(\r\n\t\t\t\t\t\t\t\t\t{[.]../Status/Casc} && {[.]../Config/HasRatio},\r\n\t\t\t\t\t\t\t\t\t'Controlling to Cascade setpoint (SP)',\r\n\t\t\t\t\t\t\t\t\tif(\r\n\t\t\t\t\t\t\t\t\t\t{[.]../Status/Casc},\r\n\t\t\t\t\t\t\t\t\t\t'Controlling to Cascade setpoint (SP)',\r\n\t\t\t\t\t\t\t\t\t\t''\r\n\t\t\t\t\t\t\t\t\t)\r\n\t\t\t\t\t\t\t\t)\r\n\t\t\t\t\t\t\t)\r\n\t\t\t\t\t\t)\r\n\t\t\t\t\t)\r\n\t\t\t\t)\r\n\t\t\t)\r\n\t\t)\r\n\t)\r\n)", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}

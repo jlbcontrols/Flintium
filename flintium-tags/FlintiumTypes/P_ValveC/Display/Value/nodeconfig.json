@@ -1,0 +1,8 @@
+{
+    "dataType": "Float4", 
+    "executionMode": "EventDriven", 
+    "expression": "{[.]../Val/Pos}", 
+    "tagGroup": "FlintiumLeased", 
+    "tagType": "AtomicTag", 
+    "valueSource": "expr"
+}
