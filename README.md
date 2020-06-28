@@ -10,7 +10,7 @@
 * Ignition v8.0.12  
 
 ## Setup  
-* Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium```  
+* Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium.git```  
 * Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Importing & Exporting UDTs](https://github.com/jlbcontrols/Flintium/wiki/Importing-&-Exporting-UDTs) for more info. The UDTs are stored in the /flintium-tags/FlintiumTypes folder.  
 * Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as /flintium-tags/FlintiumInst.json, which should be imported into the default provider's root folder.  
 * Import tag group files located in the /flintium-tags/FlintiumTagGroups folder using the Ignition Designer's built-in tool.  
