@@ -1,5 +1,8 @@
 # Set the default behavior, in case people don't have core.autocrlf set.
 * text=auto
 
-# Always use LF line endings for project script files. If this is not set, nuisance changes (line ending only) will be detected, causing resource.json files to update.
+# Force LF line endings on checkout for project script files. If this is not set, nuisance changes (line ending only) will be detected, causing resource.json files to update.
 ignition/script-python/** text eol=lf
+
+# Force LF line endings on checkout for all resource.json files.
+resource.json text eol=lf
