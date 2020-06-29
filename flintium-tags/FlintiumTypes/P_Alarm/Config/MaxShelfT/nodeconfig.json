@@ -2,7 +2,7 @@
     "dataType": "Int4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_MaxShelfT"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

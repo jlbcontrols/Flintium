@@ -2,7 +2,7 @@
     "dataType": "String", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_Tag"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
