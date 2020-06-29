@@ -1,8 +1,9 @@
 {
-    "dataType": "Float4", 
+    "accessRights": "Read_Only", 
+    "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_InpRawMax"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
@@ -13,6 +14,6 @@
         "binding": "FlintiumLeased"
     }, 
     "tagType": "AtomicTag", 
-    "value": 0.0, 
+    "value": false, 
     "valueSource": "opc"
 }

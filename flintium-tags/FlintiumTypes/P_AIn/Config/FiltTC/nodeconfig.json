@@ -1,9 +1,8 @@
 {
-    "accessRights": "Read_Only", 
-    "dataType": "Int4", 
+    "dataType": "Float4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_UnackAlmC"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
@@ -14,6 +13,6 @@
         "binding": "FlintiumLeased"
     }, 
     "tagType": "AtomicTag", 
-    "value": 0, 
+    "value": 0.0, 
     "valueSource": "opc"
 }

@@ -3,7 +3,7 @@
     "dataType": "Float4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_PVEUMax"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

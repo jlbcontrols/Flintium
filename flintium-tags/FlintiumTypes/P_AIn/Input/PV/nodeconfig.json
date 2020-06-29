@@ -3,7 +3,7 @@
     "dataType": "Float4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_PV"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

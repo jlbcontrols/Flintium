@@ -2,7 +2,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_Reset"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.ORdy_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

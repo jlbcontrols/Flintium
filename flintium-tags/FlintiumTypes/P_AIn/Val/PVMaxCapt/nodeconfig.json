@@ -1,8 +1,9 @@
 {
+    "accessRights": "Read_Only", 
     "dataType": "Float4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_InpRawMin"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

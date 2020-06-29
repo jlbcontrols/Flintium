@@ -3,7 +3,7 @@
     "dataType": "Int4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_Fault"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

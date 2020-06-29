@@ -12,7 +12,7 @@
     "historyTimeDeadband": 3.0, 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_HiLim"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

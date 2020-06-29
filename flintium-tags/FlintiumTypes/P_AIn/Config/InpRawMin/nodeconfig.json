@@ -1,9 +1,8 @@
 {
-    "accessRights": "Read_Only", 
     "dataType": "Float4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Val_PVMaxCapt"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Cfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
