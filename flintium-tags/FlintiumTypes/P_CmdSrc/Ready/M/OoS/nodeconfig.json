@@ -3,7 +3,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_OoS"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.MRdy_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

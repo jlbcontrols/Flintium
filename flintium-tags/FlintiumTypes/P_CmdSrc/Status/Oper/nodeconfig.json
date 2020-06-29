@@ -3,7 +3,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_Oper"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

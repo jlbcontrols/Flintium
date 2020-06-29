@@ -3,7 +3,7 @@
     "dataType": "Int4", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_eSrc"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Sts_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
