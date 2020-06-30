@@ -4,21 +4,23 @@
 </p>  
 
 ## Software  
-* Studio v32.02  
+* Ignition v8.0.12   
 * PlantPAx_Process_Library_v4.10.01  
+* Studio 5000 v32.02  
 * Emulate v32.00  
-* Ignition v8.0.12  
+ 
 
 ## Setup  
-* Open Git Bash in /Ignition/data/projects folder, and run ```git clone https://github.com/jlbcontrols/Flintium.git```  
-* Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Importing & Exporting UDTs](https://github.com/jlbcontrols/Flintium/wiki/Importing-&-Exporting-UDTs) for more info. The UDTs are stored in the /flintium-tags/FlintiumTypes folder.  
-* Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as /flintium-tags/FlintiumInst.json, which should be imported into the default provider's root folder.  
-* Import tag group files located in the /flintium-tags/FlintiumTagGroups folder using the Ignition Designer's built-in tool.  
+* On your Ignition Gateway computer, open your /Ignition/data/projects folder, and run  
+```git clone https://github.com/jlbcontrols/Flintium.git```  
+* Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Importing & Exporting UDTs](https://github.com/jlbcontrols/Flintium/wiki/Importing-&-Exporting-UDTs) for more info.
+* Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as [/flintium-tags/FlintiumInst.json](https://github.com/jlbcontrols/Flintium/blob/master/flintium-tags/FlintiumInst.json), which should be imported into the default provider's root folder.  
+* Import tag group files located in the [/flintium-tags/FlintiumTagGroups](https://github.com/jlbcontrols/Flintium/tree/master/flintium-tags/FlintiumTagGroups) folder using the Ignition Designer's built-in tool.  
 * Create a Logix Driver device called "plc1" on the gateway webpage.  
 * Create a database connection called "historydb" on the gateway webpage.  
 * Create an internal user source using the Ignition gateway webpage, called "FlintiumUserSource".  
-* Import /flintium-security/roles.json using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
-* Import /flintium-security/users.json using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
+* Import [/flintium-security/roles.json](https://github.com/jlbcontrols/Flintium/blob/master/flintium-security/roles.json) using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
+* Import [/flintium-security/users.json](https://github.com/jlbcontrols/Flintium/blob/master/flintium-security/users.json) using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
 ## User Source, Usernames & Passwords 
 The project's user source is 'FlintiumUserSource' by default. Note: This means that users must belong to FlintiumUserSource to log into a client.  
