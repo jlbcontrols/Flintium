@@ -1,36 +1,31 @@
 ##### Funcions used with the tagScriptModule.  Only used during development to help build UDTs from AOI tags (from OPC browser).  Not called anywhere in the project. #####
 # May need to restart module on gateway webpage before use.
 
+
 def updateOpcPaths(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	opcStartString = "{opcPrefix}[{plcName}]{plcTag}."
 	return system.udtHelper.updateOpcPath(udtPath, opcStartString)
 	
 def updateOpcServer(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	opcServerString = "{opcServName}"
 	return system.udtHelper.updateOpcServer(udtPath, opcServerString)
 
 def updateHistoryProvider(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	historyProviderString = "{histProvName}"
 	return system.udtHelper.updateHistoryProvider(udtPath, historyProviderString)
 
 def folderize(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	return system.udtHelper.folderize(udtPath)
 		
 def removePrefixes(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	return system.udtHelper.removePrefixes(udtPath)
 		
 def updateTagGroup(udtName):
-	import system
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	tagGroupString = "FlintiumLeased"
 	opcPathFilterString = ""  # For expample "Cfg_ would only update tags with Cfg_ in opc path, "" would update all opc tags
@@ -52,7 +47,7 @@ def updateAllUdts(updateFunction):
 
 # Run this to perform intitial conversion, after type is created from OPC drop.  May need to restart module on gateway webpage before use.
 def convertFromOpcDrop(udtName):
-	import system
+
 	udtPath = "_types_/FlintiumTypes/" + udtName
 	
 	folderizedQty = system.udtHelper.folderize(udtPath)

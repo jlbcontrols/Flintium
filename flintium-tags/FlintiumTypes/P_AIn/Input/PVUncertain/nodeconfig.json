@@ -3,7 +3,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_PVUncertain"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Inp_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

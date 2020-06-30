@@ -3,7 +3,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_Timer"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.Err_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 

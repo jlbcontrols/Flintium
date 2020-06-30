@@ -2,7 +2,7 @@
     "dataType": "Boolean", 
     "opcItemPath": {
         "bindType": "parameter", 
-        "binding": "{opcPrefix}[{plcName}]{plcTag}.PCfg_AllowExist"
+        "binding": "{opcPrefix}[{plcName}]{plcTag}.PCfg_{TagName}"
     }, 
     "opcServer": {
         "bindType": "parameter", 
