@@ -23,10 +23,10 @@
 * Import [/flintium-security/users.json](https://github.com/jlbcontrols/Flintium/blob/master/flintium-security/users.json) using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
 ## User Source, Usernames & Passwords 
-The project's user source is 'FlintiumUserSource' by default. Note: This means that users must belong to FlintiumUserSource to log into a client.  
-Default users and roles are imported into the FlintiumUserSource in the SETUP section above.  
-The default password for all imported users is 'password'.  
-If logging into the designer with default (or other) user source: To have full permissions for all example project faceplates in the designer, add these roles to your user: 'Administrator' and 'area01'.  
+* The project's user source is 'FlintiumUserSource' by default. Note: This means that users must belong to FlintiumUserSource to log into a client.  
+* Default users and roles are imported into the FlintiumUserSource in the SETUP section above.  
+* The default password for all imported users is 'password'.  
+* If logging into the designer with default (or other) user source: To have full permissions for all example project faceplates in the designer, add these roles to your user: 'Administrator' and 'area01'.  
 
 ## Modules 
 Two third party modules are used in this project.  
