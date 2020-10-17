@@ -28,9 +28,10 @@
 * If logging into the designer with default (or other) user source: To have full permissions for all example project faceplates in the designer, add these roles to your user: ```Administrator``` and ```area01```  
 
 ## Modules 
-Two third party modules are used in this project.  
-* pidbot: Used for PIDE tuning faceplate. Download the latest version from here: [https://www.jlbcontrols.com/pidbot](https://www.jlbcontrols.com/pidbot)  
-* tagScriptModule: Used to automate configuration of UDTs. This module is used for development only, and is not required when using the Flintium library. Converts UDTs created from PlantPAx AOI tag OPC drag/drop, making it closer to the format required for this project. The modl file is included in the flintium-modules folder. If using the tagScriptModule, you need to allow unsigned modules in your /Ignition/data/ignition.conf file, by adding this line to #Java Additional Parameters: ```wrapper.java.additional.4=-Dignition.allowunsignedmodules=true```
+Two third party modules are used in this project. The `pidbot` module is used for tuning P_PIDE controllers. The `Flintium Tag Config Tools` module is used for development only, and is not required when using the Flintium library. Converts UDTs created from PlantPAx AOI tag OPC drag/drop, making it closer to the format required for this project.  
+* [Download Pidbot](https://www.jlbcontrols.com/pidbot) module from JLB Controls.
+* [Download Flintium Tag Config Tools](https://github.com/jlbcontrols/flintium-tag-config-tools) module from the releases section of the Github repository.
+* Install the .modl files following Ignition's [module installation instructions](https://docs.inductiveautomation.com/display/DOC80/Installing+or+Upgrading+a+Module).
 
 ## Studio 5000 Project File
 See [Issue #162](https://github.com/jlbcontrols/Flintium/issues/162) for status of the project file.  
