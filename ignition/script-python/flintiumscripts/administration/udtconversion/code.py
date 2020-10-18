@@ -1,5 +1,4 @@
-##### Funcions used with the tagScriptModule.  Only used during development to help build UDTs from AOI tags (from OPC browser).  Not called anywhere in the project. #####
-# May need to restart module on gateway webpage before use.
+##### Funcions used with the flintium-tag-config-tools module.  Only used during development to help build UDTs from AOI tags (from OPC browser).  Not called anywhere in the project. #####
 
 
 def updateOpcPaths(udtName):
@@ -45,7 +44,7 @@ def updateAllUdts(updateFunction):
 		updateFunction(udtName)
 
 
-# Run this to perform intitial conversion, after type is created from OPC drop.  May need to restart module on gateway webpage before use.
+# Run this to perform intitial conversion, after type is created from OPC drop.
 def convertFromOpcDrop(udtName):
 
 	udtPath = "_types_/FlintiumTypes/" + udtName
@@ -62,15 +61,14 @@ def convertFromOpcDrop(udtName):
 	
 	tagGroupString = "FlintiumLeased"
 	opcPathFilterString = ""
-	tagGroupUpdateAllQty = system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
+	tagGroupUpdatedQty = system.udtHelper.updateTagGroup(udtPath, tagGroupString, opcPathFilterString)
 	
 	return {
 		'folderizedQty':folderizedQty,
 		'opcPathQty':opcPathQty,
 		'opcServerQty':opcServerQty,
 		'prefixUpdatedQty':prefixUpdatedQty,
-		'tagGroupUpdateAllQty':tagGroupUpdateAllQty,
-		'tagGroupUpdateCfgQty':tagGroupUpdateCfgQty
+		'tagGroupUpdatedQty':tagGroupUpdatedQty
 		}
 		
 		
