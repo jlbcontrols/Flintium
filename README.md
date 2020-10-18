@@ -55,7 +55,7 @@ The examlpe tags in this project are mapped to Ignition's built-in OPC server `I
 * Create a Logix Driver device called `plc1` using the gateway webpage. If you restored a Gateway Backup, a device called `plc1` is configured already.  
 * Edit connectivity settings for `plc1` to connect with your Logix PLC or RSLogix Emulate. See more details on setting up [RSLogix Emulate](../../wiki/Setting-up-RSLogix-Emulate).
 * Develop your PLC code using AOIs from Rockwell's Process Library v4.10.01. Search for "Process Library" in [Rockwell Downloads](https://compatibility.rockwellautomation.com/Pages/MultiProductDownload.aspx?crumb=112).
-* See [Issue #162](./issues/162) for the status of the Studio 5000 project file associated with Flintium's example tags.
+* See [Issue #162](../../issues/162) for the status of the Studio 5000 project file associated with Flintium's example tags.
 
 # User Source, Usernames & Passwords
 ### Gateway/Designer
