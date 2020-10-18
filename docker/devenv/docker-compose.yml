@@ -8,7 +8,7 @@ services:
     ports:
       - "8090:8088"
     networks:
-       - db
+       - flintium-net
     volumes:
       - flintium-dev-data:/var/lib/ignition/data
       - ../..:/var/lib/ignition/data/projects/Flintium
@@ -22,7 +22,7 @@ services:
     ports:
       - "3308:3306"
     networks:
-       - db
+       - flintium-net
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: flintiumdb
@@ -31,6 +31,6 @@ services:
       TZ: "America/New_York"
     restart: unless-stopped
 networks:
-  db:
+  flintium-net:
 volumes:
   flintium-dev-data:
