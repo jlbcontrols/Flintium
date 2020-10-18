@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  flintium-gateway:
+    build:
+      context:
+        .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8088"
+    networks:
+       - flintium-net
+    environment:
+      GATEWAY_ADMIN_PASSWORD: password
+      IGNITION_EDITION: full
+      TZ: "America/New_York"
+    restart: unless-stopped
+  flintium-db:
+    image: mariadb:10.5
+    ports:
+      - "3308:3306"
+    networks:
+       - flintium-net
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: flintiumdb
+      MYSQL_USER: ignition
+      MYSQL_PASSWORD: password
+      TZ: "America/New_York"
+    restart: unless-stopped
+networks:
+  flintium-net:
