@@ -13,4 +13,4 @@ These instructions will help you set up an development environment to work on Fl
 * Clone this repository `git clone https://github.com/jlbcontrols/Flintium.git`.
 * Open a terminal in the [/docker/devenv](./devenv) folder (locally), and run `docker-compose up`.
 * The Ignition Gateway webpage will be available at `http://localhost:8090`.
-* If this is your first time setting up this project or if gateway resources in this repository have changed, continue following the [Development Environment Option 1: Docker](../README.md#option-1-docker) instructions in the main README.
+* If this is your first time setting up this project or if gateway resources in this repository have changed, continue following the [Development Environment Option 1: Docker](../../README.md#option-1-docker) instructions in the main README.
