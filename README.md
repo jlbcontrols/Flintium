@@ -14,14 +14,14 @@ See the [Flintium Docker README](./docker/README.md) for instructions to quickly
 
 # Manual Setup
 ### Option 1: Basic Setup
-Follow these instructions to 
+Follow these instructions to try the most recent Flintium release. Note: releases are infrequent, if you would like to use the latest Flintium code, see option 2.
 * Download a Flintium Gateway backup from the [Releases](../../releases) section of this repository. Click assets, then click on the .gwbk file.
 * Restore the .gwbk following Ignition's [gateway restore instructions](https://docs.inductiveautomation.com/display/DOC80/Gateway+Backup+and+Restore).
 * See the [User Source, Usernames & Passwords](#user-source-usernames--passwords) for login details.
 * Follow the instructions in the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) sections below to complete the setup.
 
 ### Option 2: Development Environment  
-Follow these instructions to run the latest Flintium code, and a version controlled development environment.
+Follow these instructions if you would like to use the latest Flintium code, or [help develop Flintium](https://github.com/jlbcontrols/Flintium/wiki/Contributing).
 * On your Ignition Gateway computer, open your /Ignition/data/projects folder, and run  
 `git clone https://github.com/jlbcontrols/Flintium.git`  
 * Follow instructions below to [Import Gateway Resources](#Import-Gateway-Resources).
