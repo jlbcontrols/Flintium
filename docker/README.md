@@ -25,4 +25,4 @@ Quickly setup everything needed to run Flintium using Docker, including an Ignit
 * See the main README for [PLC Setup](../README.md#PLC-Setup) instructions.
 
 ### Additional Steps (Required for Development Environment Only)
-* Follow instructions in the main README to [Import Gateway Resources](../README.md#import-gateway-resources-required-for-development-environment-only).
+* Follow instructions in the main README to [Import Gateway Resources](../README.md#import-gateway-resources-required-for-development-only).
