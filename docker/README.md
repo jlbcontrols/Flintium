@@ -21,8 +21,8 @@ Quickly setup everything needed to run Flintium using Docker, including an Ignit
 * Clone this repository `git clone https://github.com/jlbcontrols/Flintium.git`.
 * Open a terminal in the [/docker/release](./release) or [/docker/devenv](./devenv) folder (locally), and run `docker-compose up`.
 * The Ignition Gateway webpage will be available at `http://localhost:8090`.
-* See the main README for gateway [login credentials](../../README.md#user-source-usernames--passwords).
-* See the main README for [PLC Setup](../../README.md#PLC-Setup) instructions.
+* See the main README for gateway [login credentials](../README.md#user-source-usernames--passwords).
+* See the main README for [PLC Setup](../README.md#PLC-Setup) instructions.
 
 ### Additional Steps (Required for Development Environment Only)
-* Follow instructions in the main README to [Import Gateway Resources](../../README.md#Import-Gateway-Resources).
+* Follow instructions in the main README to [Import Gateway Resources](../README.md#Import-Gateway-Resources).
