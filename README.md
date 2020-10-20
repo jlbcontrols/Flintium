@@ -35,7 +35,7 @@ Follow these instructions if you would like to use the latest Flintium code, or 
 * Import [/gw-resources/user-sources/FlintiumUserSource/roles.json](./gw-resources/user-sources/FlintiumUserSource/roles.json) using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
 * Import [/gw-resources/user-sources/FlintiumUserSource/users.json](./gw-resources/user-sources/FlintiumUserSource/users.json) using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
-# Additional Setup (if required by setup option)  
+# Additional Setup 
 ### Database Setup
 By default, historical tags in this project use a database connection called `historydb`.
 * Create a database to use with Ignition's Historian. Ignition supports many popular databases.
