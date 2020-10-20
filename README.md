@@ -20,14 +20,15 @@ Follow these instructions to try the most recent Flintium release. Note: release
 * See the [User Source, Usernames & Passwords](#user-source-usernames--passwords) for login details.
 * Follow the instructions in the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) sections below to complete the setup.
 
-### Option 2: Development Environment  
+### Option 2: Development Setup  
 Follow these instructions if you would like to use the latest Flintium code, or [help develop Flintium](https://github.com/jlbcontrols/Flintium/wiki/Contributing).
 * On your Ignition Gateway computer, open your /Ignition/data/projects folder, and run  
 `git clone https://github.com/jlbcontrols/Flintium.git`  
-* Follow instructions below to [Import Gateway Resources](#Import-Gateway-Resources).
+* Follow instructions below to [Import Gateway Resources](#import-gateway-resources-required-for-development-only).
 * Follow the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) instructions below to complete the setup.
 
-### Import Gateway Resources (Required for Development Environment Only)
+# Additional Setup 
+### Import Gateway Resources (Required for Development Only)
 * Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Importing & Exporting UDTs](../../wiki/Importing-&-Exporting-UDTs) for more info.
 * Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as [/gw-resources/tags/FlintiumInst.json](./gw-resources/tags/FlintiumInst.json), which should be imported into the default provider's root folder.  
 * Import tag group files located in the [/gw-resources/tags/tag-groups](./gw-resources/tags/tag-groups) folder using the Ignition Designer's built-in tool.  
@@ -35,7 +36,6 @@ Follow these instructions if you would like to use the latest Flintium code, or 
 * Import [/gw-resources/user-sources/FlintiumUserSource/roles.json](./gw-resources/user-sources/FlintiumUserSource/roles.json) using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
 * Import [/gw-resources/user-sources/FlintiumUserSource/users.json](./gw-resources/user-sources/FlintiumUserSource/users.json) using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
-# Additional Setup 
 ### Database Setup
 By default, historical tags in this project use a database connection called `historydb`.
 * Create a database to use with Ignition's Historian. Ignition supports many popular databases.
