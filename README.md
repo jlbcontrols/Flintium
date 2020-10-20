@@ -9,28 +9,25 @@
 * Studio 5000 v32.02  
 * Emulate v32.00  
 
-# Basic Setup
-The easiest way to try Flintium is to use a Flintium gateway backup file. Note that the gateway backups do not reflect the latest updates. If you would like to use the latest Flintium code, see the Development Environment Setup section instead.
-### Restoring a Gateway Backup
-* Download a Flintium Gateway backup from here: [Flintium Gateway Backups](https://drive.google.com/drive/folders/1VR1llj7gU4xmlLSO3eSFc16aup2XHHFG?usp=sharing).
+# Quick Setup with Docker
+See the [Flintium Docker README](./docker/README.md) for instructions to quickly setup everything needed to run Flintium, including the Ignition Gateway and external database for the Historian.
+
+# Manual Setup
+### Option 1: Basic Setup
+Follow these instructions to 
+* Download a Flintium Gateway backup from the [Releases](../../releases) section of this repository. Click assets, then click on the .gwbk file.
 * Restore the .gwbk following Ignition's [gateway restore instructions](https://docs.inductiveautomation.com/display/DOC80/Gateway+Backup+and+Restore).
 * See the [User Source, Usernames & Passwords](#user-source-usernames--passwords) for login details.
 * Follow the instructions in the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) sections below to complete the setup.
 
-# Development Environment Setup  
-Follow these instructions to use the latest Flintium code, and set up a version controlled development environment.
-### Option 1: Docker
-* Follow the [Flintium Docker Dev Environment README](./docker/devenv/README.md) instructions.
-* Follow instructions below to [Import Gateway Resources](#Import-Gateway-Resources).
-* Follow instructions in the [PLC Setup](#PLC-Setup) section to connect to your PLC.
-
-### Option 2: Using a Local Ignition Gateway 
+### Option 2: Development Environment  
+Follow these instructions to run the latest Flintium code, and a version controlled development environment.
 * On your Ignition Gateway computer, open your /Ignition/data/projects folder, and run  
 `git clone https://github.com/jlbcontrols/Flintium.git`  
 * Follow instructions below to [Import Gateway Resources](#Import-Gateway-Resources).
-* Follow the instructions in the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) sections below to complete the setup.
+* Follow the [Database Setup](#Database-Setup), [Modules Setup](#Modules-Setup), and [PLC Setup](#PLC-Setup) instructions below to complete the setup.
 
-### Import Gateway Resources
+### Import Gateway Resources (Required for Development Environment Only)
 * Import UDTs into Ignition. Flintium's UDTs are stored as a folder structure to improve merging. They must be imported using the tool on project window: Flintium/Administration/ExportImportTags. See Flintium Wiki page [Importing & Exporting UDTs](../../wiki/Importing-&-Exporting-UDTs) for more info.
 * Import the example instance tags using the Ignition Designer's built-in tool. The tags are saved as [/gw-resources/tags/FlintiumInst.json](./gw-resources/tags/FlintiumInst.json), which should be imported into the default provider's root folder.  
 * Import tag group files located in the [/gw-resources/tags/tag-groups](./gw-resources/tags/tag-groups) folder using the Ignition Designer's built-in tool.  
@@ -38,7 +35,7 @@ Follow these instructions to use the latest Flintium code, and set up a version 
 * Import [/gw-resources/user-sources/FlintiumUserSource/roles.json](./gw-resources/user-sources/FlintiumUserSource/roles.json) using the tool located on project window: Flintium/Administration/Utilities/ExportImportRolesAndUsers  
 * Import [/gw-resources/user-sources/FlintiumUserSource/users.json](./gw-resources/user-sources/FlintiumUserSource/users.json) using the tool located on proejct window: Flintium/Administration/Utilities/ExportImportRolesAndUsers
 
-# Additional Setup (if required)  
+# Additional Setup (if required by setup option)  
 ### Database Setup
 By default, historical tags in this project use a database connection called `historydb`.
 * Create a database to use with Ignition's Historian. Ignition supports many popular databases.
